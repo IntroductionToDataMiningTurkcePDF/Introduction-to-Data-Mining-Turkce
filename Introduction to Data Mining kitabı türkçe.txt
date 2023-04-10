@@ -1,0 +1,17463 @@
+BLM0463 Veri Madenciliğine Giriş 
+
+ 
+
+ Kaynaklar 
+
+
+Introduction to Data Mining, Pang-Ning Tan, Michigan 
+State University, Michael Steinbach, University of 
+Minnesota, Vipin Kumar, University of Minnesota, 
+Publisher: Addison-Wesley 
+
+(Textbook & its slides) 
+
+https://www-users.cs.umn.edu/~kumar001/dmbook/firsted.php 
+
+ 
+
+ 
+
+ Başarı Notu 
+o Vize (%35) 
+o Final (%50) 
+o Lab. & Ödev & Proje (%15) 
+
+
+
+
+ 
+
+ Ders Asistanı 
+o Arş. Gör. Sena DİKİCİ 
+
+
+
+
+ 
+
+
+Data Mining: Introduction
+
+
+Lecture Notes for Chapter 1
+
+
+Introduction to Data Mining, 2
+nd
+Edition
+
+
+by
+
+
+Tan, Steinbach, 
+Karpatne
+, Kumar
+
+
+Orijilal
+slaytların Türkçe çevirisidir.
+
+
+
+story-3dimensional-2
+Large
+-
+scale Data is Everywhere!
+
+
+
+Veri oluşturma ve toplama 
+teknolojilerindeki ilerlemeler 
+nedeniyle hem ticari hem de 
+bilimsel veri tabanlarında 
+muazzam bir veri büyümesi 
+olmuştur.
+
+New mantra
+(kutsal söz)
+
+Mümkün olduğunda
+(
+whenever
+)
+ve mümkün olan 
+her yerde
+(
+wherever
+)
+her türlü 
+(whatever) 
+veri
+yi
+toplayın.
+
+
+
+Beklentiler
+
+Toplanan veriler ya toplanan 
+amaç için ya da öngörülmeyen 
+bir amaç için değerli olacaktır.
+
+
+
+
+Computational Simulations
+
+
+Social Networking: Twitter 
+
+
+crop
+Sensor Networks
+
+
+Traffic Patterns
+
+
+Cyber Security
+
+
+E
+-
+Commerce
+
+
+http://images.ezgif.com/tmp/gif_232x188_6af960.gif
+
+Why Data Mining? Commercial Viewpoint
+
+
+
+Çok sayıda veri toplanıyor ve depolanıyor
+–
+Web data
+
+Yahoo has Peta Bytes of web data
+
+Facebook has billions of active users
+
+
+–
+mağaza / marketlerde alışveriş, e
+-
+ticaret
+
+Amazon
+.com’u her gün
+milyonlarca 
+kullanıcı 
+ziyaret 
+ediyor
+
+
+–
+Bank/Credit Card transactions
+
+
+
+Bilgisayarlar daha ucuz ve daha güçlü hale geldi
+
+Rekabetçi 
+b
+askı 
+g
+üçlü
+hale geldi
+–
+A
+vantaj
+yakalamak
+için daha iyi, özelleştirilmiş hizmetler sun
+mak
+(örneğin, Müşteri İlişkileri Yönetimi'nde
+-
+C
+ustomer 
+R
+elationship 
+M
+anagement)
+
+
+
+
+
+Why Data Mining? Scientific Viewpoint
+
+
+
+Çok yüksek hızlarda toplanan ve 
+depolanan veriler
+–
+Uydudaki sensörler (
+remote 
+sensors on a satellite
+) 
+
+NASA EOSDIS 
+yılda petabyte’ların 
+üzerinde dünyaya ilişkin bilimsel veri 
+arşivler
+
+
+–
+gökyüzünü tarayan teleskoplar
+
+Sky survey data
+
+
+–
+Yüksek
+-
+hacimli 
+biyolojik veriler
+(
+High
+-
+throughput biological data
+)
+–
+Bilimsel simülasyonlar
+
+birkaç saat içinde üretilen terabaytlarca 
+veri
+
+
+
+
+
+Veri madenciliği bilim insanlarına 
+yardımcı olur
+–
+büyük veri kümelerinin otomatik 
+analizinde
+–
+Hipotez oluş
+t
+u
+r
+m
+a
+da
+
+
+
+
+fMRI Data from Brain
+
+
+Sky Survey Data
+
+
+Gene Expression Data
+
+
+Surface Temperature of Earth
+
+
+http://im2.ezgif.com/tmp/ezgif-1403672989.gif
+
+Hayatın her alanında verimliliği artırmak için harika fırsatlar
+
+
+
+Toplumun 
+Önemli
+Sorunlarını Çözmek için Büyük Fırsatlar
+
+
+http://countrylivingoffgrid.com/resources/aboutus_image.jpg
+Sağlık hizmetlerini iyileştirmek ve maliyetleri düşürmek
+
+
+Alternatif / yeşil enerji kaynakları bulmak
+
+
+İklim değişikliğinin etki
+lerini
+tahmin etmek
+
+
+basf-949686-plant-biotechnology-lg.jpg
+Tarımsal üretimi artırarak açlığı ve yoksulluğu azaltmak
+
+
+
+What is Data Mining?
+
+
+
+Pek çok tanımı vardır
+–
+Verilerden örtük
+(
+implicit
+)
+, önceden bilinmeyen ve 
+potansiyel olarak yararlı 
+(önem arz eden) 
+bilgilerin 
+çıkarılması
+–
+Anlamlı 
+örüntüleri
+keşfetmek için büyük miktarlarda 
+verinin otomatik veya yarı otomatik olarak keşfi
+(
+exploration
+)
+ve analizi
+
+
+
+
+
+What is (not) Data Mining?
+
+
+
+What is Data Mining?
+
+
+–
+Belirli isimler ABD'nin belirli 
+bölgelerinde daha yaygındır 
+(O’Brien, O’Rourke, 
+O’Reilly… Boston 
+bölgesinde)
+–
+Arama motoru tarafından 
+döndürülen benzer belgeleri 
+içeriklerine göre gruplandırın 
+(ör
+n
+. Amazon yağmur 
+ormanları, Amazon.com)
+
+
+
+
+
+What is not Data 
+Mining?
+–
+Telefon 
+rehberinde telefon 
+numarasını 
+arama
+k
+–
+“Amazon” 
+hakkında bilgi için 
+bir Web arama 
+motorunu 
+sorgul
+amak
+
+
+
+
+
+
+Makine öğren
+mesi
+/ yapay zeka, örüntü tanıma, istatistik ve 
+veritabanı sistemlerinden 
+faydalanır
+
+Geleneksel teknikler uygun olmayabilir, çünkü veri
+–
+Large
+-
+scale
+(
+Büyük ölçekli
+)
+–
+High dimensional
+(
+Çok boyutlu
+)
+–
+Heterogeneous
+–
+Complex
+–
+Distributed
+
+
+
+Yeni ortaya çıkan veri bilimi
+(
+data science
+)
+ve veri güdümlü keşif
+(
+data
+-
+driven discovery
+)
+alanının önemli bir bileşeni
+
+
+Origins of Data Mining
+
+
+
+Data Mining Tasks
+
+
+
+Tahmin/Öngörü Yöntemleri (
+Prediction 
+Methods
+)
+–
+Diğer değişkenlerin bilinmeyen veya 
+gelecekteki değerlerini tahmin etmek için bazı 
+değişkenler kullan
+ır.
+
+
+
+
+
+Tanımlama/Açıklama Yöntemleri (
+Description 
+Methods
+)
+–
+Verileri tanımlayan
+,
+insan tarafından 
+yorumlanabilen 
+örüntüleri
+bul
+ur.
+
+
+
+
+From [Fayyad, et.al.] Advances in Knowledge Discovery and Data Mining, 1996
+
+
+
+Tid Refund Marital 
+Status 
+Taxable 
+Income Cheat 
+1 Yes Single 125K No 
+2 No Married 100K No 
+3 No Single 70K No 
+4 Yes Married 120K No 
+5 No Divorced 95K Yes 
+6 No Married 60K No 
+7 Yes Divorced 220K No 
+8 No Single 85K Yes 
+9 No Married 75K No 
+10 No Single 90K Yes 
+11 No Married 60K No 
+12 Yes Divorced 220K No 
+13 No Single 85K Yes 
+14 No Married 75K No 
+15 No Single 90K Yes 
+10 
+Predictive Modeling
+
+
+Clustering
+
+
+Association 
+Rules
+
+
+Anomaly 
+Detection
+
+
+fd01226_
+Milk
+
+
+Data
+
+
+Data Mining Tasks …
+
+
+
+
+Sınıf özniteliği
+(class attribute)
+için diğer 
+özniteliklerin değerlerinin bir 
+fonksiyonu
+olarak bir 
+model bulma
+
+
+Tid Employed 
+Level of 
+Education 
+# years at 
+present 
+address 
+Credit 
+Worthy 
+1 Yes Graduate 5 Yes 
+2 Yes High School 2 No 
+3 No Undergrad 1 No 
+4 Yes High School 10 Yes 
+… … … … … 
+10 
+Kredi 
+liyakatini
+tahmin 
+etme modeli
+
+
+Class
+
+
+EmployedNoEducationNumber ofyearsNoYesGraduate{ High school, 
+Undergrad }
+YesNo 
+> 7 yrs< 7 yrsYesNumber ofyearsNo 
+> 3 yr< 3 yrPredictive Modeling: Classification
+
+
+
+Classification Example
+
+
+categorical
+
+
+categorical
+
+
+quantitative
+
+
+class
+
+
+Test
+
+
+Set
+
+
+Training 
+
+
+Set
+
+
+Model
+
+
+Learn 
+
+
+Classifier
+
+
+Tid Employed 
+Level of 
+Education 
+# years at 
+present 
+address 
+Credit 
+Worthy 
+1 Yes Undergrad 7 ? 
+2 No Graduate 3 ? 
+3 Yes High School 2 ? 
+… … … … … 
+10 
+
+
+Kredi
+kartı
+işlemlerini
+yasal
+veya
+hileli
+olarak
+sınıflandırma
+
+
+
+Uydu
+verilerini
+kullanarak
+Arazi
+örtülerini
+(
+su
+havzaları
+, 
+kentsel
+alanlar
+, 
+ormanlar
+, vb.) 
+sınıflandırma
+
+Haber 
+sayfalarını 
+finans
+, 
+hava
+durumu
+, 
+eğlence
+, 
+spor
+vb
+.
+olarak 
+kagetorize
+etme
+
+Siber
+dünyada
+izinsiz giriş yapmaya çalışanları 
+belirleme
+
+Tümör
+hücrelerini
+iyi
+huylu
+veya
+kötü
+huylu
+olarak
+tahmin
+etme
+
+Proteinin
+sekonder
+yapılarını
+alfa
+-
+sarmal
+, beta
+-
+yaprak
+veya
+rastgele
+spiral
+olarak
+sınıflandırmak
+
+
+story-3dimensional-2
+Examples of Classification Task
+
+
+http://biomasshub.com/wp-content/uploads/2010/03/ILUC1.jpg
+pro
+
+Classification: Application 1
+
+
+
+Sahtekarlık Tespiti
+(
+Fraud Detection
+)
+–
+Amaç
+:
+Kredi kartı işlemlerindeki hileli vakaları tahmin 
+e
+tmek.
+–
+Yaklaşım
+:
+
+Kredi kartı işlemlerini ve hesap sahibin
+in
+bilgileri 
+öznitelik olarak kulla
+nmak
+–
+müşteri ne zaman satın alır, ne satın alır, ne sıklıkta 
+zamanında ödeme yapar, vb.
+
+
+
+Geçmiş işlemler sahtekarlık veya 
+yasal
+işlem 
+olarak etiketle
+nir
+. Bu, sınıf niteliğini oluşturur.
+
+İşlemlerin sınıfı için bir model 
+eğitilir/öğrenilir
+.
+
+Bir hesaptaki kredi kartı işlemlerini gözlemleyerek 
+sahtekarlığı tespit etmek için bu model
+kullanılır
+.
+
+
+
+
+
+
+
+Classification: Application 2
+
+
+
+Telefon 
+operatörlerinin 
+müşterileri için kayıp tahmini
+(
+Churn prediction
+)
+–
+Amaç
+:
+Bir müşterinin bir rakibe 
+kaptırılıp
+kaptırılmayacağını
+tahmin etmek.
+–
+Yaklaşım
+:
+
+Nitelikleri bulmak için geçmiş ve 
+mevcut
+müşterilerin her biriyle 
+ilgili 
+işlemlerin ayrıntılı 
+kaydını kullan
+ılır
+.
+–
+Müşterinin ne sıklıkta aradığı, nereden aradığı, günün hangi 
+saatinde en çok aradığı, finansal durumu, medeni durumu vb.
+
+
+
+Müşteriler sadık veya sad
+ık olmayan
+olarak 
+etiketle
+nir
+.
+
+Sadakat için bir model 
+oluşturulur
+
+
+
+
+
+
+From [Berry & Linoff] Data Mining Techniques, 1997
+
+
+
+Classification: Application 3
+
+
+
+Gök Haritası Kataloğu (
+Sky Survey Cataloging
+)
+–
+Amaç
+:
+Teleskopik
+inceleme
+görüntülerine
+(Palomar 
+Gözlemevi'nden
+) 
+dayalı
+olarak
+gökyüzü
+nesnelerinin
+, 
+özellikle
+görsel
+olarak
+soluk
+olanların
+sınıfını
+(
+yıldız
+veya
+galaksi
+) 
+tahmin
+etmek
+.
+–
+3000 images with 23,040 x 23,040 pixels per image.
+
+
+
+
+–
+Yaklaşım
+:
+
+Görüntüyü
+segmentlere
+ayırın
+. 
+
+Görüntü
+özniteliklerini
+(
+özellikler
+) 
+ölçün
+-
+nesne
+başına
+40 
+tane
+.
+
+Sınıfı
+bu
+özelliklere
+göre
+modelleyin
+.
+
+Başarı
+Hikayesi
+: 
+Bulması
+zor
+olan
+en
+uzak
+nesnelerden
+biri
+olan
+(galaksi dışında)
+16 
+yeni
+kırmızı
+yıldızsı
+gökcisim
+(
+red
+-
+shift
+quasars
+)
+bul
+unabildi
+!
+
+
+
+
+
+
+From [Fayyad, et.al.] Advances in Knowledge Discovery and Data Mining, 1996
+
+
+
+Classifying Galaxies
+
+
+early
+intermediate
+late
+Early
+
+
+Intermediate
+
+
+Late
+
+
+Data Size: 
+
+
+•
+72 million stars, 20 million galaxies
+•
+Object Catalog: 9 GB
+•
+Image Database: 150 GB
+
+
+Class: 
+
+
+•
+Stages of Formation
+
+
+Attributes:
+
+
+•
+Image features, 
+•
+Characteristics of light 
+waves received, etc.
+
+
+Courtesy: http://aps.umn.edu
+
+
+
+Regression
+
+
+
+Doğrusal veya doğrusal olmayan bir bağımlılık modeli 
+varsayarak, belirli bir sürekli değerli değişkenin değerini 
+diğer değişkenlerin değerlerine göre tahmin 
+etmek
+
+İstatistik
+ve 
+sinir ağı alanları
+nda
+üzerinde yoğun bir 
+şekilde çalışıl
+mıştır.
+
+Örnekler
+:
+–
+Reklam harcamalarına dayalı 
+olarak 
+yeni ürünün satış 
+miktarlarını tahmin etme.
+–
+Sıcaklık, nem, hava basıncı vb. 
+nin b
+ir fonksiyon
+u
+olarak rüzgar hızlarını tahmin etme
+–
+Borsa endekslerinin zaman serisi tahmini.
+
+
+
+
+
+
+Bir gruptaki nesnelerin birbirine benzeyeceği (veya 
+ilişkilendirileceği) ve diğer gruplardaki nesnelerden 
+farklı (veya ilgisiz) olduğu nesne gruplarını bulma
+
+
+Inter
+-
+cluster 
+distances are 
+maximized
+
+
+Intra
+-
+cluster 
+distances are 
+minimized
+
+
+Clustering
+(
+Kümeleme
+)
+
+
+
+
+Anlama (
+Understanding
+)
+–
+Hedeflenen pazarl
+ar
+için özel 
+profil oluşturma
+–
+«Browsing»
+için ilgili belgeleri 
+gruplama
+–
+Benzer işlevselliğe sahip 
+genleri ve proteinleri
+gruplama
+–
+Benzer fiyat dalgalanmalarına 
+sahip hisse senetleri
+ni 
+gruplama
+
+
+
+Özetleme(
+Summarization
+)
+–
+Büyük veri kümelerinin 
+boyutunu küçültme
+
+
+
+
+Applications of Cluster Analysis
+
+
+Clusters for Raw SST and Raw NPPlongitudelatitude-180-150-120-90 -60 -30 0 30 60 90 120 150 180 
+90 
+60 
+30 
+0 
+-30-60-90ClusterSea Cluster 1Sea Cluster 2Ice or No NPPLand Cluster 1Land Cluster 2K
+-
+means yönteminin
+, 
+Deniz Yüzeyi Sıcaklığı 
+(SST) ve Net Birincil 
+Üretimi (NPP) Kuzey ve 
+Güney Yarımküre'yi 
+yansıtan kümelere 
+ayırmak için 
+kullanılması.
+
+
+D1
+Courtesy: Michael Eisen
+
+
+
+Clustering: Application 1
+
+
+
+Pazar Bölümlemesi (
+Market Segmentation
+)
+:
+–
+Amaç
+:
+herhangi bir alt kümenin farklı bir pazarlama 
+karmasıyla ulaşılacak bir pazar hedefi olarak 
+seçilebileceği bir pazarın farklı müşteri alt kümelerine 
+bölünmesi.
+–
+Yaklaşım
+:
+
+Coğrafi ve yaşam tarzı ile ilgili bilgilere dayanarak 
+müşterilerin farklı özelliklerini toplayın.
+
+Benzer müşteri kümelerini bulun.
+
+Farklı kümelerde
+kilerle 
+aynı kümedeki müşterilerin 
+satın alma 
+örüntülerini
+gözlemleyerek kümeleme 
+kalitesini ölçün.
+
+
+
+
+
+
+
+Clustering: Application 2
+
+
+
+Document Clustering:
+–
+Amaç
+:
+İ
+çinde 
+geçen
+önemli terimlere 
+dayalı olarak
+b
+irbirine benzeyen belge gruplarını
+bulmak
+–
+Yaklaşım 
+:
+Her bir belgede sık görülen terimleri 
+tanıml
+ayıp f
+arklı terimlerin frekanslarına dayalı bir 
+benzerlik ölçüsü oluşturun
+ve bunları
+k
+ümeleme için 
+kullanın
+.
+
+
+
+
+Enron email dataset 
+
+
+
+Association Rule Discovery: Definition
+(
+Birliktelik Kuralı Keşfi
+)
+
+
+
+Her biri belirli bir koleksiyondan birkaç öğe içeren 
+bir kayıt kümesi veril
+diğinde
+–
+Diğer öğelerin 
+olma durumlarına
+dayalı olarak bir 
+öğenin 
+olmasını
+tahmin edecek bağımlılık kuralları 
+üret
+mek
+
+
+
+
+TIDItems1Bread, Coke, Milk2Beer, Bread3Beer, Coke, Diaper, Milk4Beer, Bread, Diaper, Milk5Coke, Diaper, MilkRules Discovered:
+
+
+{Milk} 
+--
+> {Coke}
+
+
+{Diaper, Milk} 
+--
+> {Beer}
+
+
+
+Association Analysis: Applications
+(
+Birliktelik analizi
+)
+
+
+
+Market
+sepeti analizi
+–
+Kurallar; s
+atış promosyonu, raf yönetimi ve envanter 
+yönetimi için kullanılır
+
+
+
+Telekomünikasyon alarm teşhisi
+–
+Kurallar, aynı zaman aralığında sık sık meydana 
+gelen alarmların birleşimini bulmak için kullanılır
+
+
+
+Medical Informatics
+–
+Kurallar, hasta semptomları ve bazı hastalıklarla ilişkili 
+test sonuçlarının kombinasyonunu bulmak için 
+kullanılır
+
+
+
+
+
+
+An Example Subspace Differential Coexpression Pattern 
+from lung cancer dataset
+
+
+Enriched with the TNF/NFB signaling pathway
+
+
+which is well
+-
+known to be related to lung cancer
+
+
+P
+-
+value: 1.4*10
+-
+5
+(6/10 overlap with the pathway) 
+
+
+[Fang et al PSB 2010]
+
+
+Three lung cancer datasets 
+[Bhattacharjee et al. 
+2001], [Stearman et al. 2005], [Su et al. 2007]
+
+
+Association Analysis: Applications
+
+
+
+Deviation/Anomaly/Change Detection
+(
+Sapma/Analomali/Değişim tespiti
+)
+
+
+
+Normal davranıştan önemli 
+derecedeki 
+sapmaları tespit 
+etmek
+
+Applications:
+–
+Kredi Kartı Sahtekarlık Tespiti
+–
+İzinsiz
+Ağ (Network)
+Giriş Tespiti
+–
+İzleme ve gözetim için 
+kullanılan 
+sensör ağlarından gelen anormal 
+davranışı belirle
+mek
+–
+Küresel orman örtüsündeki 
+değişiklikleri tespit etmek
+
+
+
+
+
+Motivating Challenges
+
+
+
+Scalability
+
+High Dimensionality
+
+Heterogeneous and Complex Data
+
+Data Ownership and Distribution
+
+Non
+-
+traditional Analysis
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Data Mining: Data
+
+
+Lecture Notes for Chapter 2
+
+
+Introduction to Data Mining
+
+
+by
+
+
+Tan, Steinbach, Kumar
+
+
+Orijilal slaytların Türkçe çevirisidir.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+What is Data?
+
+
+
+Veri nesneleri
+ve onların 
+özniteliklerinin 
+koleksiyonu
+
+Öznitelik (
+attribute
+), bir 
+nesnenin karakteristiği veya 
+özelliğidir.
+Örnek
+: 
+kişinin göz 
+rengi
+, 
+sıcaklık
+, 
+vb
+.
+–
+Attribute is also known as 
+variable
+, 
+field
+, 
+characteristic
+, 
+or 
+feature
+
+
+
+Bir öznitelik koleksiyonu bir 
+nesneyi
+(
+object
+)
+tanımlar
+–
+Object is also known as 
+record
+, 
+point
+, 
+case
+, 
+sample
+, 
+entity
+, or 
+instance
+
+
+
+
+Tid Refund Marital 
+Status 
+Taxable 
+Income Cheat 
+1 Yes Single 125K No 
+2 No Married 100K No 
+3 No Single 70K No 
+4 Yes Married 120K No 
+5 No Divorced 95K Yes 
+6 No Married 60K No 
+7 Yes Divorced 220K No 
+8 No Single 85K Yes 
+9 No Married 75K No 
+10 No Single 90K Yes 
+10 
+Attributes
+
+
+Objects
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Attribute Values
+(
+Öznitelik değerleri
+)
+
+
+
+Öznitelik
+değerleri, bir 
+özniteliğe
+atanan sayılar 
+veya sembollerdir
+
+Özn
+itelikler ve 
+öz
+nitelik değerleri arasındaki ayrım
+–
+Aynı öz
+nitelik
+farklı 
+öznitelik
+değerleri
+ne izdüşürülebilir
+
+Örnek
+: yükseklik metre veya 
+feet
+olarak ölçülebili
+r
+
+
+–
+Farklı 
+öznitelikler
+aynı değer kümesine eşlenebilir
+
+Örnek
+: Kimlik
+numarası (
+ID
+)
+ve yaş
+(
+age
+)
+için öznitelik 
+değerleri tamsayıdır
+
+Fakat
+öznitelik
+değerlerinin özellikleri farklı olabilir
+–
+Kimli
+k numarasında
+sınırlam
+a
+yoktur ancak yaşın maksimum ve 
+minimum değeri vardır
+
+
+
+
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Measurement of Length 
+
+
+
+Bir 
+öz
+niteliği ölçme şekliniz, öz
+nit
+elik özellikleriyle eşleşmeyebilir.
+
+
+123557815104ABCDEThus, an 
+attribute 
+can be
+
+
+measured in a way
+that
+does not capture all the properties 
+of the attribute.
+
+
+A mapping to lengths to numbers that 
+captures only the 
+order
+properties of length 
+
+
+A mapping to lengths to numbers that captures 
+both 
+order
+and 
+additivity
+properties of length 
+
+
+Bu ölçek 
+yalnızca 
+uzunluğun 
+sıra (
+ordering
+)
+özelliğini 
+korur.
+
+
+Bu ölçek 
+uzunluğun 
+sıra 
+(
+ordering
+) ve 
+toplanırlık 
+(
+additvity
+) 
+özelliğini 
+korur.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Types of Attributes 
+
+
+
+There are different types of attributes
+–
+Nominal
+
+Examples: ID numbers, eye color, zip codes
+
+
+–
+Ordinal
+
+Examples: rankings (e.g., taste of potato chips on a scale 
+from 1
+-
+10), grades, height in {tall, medium, short}
+
+
+–
+Interval
+
+Examples: calendar dates, temperatures in Celsius or 
+Fahrenheit.
+
+
+–
+Ratio
+
+Examples: temperature in Kelvin, length, time, counts 
+
+
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Properties of Attribute Values 
+(
+Öznitelik değerlerinin özellikleri
+)
+
+
+
+Bir 
+(öz)
+niteliğin türü, aşağıdaki özelliklerden 
+hangisine sahip olduğuna bağlıdır
+:
+–
+Distinctness: 
+= 
+
+–
+Order: 
+< > 
+–
+Addition: 
++ 
+-
+–
+Multiplication: 
+* /
+–
+Nominal attribute: distinctness
+–
+Ordinal attribute: distinctness & order
+–
+Interval attribute: distinctness, order & addition
+–
+Ratio attribute: all 4 properties
+
+
+
+
+
+Attribute 
+Type
+
+
+Description
+
+
+Examples
+
+
+Operations
+
+
+Nominal
+
+
+Nominal bir niteliğin değerleri 
+sadece farklı isimlerdir, yani 
+nominal nitelikler sadece
+bir nesneyi 
+diğerinden ayırt etmek için yeterli 
+bilgi sağlar. (=, 
+
+)
+
+
+zip codes, employee 
+ID numbers, eye color, 
+sex: {
+male, female
+}
+
+
+mode, entropy, 
+contingency 
+correlation, 
+
+2
+test
+
+
+Ordinal
+
+
+Bir 
+ordinal
+niteliğin değerleri, 
+nesneleri 
+sıralamak 
+için yeterli bilgi 
+sağlar. (<, >)
+
+
+hardness of minerals, 
+{
+good, better, best
+}, 
+grades, street numbers
+
+
+median, percentiles, 
+rank correlation, 
+run tests, sign tests
+
+
+Interval
+
+
+A
+ralık
+(Interval)
+nitelikleri için, 
+değerler arasındaki farklar 
+anlamlıdır, yani bir ölçü birimi 
+mevcuttur.
+(+, 
+-
+)
+
+
+calendar dates, 
+temperature in Celsius 
+or Fahrenheit
+
+
+mean, standard 
+deviation, Pearson's 
+correlation, 
+t
+and 
+F
+tests
+
+
+Ratio
+
+
+Oran
+(Ratio)
+değişkenleri için, hem 
+farklar hem de oranlar anlamlıdır. 
+(*, /)
+
+
+temperature in Kelvin, 
+monetary quantities, 
+counts, age, mass, 
+length, electrical 
+current
+
+
+geometric mean, 
+harmonic mean, 
+percent variation
+
+
+
+Attribute 
+Level
+
+
+Transformation
+
+
+Comments
+
+
+Nominal
+
+
+Her türlü permütasyon (
+Any 
+permutation of values
+)
+
+
+Tüm çalışan kimlik 
+numaraları
+(ID)
+yeniden 
+atansa
+, herhangi bir fark 
+yaratır mı?
+
+
+Ordinal
+
+
+Değerlerin sırasını muhafaza eden 
+bir değişiklik
+, 
+yani 
+new_value = f(old_value) 
+burada f monotonik bir 
+fonksiyondur.
+
+
+İyi, daha iyi en iyi kavramını 
+kapsayan bir 
+öznitelik
+, 
+başka 
+değerlerle de aynı şekilde 
+temsil edilebilir{1, 2, 3} 
+veya
+{ 0.5, 1, 10}
+ile
+
+
+Interval
+
+
+new_value =a * old_value + b 
+burada 
+a
+ve
+b
+sabitdir
+
+
+Buradan hareketle
+, Fahrenheit 
+ve Santigrat sıcaklık ölçekleri 
+sıfır değerlerinin nerede 
+olduğu ve bir birimin (derece) 
+büyüklüğü açısından farklılık 
+gösterir.
+
+
+Ratio
+
+
+new_value = a * old_value
+
+
+Uzunluk metre veya feet 
+olarak ölçülebilir.
+
+
+Categorical
+(or 
+qualitative
+) 
+attribute
+
+
+Numeric
+(
+Quantitative
+) 
+attributes
+
+
+Nitelik türleri, bir niteliğin anlamını değiştirmeyen dönüşümler
+(transformations)
+olarak da 
+tanımlanabilir.
+
+
+This categorization of attributes is due to S. S. Stevens
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Discrete and Continuous Attributes 
+
+
+
+Ayrık Nitelik (
+Discrete Attribute
+)
+–
+Sonlu bir değer kümesine sahiptir
+–
+Örnekler
+: 
+posta kodu
+, 
+sayılar veya bir belge koleksiyonundaki 
+kelime kümesi
+–
+Genellikle tamsayı değişkenleri olarak gösterilir.
+–
+Not: ikili öznitelikler (
+binary
+attributes
+), ayrık özniteliklerin özel 
+bir durumudur
+
+Sadece iki değer alır
+, e.g., true/false, yes/no,
+male/female, or 0
+/
+1. 
+
+
+
+
+
+Sürekli Nitelik (
+Continuous Attribute
+)
+–
+Öz
+nitelik
+değerleri olarak gerçek sayılar var
+dır
+–
+Örnek
+: 
+sıcaklık
+, 
+yükseklik veya ağrılık
+. 
+–
+Pratik
+te
+, gerçek değerler sadece sınırlı sayıda basamak 
+kullanılarak ölçülebilir ve temsil edilebilir.
+–
+Sürekli 
+öznitelikler
+genellikle kayan nokta değişkenleri olarak 
+temsil edilir.
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Asymmetric Attributes
+
+
+
+Yalnızca
+varoluş/mevcudiyet
+(
+sıfır
+olmayan
+bir
+öznitelik
+değeri
+) 
+önemli
+olarak
+kabul
+edilir
+
+Dokumanlarda
+geçen kelimeler
+
+Müşteri
+işlemlerinde
+mevcut
+olan
+kalemler
+
+
+
+
+
+Markette
+bir
+arkadaşla
+karşılaşsak
+şunu
+söyler
+miydik
+?
+“
+Aynı
+şeylerin
+çoğunu
+almadığımız
+için
+alımlarımızın
+çok
+benzer
+olduğunu
+görüyorum
+.” 
+
+Sıfır olmayan değerlere odaklanmak daha anlamlı ve daha 
+verimlidir
+.
+
+Sadece sıfır olmayan değerlerin önemli olduğu ikili 
+niteliklere asimetrik ikili 
+öznitelikler (
+asymmetric
+binary
+attributes
+) denir.
+–
+Birliktelik
+analizinde
+asimetrik
+öznitelikler
+kullanılır
+.
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Types of data sets 
+
+
+
+Record
+–
+Data Matrix
+–
+Document Data
+–
+Transaction Data
+
+
+
+Graph
+-
+based
+–
+World Wide Web
+–
+Molecular Structures
+
+
+
+Ordered
+–
+Spatial Data
+–
+Temporal Data
+–
+Sequential Data
+–
+Genetic Sequence Data
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Important Characteristics of Data
+
+
+–
+Dimensionality
+(number of attributes)
+
+Curse of Dimensionality
+
+
+–
+Sparsity
+
+Only presence counts
+
+
+–
+Resolution
+
+Patterns depend on the scale 
+
+
+–
+Size
+
+Type of analysis may depend on size of data
+
+
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Record Data 
+
+
+
+Her biri sabit bir öznitelik kümesinden
+(
+fixed set of 
+attributes
+)
+oluşan kayıt
+koleksiyonu
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Data Matrix 
+
+
+
+Veri nesneleri aynı sabit sayısal öznitelik kümesine 
+sahipse, veri nesneleri
+(
+data objects 
+)
+çok boyutlu bir 
+uzayda noktalar 
+(
+points in a multi
+-
+dimensional space
+) 
+olarak düşünülebilir; burada her boyut farklı bir özniteliği 
+temsil eder
+
+Bu veri seti, her nesne için bir tane olmak üzere 
+m satır 
+ve her bir 
+öznitelik
+için bir tane olmak
+üzere 
+n sütun
+ile, 
+yani
+bir 
+m
+x
+n
+matrisi ile temsil edilebilir.
+
+
+1.12.216.226.2512.651.22.715.225.2710.23Thickness LoadDistanceProjection 
+of y loadProjection 
+of x Load1.12.216.226.2512.651.22.715.225.2710.23Thickness LoadDistanceProjection 
+of y loadProjection 
+of x Load
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Document Data
+
+
+
+Her belge bir 
+'ter
+i
+m' ve
+ktörü olur
+–
+her terim
+,
+vektörün bir bileşenidir (özniteliğidir)
+–
+her bileşenin değeri, karşılık gelen terimin belgede 
+kaç kez geçtiğini gösterir.
+
+
+
+
+Document 1seasontimeoutlostwingamescoreballplaycoachteamDocument 2Document 3305026020200702100300100122030
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Transaction Data
+
+
+
+Özel bir kayıt verisi türü, burada
+–
+H
+er kayıt (işlem
+/
+transaction) bir dizi maddeyi içerir. 
+–
+Örneğin, bir 
+marketi
+düşünün. Bir müşterinin bir 
+alışveriş gezisi sırasında satın aldığı ürün grubu bir 
+işlem
+(
+transaction
+)
+oluştururken, satın alınan tekil 
+ürünler öğelerdir
+(
+items
+)
+.
+
+
+
+
+TID Items 
+1 Bread, Coke, Milk 
+2 Beer, Bread 
+3 Beer, Coke, Diaper, Milk 
+4 Beer, Bread, Diaper, Milk 
+5 Coke, Diaper, Milk 
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Graph Data 
+
+
+
+Examples: Generic graph, a molecule, and webpages 
+
+
+521 
+25Benzene Molecule: C6H6
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Ordered Data 
+
+
+
+Sequences of transactions
+
+
+An element of 
+the sequence
+
+
+Items/Events
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Ordered Data 
+
+
+
+Genomic sequence data
+(Gen dizilim verisi)
+
+
+GGTTCCGCCTTCAGCCCCGCGCCCGCAGGGCCCGCCCCGCGCCGTCGAGAAGGGCCCGCCTGGCGGGCGGGGGGAGGCGGGGCCGCCCGAGCCCAACCGAGTCCGACCAGGTGCCCCCTCTGCTCGGCCTAGACCTGAGCTCATTAGGCGGCAGCGGACAGGCCAAGTAGAACACGCGAAGCGCTGGGCTGCCTGCTGCGACCAGGG
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+sst_land_temp_82_best
+Ordered Data
+
+
+
+Spatio
+-
+Temporal Data
+
+
+Kara ve 
+okyanus
+ların
+Aylık Ortalama 
+Sıcaklık
+verisi
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Data Quality 
+
+
+
+Yetersiz veri kalitesi, birçok veri işleme çabasını olumsuz 
+etkiler
+
+
+“
+En önemli nokta, düşük veri kalitesinin 
+gelişen 
+bir felaket 
+olmasıdır.
+
+
+Düşük veri kalitesi, tipik bir şirketin gelirinin en az yüzde 
+onuna (%10) mal olur; Yüzde yirmi (%20) muhtemelen daha iyi 
+bir tahmin.”
+
+
+Thomas C. Redman, DM Review, August 2004
+
+
+
+Veri madenciliği örneği: kredi riski olan kişileri tespit 
+etmek için bir sınıflandırma modeli 
+yetersiz/eksik
+veriler 
+kullanılarak oluşturulmuştur
+–
+Bazı krediye değer adayların kredileri reddedildi
+–
+Temerrüde düşen kişilere daha fazla kredi veril
+di
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Data Quality 
+
+
+
+Ne tür veri kalitesi sorunları?
+
+Verilerle ilgili sorunları nasıl tespit edebiliriz?
+
+Bu sorunlar hakkında ne
+ler
+yapabiliriz?
+
+Examples of data quality problems: 
+–
+Noise and outliers 
+–
+missing values 
+–
+duplicate data 
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Noise
+
+
+
+Gürültü
+(
+n
+oise
+)
+, orijinal değerlerin değiştirilmesi 
+anlamına gelir
+–
+Örnekler: 
+kaklitesiz
+bir telefonda konuşurken kişinin 
+sesinde bozulma ve televizyon ekranında "kar
+lanma
+"
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+
+Outliers
+(uç/aykırı değerler) v
+eri
+kümesindeki
+diğer
+veri
+nesnelerinin
+çoğundan
+önemli
+ölçüde
+farklı
+özelliklere
+sahip
+veri
+nesneleridir
+–
+Case 1:
+Outliers
+,
+
+
+
+
+veri
+analizine
+müdahale
+
+
+eden
+gürültüdür
+
+
+–
+Case 2: 
+Outliers
+analizimizin
+
+
+
+
+hedefidir
+
+
+
+Credit card fraud
+
+Intrusion detection
+
+
+
+
+
+
+Outliers
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Missing Values
+
+
+
+Eksik
+değerlerin
+nedenleri
+–
+Bilginin toplanamadığı durumlar
+(
+ör
+. 
+insanlar
+yaşlarını
+ve
+kilolarını
+vermeyi
+reddederler
+)
+–
+Nitelikler tüm durumlar için geçerli olmayabilir
+(
+ör
+. 
+yıllık
+gelir
+çocuklar
+için
+geçerli
+değildir
+)
+
+
+
+Eksik verilerle başa çıkma
+–
+Eliminate Data Objects
+–
+Estimate Missing Values
+–
+Ignore the Missing Value During Analysis
+–
+Replace with all possible values (weighted by their 
+probabilities)
+
+
+
+
+?: missing value
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Duplicate Data
+
+
+
+Veri
+kümesi
+, 
+yinelenen
+(
+duplicate
+)
+veya
+neredeyse
+birbirinin
+kopyası
+olan
+veri
+nesnelerini
+içerebilir
+–
+Heterojen
+kaynaklardan
+gelen
+verileri
+birleştirirken
+önemli
+sorun
+
+
+
+Örnekler
+:
+–
+Birden
+çok
+e
+-
+posta
+adresine
+sahip
+aynı
+kişi
+:
+
+
+
+Data cleaning
+(Veri temizleme)
+–
+Tekrarlı
+veri
+sorunlarıyla
+ilgilenme
+süreci
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Data Preprocessing
+
+
+
+Aggregation
+
+Sampling
+
+Dimensionality Reduction
+
+Feature 
+S
+ubset 
+S
+election
+
+Feature 
+C
+reation
+
+Discretization and Binarization
+
+Attribute Transformation
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Aggregation
+
+
+
+İki veya daha fazla 
+öz
+niteliği (veya nesneyi) tek 
+bir öznitelikte (veya nesnede) birleştirmek
+
+Amaç
+–
+Veri azaltma (
+Data reduction
+)
+
+Özniteliklerin
+(attributes)
+veya nesnelerin
+(objects)
+sayısını 
+azalt
+ma
+
+
+–
+Ölçek değişikliği (
+Change of scale
+)
+
+Bölgeler, eyaletler, ülkeler vb. 
+ş
+eklinde birleştirilmiş şehirler
+
+
+–
+Daha "kararlı"
+(
+stable
+)
+veriler
+
+Birleştirilmiş veriler daha az değişkenliğe/oynaklığa sahip 
+olma eğilimindedir
+
+
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Aggregation
+
+
+Ortalama Aylık Yağışların 
+Standart Sapması
+
+
+Ortalama Yıllık Yağışların 
+Standart Sapması
+
+
+Avustralya'daki Yağış
+(
+Precipitation
+)
+Değişimi
+
+
+Aggregation sayesinde std. dev. miktarında belirgin azalma
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Sampling 
+
+
+
+Veri
+seçimi
+(
+data
+selection
+)
+için
+kullanılan
+ana
+teknik
+örneklem
+e
+dir
+.
+–
+Genellikle
+hem
+verilerin
+ön
+araştırması
+,
+hem
+de
+nihai
+veri
+analizi
+için
+kullanılır
+.
+
+
+
+
+
+İstatistikçiler
+örnekleme
+yapar
+çünkü
+ilgilenilen
+tüm
+veri
+setini
+elde
+etmek
+çok
+pahalı
+veya
+zaman
+alıcıdır
+.
+
+
+
+Örnekleme
+,
+veri
+madenciliğinde
+kullanılır
+çünkü
+ilgilenilen
+tüm
+veri
+kümesinin
+işlenmesi
+çok
+pahalı
+(
+expensive
+)
+veya
+zaman
+alıcıdır
+(
+time
+consuming
+)
+.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Sampling … 
+
+
+
+Etkili örnekleme için temel ilke şudur: 
+–
+Eğer seçilen örneklemin temsil gücü yüksek ise, 
+bir 
+örneklem kullanmak
+neredeyse 
+tüm veri setini 
+kullanmak kadar 
+işe yarayacaktır.
+–
+Bir örnek
+lem
+, orijinal veri kümesiyle yaklaşık olarak 
+(ilgili) aynı özelliğe sahipse temsil
+cidir (representative)
+. 
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Types of Sampling
+
+
+
+Simple Random Sampling
+–
+Herhangi bir belirli öğeyi seçme konusunda eşit bir olasılık vardır
+
+
+
+Sampling without replacement
+–
+Her öğe seçildikçe popülasyondan 
+çıkarılır.
+
+
+
+Sampling with replacement
+–
+Nesneler, örneklem için seçildikçe popülasyondan çıkarılmaz.
+
+A
+ynı nesne birden fazla kez alınabilir
+.
+
+
+
+
+
+Stratified sampling
+–
+Verileri birkaç bölüme
+(
+partition
+)
+ayırın; sonra her bölümden 
+rastgele örnekler alın
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Sample Size
+
+
+8000 points
+2000 Points
+500 Points
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Sample Size
+
+
+
+10
+eşit
+büyüklükteki
+grubun
+her
+birinden
+en
+az
+bir
+nesne
+elde
+etmek
+için
+hangi
+örneklem
+boyutu
+gereklidir?
+
+
+The figure 
+show
+ing
+an idealized set of clusters (groups)
+from which these points might be drawn
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Curse of Dimensionality
+
+
+
+Boyut arttığında
+(
+dimensionality increases
+)
+, 
+veri kapladığı alanda 
+giderek daha seyrek
+(
+sparse
+)
+hale gelir
+
+Kümeleme
+(
+clustering
+)
+ve 
+aykırı değer tespiti
+(
+outlier 
+detection
+)
+için kritik olan 
+yoğunluk
+(
+density
+)
+ve 
+noktalar arasındaki mesafe
+tanımları 
+daha az anlamlı
+hale gelir
+
+
+•
+Rastgele 500 
+nokta
+oluştur
+un
+•
+Herhangi bir nokta çifti arasındaki 
+maksimum ve minimum mesafe arasındaki 
+farkı hesaplayın
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Dimensionality Reduction
+
+
+
+Amaç
+:
+–
+Çok boyutlululuğun getirdiği sıkıntıdan kurtulmak
+–
+Veri madenciliği algoritmalarının gerektirdiği süre
+(
+time
+)
+ve bellek
+(
+memory
+)
+miktarını azalt
+mak
+–
+Verilerin 
+daha kolay görselleştirilmesine 
+olanak tanır
+–
+Alakasız özellikleri
+(
+irrelevant features
+)
+ortadan 
+kaldırmaya veya gürültüyü
+(
+noise
+)
+azaltmaya yardımcı 
+olabilir
+
+
+
+Teknikler
+–
+Principle Component Analysis
+(PCA)
+–
+Singular Value Decomposition
+–
+Others: supervised and non
+-
+linear techniques
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Dimensionality Reduction: PCA
+
+
+
+Amaç, verilerdeki en büyük miktarda varyasyonu 
+yakalayan bir projeksiyon bulmaktır.
+
+
+x
+2
+
+
+x
+1
+
+
+e
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Dimensionality Reduction: PCA
+
+
+
+Kovaryans
+matrisinin 
+özvektörlerini
+bulunur
+
+Özvektörler
+yeni
+uzayı
+tanımlar
+
+
+x
+2
+
+
+x
+1
+
+
+e
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Dimensionality Reduction: PCA
+
+
+
+Temel Bileşenler Analizi 
+(PCA) 
+sürekli 
+öznitelikler için yeni öznitelikler (
+temel 
+bileşenleri
+) bulan bir lineer cebir tekniğidir 
+ve bu bileşenler 
+–
+(1) orijinal özelliklerin 
+lineer
+kombinasyonlarıdır
+,
+–
+(2) 
+birbirlerine diktir
+(
+orthogonal
+) 
+–
+(3) verilerdeki 
+maksimum varyasyon miktarını 
+yakal
+ar
+
+
+
+
+Örneğin, ilk iki temel bileşen, orijinal niteliklerin doğrusal kombinasyonları olan 
+iki ortogonal nitelik ile mümkün olduğu kadar verideki varyasyonun çoğunu 
+yakalar.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Dimensionality Reduction: PCA
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Feature Subset Selection
+
+
+
+Verilerin boyutunu azaltmanın başka bir yolu
+
+Redundant features 
+(yedekli özellikler)
+–
+bir veya daha fazla başka öznitelikte bulunan bilgilerin 
+çoğunu veya tamamını 
+tekrarlama (
+duplicate
+)
+–
+Örnek: bir ürünün satın alma fiyatı ve ödenen satış 
+vergisi tutarı
+
+
+
+Irrelevant features
+(alakasız özellikler)
+–
+eldeki veri madenciliği görevi için yararlı hiçbir bilgi 
+içermez
+–
+Örnek: öğrencilerin kimliği
+(ID)
+genellikle öğrencilerin 
+not ortalamasını
+(GPA)
+tahmin etme görevi ile ilgisizdir
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Feature Creation
+
+
+
+Bir veri kümesindeki önemli bilgileri orijinal 
+özniteliklerden çok daha verimli bir şekilde 
+yakalayabilen yeni öznitelikler oluştur
+ma
+
+Üç genel metodoloji :
+–
+Feature extraction
+(
+öznitelik çıkarımı
+)
+
+Örnek: görüntülerden kenarları çıkarma
+
+
+–
+Feature construction
+(
+öznitelik
+oluşturma
+)
+
+Örnek: yoğunluğu elde etmek için kütleyi hacme bölme
+
+
+–
+Mapping data to new space
+(
+Verileri yeni uzaya izdüşürme
+)
+
+Örnek
+: Fourier and wavelet 
+analizi
+
+
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Mapping Data to a New Space
+
+
+Two Sine Waves
+
+
+Two Sine Waves + Noise
+
+
+Frequency
+
+
+
+Fourier
+transform
+
+Wavelet
+transform
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Discretization
+
+
+
+Ayrıklaştırma
+(
+Discretization
+)
+, 
+sürekli
+(
+continuous
+)
+bir
+özniteliği
+sıra
+sal (
+ordinal
+)
+özniteliğe
+dönüştürme
+sürecidir
+.
+–
+Potansiyel
+olarak
+sonsuz
+sayıda
+değer
+, 
+az
+sayıda
+kategoriye
+eşlenir
+–
+Ayrıklaştırma
+genellikle
+sınıflandırmada
+kullanılır
+–
+Birçok
+sınıflandırma
+algoritması
+, hem 
+bağımsız
+hem de 
+bağımlı
+değişkenleri
+yalnızca
+birkaç
+değer
+e
+sahipse 
+en
+iyi
+şekilde
+çalışır
+–
+Iris 
+veri
+setini
+kullanarak
+ayrıklaştırmanın
+yararlılığına
+dair
+bir
+örnek
+…
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Iris Sample Data Set 
+
+
+
+Iris Plant data set.
+–
+Can be obtained from the UCI Machine Learning Repository 
+http://www.ics.uci.edu/~mlearn/MLRepository.html
+–
+From the statistician Douglas Fisher
+–
+Three flower types (classes):
+
+Setosa
+
+Versicolour
+
+Virginica 
+
+
+–
+Four (non
+-
+class) attributes
+
+Sepal width and length
+
+Petal width and length
+
+
+
+
+
+
+Virginica. Robert H. Mohlenbrock. USDA 
+NRCS. 1995. Northeast wetland flora: Field 
+office guide to plant species. Northeast National 
+Technical Center, Chester, PA. Courtesy of 
+USDA NRCS Wetland Science Institute. 
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Discretization: Iris Example
+
+
+Petal genişliği düşük veya petal uzunluğu düşük
+, 
+Setosa
+anlamına gelir.
+
+
+Petal genişliği orta veya petal uzunluğu orta, 
+Versicolour
+anlamına gelir.
+
+
+Petal genişliği yüksek veya petal uzunluğu yüksek
+,
+Virginica
+anlamına gelir.
+
+
+Petal 
+-
+>
+taç yapra
+k
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Discretization: Iris Example …
+
+
+En iyi ayrıklaştırmanın
+(
+best discretization
+)
+ne olduğunu 
+nasıl anlayabiliriz?
+
+
+–
+Unsupervised discretization:
+veri değerindeki 
+kırılmaları (breaks) bulmak 
+
+Example:
+Petal Length 
+
+
+–
+Supervised discretization:
+Kırılmaları
+bulmak için sınıf 
+etiketleri kullan
+mak
+
+
+
+
+0246801020304050Petal LengthCounts
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Discretization Without Using Class Labels 
+
+
+Veriler dört grup noktadan ve iki uç değerden oluşur. Veriler tek 
+boyutludur, ancak çakışmayı azaltmak için rastgele bir y bileşeni 
+eklenir
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Discretization Without Using Class Labels 
+
+
+4 değer elde etmek için
+kullanılan
+eşit aralık genişliği
+(
+Equal interval width
+)
+yaklaşımı. 
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Discretization Without Using Class Labels 
+
+
+4 değer elde etmek için kullanılan eşit frekans
+(
+Equal 
+frequency
+)
+yaklaşımı
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Discretization Without Using Class Labels 
+
+
+4 değer elde etmek için 
+K
+-
+means 
+yaklaşımı
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Discretization Without Using Class Labels 
+
+
+Data
+
+
+Equal interval width
+
+
+Equal frequency
+
+
+K
+-
+means
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Binarization
+
+
+
+İkilileştirme, sürekli veya kategorik bir özniteliği 
+bir veya daha fazla ikili değişkenle eşler
+.
+
+Tipik olarak 
+birliktelik (
+association
+)
+analizi için 
+kullanılır
+.
+
+Genellikle sürekli bir özniteli
+k
+önce 
+kategorik 
+özniteliğe dönüştür
+ülür 
+ve ardından kategorik 
+özniteli
+k 
+bir dizi ikili özniteliğe dönüştür
+ülür
+–
+Birliktelik
+analizi asimetrik ikili özniteliklere
+(
+asymmetric binary 
+attribute
+)
+ihtiyaç duyar
+–
+Örnekler
+: 
+göz rengi
+ve 
+{low, medium, high}
+şeklinde 
+ölçülen boy özniteliği
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Binarization
+
+
+Kategorik 
+özniteliğin ikili 
+özniteliğe 
+dönüştürülmesi
+
+
+Kategorik 
+özniteliğin 5 tane 
+asimetrik ikili 
+özniteliğe 
+dönüştürülmesi
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Attribute Transformation
+
+
+
+A
+ttribute
+transform
+:
+Belirli
+bir
+özniteliğin
+tüm
+değer
+kümesini
+yeni
+bir
+ikame
+değerler
+kümesiyle
+eşleştiren
+bir
+fonksiyon
+, 
+böylece
+her 
+eski
+değer
+yeni
+değerlerden
+biriyle
+tanımlanabilir
+–
+Basit
+fonksiyonlar
+: x
+k
+, log(x), e
+x
+, |x|
+–
+Normalization
+
+O
+rtalama
+(
+mean
+)
+, 
+varyans
+(
+variance
+)
+, 
+aralık
+(
+range
+)
+açısından
+özellikler
+arasındaki
+farklılıklara
+uyum
+sağlamak
+için
+çeşitli
+teknikleri
+ifade
+eder
+.
+
+İstenmeyen
+, 
+ortak
+sinyali
+çıkarın
+, 
+örn
+. mevsimsellik
+
+
+–
+S
+tandardization
+,
+istasistikte
+ortalamaların
+çıkarılması
+ve
+standart
+sapmaya
+bölünmesi
+anlamına
+gelir
+.
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Example: Sample Time Series of Plant Growth
+
+
+Correlations between time series
+
+
+npp_series
+Minneapolis
+
+
+ Minneapolis Atlanta Sao Paolo 
+Minneapolis 1.0000 0.7591 -0.7581 
+Atlanta 0.7591 1.0000 -0.5739 
+Sao Paolo -0.7581 -0.5739 1.0000 
+Zaman serileri arasındaki 
+korelasyon
+
+
+Net Birincil Üretim 
+(Net Primary 
+Production 
+-
+NPP), 
+ekosistem 
+bilimcileri 
+tarafından 
+kullanılan bitki 
+büyümesinin bir 
+ölçüsüdür.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Seasonality Accounts for Much Correlation
+
+
+Correlations between time series
+
+
+npp_anom
+Minneapolis
+
+
+Aylık Z Score 
+kullanılarak 
+normalize edildi
+
+
+Aylık ortalamayı 
+çıkarın ve aylık 
+standart sapmaya 
+bölün
+
+
+ Minneapolis Atlanta Sao Paolo 
+Minneapolis 1.0000 0.0492 0.0906 
+Atlanta 0.0492 1.0000 -0.0154 
+Sao Paolo 0.0906 -0.0154 1.0000 
+Correlations between time series
+
+
+Korelasyonun 
+büyük bölümü 
+mevsimsellik 
+sebebiyledir
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Similarity and Dissimilarity
+
+
+
+Similarity
+(
+Benzerlik
+)
+–
+İki veri nesnesinin ne kadar benzer olduğunun sayısal ölçüsü.
+–
+Nesneler birbirine daha çok benzediğinde daha yüksektir.
+–
+Genellikle [0,1] aralığına düşer
+
+
+
+Dissimilarity
+(
+Farklılık
+)
+–
+İki veri nesnesinin ne kadar farklı olduğunun sayısal 
+ölçüsü
+–
+Nesneler birbirine daha çok benzediğinde daha düşük
+–
+Minimum farklılık genellikle 0'dır
+–
+Üst limit değişebilir
+
+
+
+Yakınlık
+(
+Proximity
+)
+, benzerlik veya farklılığı 
+ifade eder
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Similarity/Dissimilarity for Simple Attributes
+
+
+p
+and 
+q
+are the attribute values for two data objects.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Similarity/Dissimilarity 
+transformation examples
+
+
+For 
+the dissimilariti
+y values of 
+0, 1, 10, 10
+0
+;
+
+
+transformation equation results in similaritiy values of 1, 0.5, 
+0.09, 0.01, respectively.
+
+
+transformation
+equation results in similaritiy values 
+of 1.00, 0.99, 0.00, 0.00, respectively.
+
+
+transformation
+equation results in similaritiy values 
+of 1.00, 0.37, 0.00, 0.00, respectively.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Euclidean Distance
+
+
+
+Euclidean Distance
+(Öklit Mesfesi)
+
+
+Burada n boyut sayısı (öznitelikler) ve 
+p
+k
+ve 
+q
+k
+sırasıyla k'inci 
+öznitelikler (bileşenler) veya 
+p
+ve 
+q
+veri nesneleri
+dir.
+
+
+
+Ölçekler farklıysa standardizasyon gereklidir.
+
+
+
+
+
+nkkkqpdist12)(
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Euclidean Distance
+
+
+01230123456p1p2p3p4
+pointxyp102p220p331p451Distance Matrix
+
+
+p1p2p3p4p102.8283.1625.099p22.82801.4143.162p33.1621.41402p45.0993.16220
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Minkowski Distance
+
+
+
+Minkowski Distance is a generalization of Euclidean 
+Distance
+
+
+Where 
+r
+is a parameter, 
+n
+is the number of dimensions 
+(attributes) and 
+p
+k
+and 
+q
+k
+are, respectively, the k
+th
+attributes 
+(components) or data objects 
+p
+and 
+q
+.
+
+
+rnkrkkqpdist11)||(
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Minkowski Distance: Examples
+
+
+
+r
+= 1. City block (Manhattan, taxicab, L
+1
+norm) distance. 
+–
+Bunun
+yaygın
+bir
+örneği
+, 
+iki
+binary
+vektör
+arasında
+farklı
+olan
+bitlerin
+sayısı
+, 
+Hamming 
+mesafesidir
+(
+Hamming distance
+)
+.
+
+
+
+r
+= 2. Euclidean distance
+(
+L
+2
+norm) 
+
+r
+
+
+. “supremum” (
+L
+max
+norm, L
+
+norm) distance. 
+–
+Bu, 
+vektörlerin
+herhangi
+bir
+bileşeni
+arasındaki
+maksimum
+farktır
+
+
+
+Do not confuse 
+r
+with 
+n
+, i.e., all these distances are 
+defined for all numbers of dimensions.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Minkowski Distance
+
+
+Distance Matrix
+
+
+pointxyp102p220p331p451
+L1p1p2p3p4p10446p24024p34202p46420
+L2p1p2p3p4p102.8283.1625.099p22.82801.4143.162p33.1621.41402p45.0993.16220
+Lp1p2p3p4p10235p22013p33102p45320
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Common Properties of a Similarity
+
+
+
+Similarities, also have some well known 
+properties.
+1.
+s(p, q) = 1 
+(or maximum similarity) only if 
+p
+= q
+. 
+2.
+s(p, q) = s(q, p)
+for all 
+p
+and 
+q
+. (Symmetry)
+
+
+
+
+where 
+s(p, q)
+is the similarity between points (data 
+objects), 
+p
+and 
+q
+.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Similarity Between Binary Vectors
+
+
+
+Common situation is that objects, 
+p
+and 
+q
+, have only 
+binary attributes
+
+Compute similarities using the following quantities
+
+
+M
+01
+= the number of attributes where 
+p 
+was 0 and 
+q 
+was 1
+
+
+M
+10 
+= the number of attributes where 
+p 
+was 1 and 
+q 
+was 0
+
+
+M
+00
+= the number of attributes where 
+p 
+was 0 and 
+q 
+was 0
+
+
+M
+11
+= the number of attributes where 
+p 
+was 1 and 
+q 
+was 1
+
+
+
+Simple Matching and Jaccard Coefficients 
+
+
+SMC = number of matches / number of attributes 
+
+
+= (M
+11
++ M
+00
+) / (M
+01
++ M
+10
++ M
+11
++ M
+00
+)
+
+
+J = number of 11 matches / number of not
+-
+both
+-
+zero attributes values
+
+
+= (M
+11
+) / (M
+01
++ M
+10
++ M
+11
+) 
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+SMC versus Jaccard: Example
+
+
+p
+= 1 0 0 0 0 0 0 0 0 0 
+
+
+q
+= 0 0 0 0 0 0 1 0 0 1
+
+
+M
+01
+= 2 (the number of attributes where 
+p 
+was 0 and 
+q 
+was 1)
+
+
+M
+10
+= 1 (the number of attributes where 
+p 
+was 1 and 
+q 
+was 0)
+
+
+M
+00
+= 7 (the number of attributes where 
+p 
+was 0 and 
+q 
+was 0)
+
+
+M
+11
+= 0 (the number of attributes where 
+p 
+was 1 and 
+q 
+was 1)
+
+
+SMC = (M
+11
++ M
+00
+)/(M
+01
++ M
+10
++ M
+11
++ M
+00
+) = (0+7) / (2+1+0+7) = 0.7
+
+
+J = (M
+11
+) / (M
+01
++ M
+10
++ M
+11
+) = 0 / (2 + 1 + 0) = 0
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Cosine Similarity
+
+
+
+If
+d
+1
+and
+d
+2
+are
+two
+document
+vectors,
+then
+
+
+cos(
+d
+1
+,
+d
+2
+)
+=
+<
+d
+1
+,
+d
+2
+>
+/
+||
+d
+1
+||
+||
+d
+2
+||
+,
+
+
+where
+<
+d
+1
+,
+d
+2
+>
+indicates
+inner
+product
+or
+vector
+dot
+product
+of
+vectors,
+d
+1
+and
+d
+2
+,
+and
+||
+d
+||
+is
+the
+length
+of
+vector
+d
+.
+
+
+
+Example
+:
+
+
+d
+1
+=
+3
+2
+0
+5
+0
+0
+0
+2
+0
+0
+
+
+d
+2
+= 1 0 0 0 0 0 0 1 0 2
+
+
+<d
+1
+,
+d2>
+= 3*1 + 2*0 + 0*0 + 5*0 + 0*0 + 0*0 + 0*0 + 2*1 + 0*0 + 0*2 = 5
+
+
+|
+d
+1 
+|| = (3*3+2*2+0*0+5*5+0*0+0*0+0*0+2*2+0*0+0*0)
+0.5
+= (42) 
+0.5
+= 6.481
+
+
+||
+d
+2 
+|| = (1*1+0*0+0*0+0*0+0*0+0*0+0*0+1*1+0*0+2*2)
+0.5
+= (6) 
+0.5
+= 2.449
+
+
+cos(
+d
+1
+, 
+d
+2
+) = 0.3150
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Extended Jaccard Coefficient (Tanimoto)
+
+
+
+Variation of Jaccard for continuous or count 
+attributes
+–
+Reduces to Jaccard for binary attributes
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Correlation
+
+
+
+Korelasyon, nesneler arasındaki doğrusal ilişkiyi 
+ölçer
+
+Korelasyonu hesaplamak için, veri nesnelerini, p 
+ve q'yu standartlaştırıyoruz ve sonra 
+«dot 
+product» 
+alıyoruz
+
+
+)(/))((pstdpmeanppkk
+)(/))((qstdqmeanqqkk
+qpqpncorrelatio),(
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Correlation measures the linear relationship 
+between objects
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Visually Evaluating Correlation
+
+
+Scatter plots 
+showing the 
+similarity from 
+–
+1 to 1.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Drawback of Correlation
+
+
+
+x
+= (
+-
+3, 
+-
+2, 
+-
+1, 0, 1, 2, 3)
+
+y
+= (9, 4, 1, 0, 1, 4, 9)
+
+
+y
+i
+= 
+x
+i
+2
+
+
+
+mean(
+x
+) = 0, mean(
+y
+) = 4
+
+std
+(
+x
+) = 2.16, 
+std
+(
+y)
+= 3.74
+
+corr
+= (
+-
+3)(5)+(
+-
+2)(0)+(
+-
+1)(
+-
+3)+(0)(
+-
+4)+(1)(
+-
+3)+(2)(0)+3(5) / ( 6 * 2.16 * 3.74 )
+
+
+= 0
+
+
+If the 
+correlation
+is 
+0
+, then
+there is 
+no linear relationship
+between the 
+attributes of the two data objects
+. 
+However,
+non
+-
+linear 
+r
+elationships
+may still exist
+as in this example
+.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+General Approach for Combining Similarities
+
+
+
+Sometimes attributes are of many different 
+types, but an overall similarity is needed.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Using Weights to Combine Similarities
+
+
+
+May not want to treat all attributes the same.
+–
+Use weights w
+k
+which are between 0 and 1 and sum 
+to 1. 
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Density
+
+
+
+Belirli
+bir
+alanda
+veri
+nesnelerinin
+birbirine
+yakın
+olma
+derecesini
+ölçer
+
+Yoğunluk
+(
+density
+)
+kavramı
+yakınlık
+kavramı
+ile
+yakından
+ilgilidir
+.
+
+Yoğunluk
+kavramı
+tipik
+olarak
+kümeleme
+ve
+anormallik
+tespiti
+için
+kullanılır
+
+Examples:
+–
+Euclidean density
+
+Euclidean density = number of points per unit volume
+
+
+–
+Probability density
+
+Estimate what the distribution of the data looks like
+
+
+–
+Graph
+-
+based density
+
+Connectivity
+
+
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Euclidean Density: Grid
+-
+based Approach
+
+
+
+En basit yaklaşım, bölgeyi 
+belirli sayıda 
+eşit hacimli 
+dikdörtgen hücre
+lere 
+bölmek ve yoğunluğu hücrenin 
+içerdiği nokta sayısı olarak tanımlamaktır.
+
+
+Grid
+-
+based density.
+Counts for each cell.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Euclidean Density: Center
+-
+Based
+
+
+
+Öklid yoğunluğu, belirli bir yarıçapı içindeki 
+noktaların sayısıdır.
+
+
+Illustration of center
+-
+based density.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Data Mining: Exploring Data
+
+
+Lecture Notes for Chapter 3
+
+
+Introduction to Data Mining
+
+
+by
+
+
+Tan, Steinbach, Kumar
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+What is data exploration?
+
+
+
+«D
+ata exploration
+»
+temel motivasyonlar 
+:
+–
+Ön işleme veya analiz için 
+doğru aracı seçmeye yardımcı olma
+–
+İnsanların kalıpları
+/örüntüleri
+tanıma yeteneklerinden 
+yararlanma
+
+İnsanlar veri analizi araçları tarafından yakalanmayan 
+kalıpları tanıyabilir
+
+
+
+
+
+Related to the area of Exploratory Data Analysis (EDA)
+–
+Created by statistician John Tukey
+–
+Seminal book is Exploratory Data Analysis by Tukey
+–
+A nice online introduction can be found in Chapter 1 of the NIST 
+Engineering Statistics Handbook
+
+
+
+
+http://www.itl.nist.gov/div898/handbook/index.htm
+
+
+Özelliklerini daha iyi anlamak için veriler
+üzerinde
+ön araştırma
+yapma işi
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Techniques Used In Data Exploration 
+
+
+
+EDA'da, orijinal olarak Tukey tarafından 
+tanımlandığı gibi
+–
+Odak noktası görselleştirme
+(
+visualization
+)
+idi
+–
+Kümeleme ve anormallik tespiti keşif teknikleri 
+(
+explatory techniques
+) 
+olarak görüldü
+–
+Veri madenciliğinde, kümeleme ve anormallik tespiti 
+başlıca ilgi alanlarıdır ve sadece keşif amaçlı olarak 
+düşünülmez
+
+
+
+In our discussion of data exploration, we focus on
+–
+Summary statistics
+–
+Visualization
+–
+Online Analytical Processing (OLAP) 
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Iris Sample Data Set 
+
+
+
+Many of the exploratory data techniques are illustrated 
+with the Iris Plant data set.
+–
+Can be obtained from the UCI Machine Learning Repository 
+http://www.ics.uci.edu/~mlearn/MLRepository.html
+–
+From the statistician Douglas Fisher
+–
+Three flower types (classes):
+
+Setosa
+
+Virginica 
+
+Versicolour
+
+
+–
+Four (non
+-
+class) attributes
+
+Sepal width and length
+
+Petal width and length
+
+
+
+
+
+
+Virginica. Robert H. Mohlenbrock. USDA 
+NRCS. 1995. Northeast wetland flora: Field 
+office guide to plant species. Northeast National 
+Technical Center, Chester, PA. Courtesy of 
+USDA NRCS Wetland Science Institute. 
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Summary Statistics
+
+
+
+Özet istatistikler
+, 
+verilerin özelliklerini özetleyen
+sayılardır
+–
+Özet özellikler arasında sıklık
+(
+frequency
+)
+, konum
+(
+location
+)
+ve yayılma
+(
+spread
+)
+bulunur
+
+Examples: 
+location
+-
+mean
+spread
+-
+standard deviation
+
+
+–
+Özet istatistiklerin çoğu, veriler üzerinden 
+tek bir 
+geçişte
+(
+in a single pass through the data
+) 
+hesaplanabilir
+.
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Frequency and Mode
+
+
+
+Bir 
+öznitelik değerinin sıklığı
+, 
+değerin veri 
+kümesinde 
+var olma 
+yüzdesidir
+. 
+–
+Örneğin, "cinsiyet" 
+özniteliği
+ve temsili bir insan 
+popülasyonu verildiğinde, cinsiyet "kadın" yaklaşık
+%50 oranında ortaya çıkar.
+
+
+
+Bir özniteliğin modu
+(
+mode of an attribute 
+)
+en sık 
+görülen
+öznitelik değeridir
+
+Sıklık (
+frequency
+)
+ve 
+mod
+kavramları tipik olarak 
+kategorik verilerle 
+kullanılır
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Percentiles
+
+
+
+Sürekli veriler
+(
+continuous data
+)
+için, yüzdelik
+(
+percentile
+)
+kavramı daha kullanışlıdır.
+
+
+Sıralı veya sürekli bir 
+x 
+öznitel
+iği
+ve 0 ile 100 
+arasında bir
+p
+sayı
+sı
+verildiğinde, 
+p
+.
+y
+üzdelik
+dilim 
+
+
+, x'in 
+gözlemlenen değerlerinin 
+%
+p
+'sinden 
+küçük olaca
+k
+şekilde
+bir x değeridir.
+
+
+
+Örneğin, 50. yüzdelik dilim
+, x'in tüm 
+değerlerinin
+%50'sinin 
+ondan da
+ha küçük olacağı 
+değerdir.
+
+
+ 
+xp 
+
+x50%
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Measures of Location: Mean and Median
+
+
+
+Ortalama
+(
+mean
+)
+, bir nokta kümesinin konumunun en 
+yaygın ölçüsüdür. 
+
+Bununla birlikte, ortalama
+(
+mean
+)
+, 
+uç
+değerlere
+(
+outliers
+)
+karşı çok hassastır
+.
+
+Bu nedenle, 
+medyan
+(
+median
+)
+veya kırpılmış ortalama 
+da yaygın olarak kullanılır.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+•
+Trimmed
+mean
+(
+kırpılmış ortalama
+):
+o
+0 ile 100 arasında bir yüzde 
+p
+belirlenir, verilerin 
+üst
+ve 
+alt
+%(
+p / 2
+) 
+'si atılır 
+ve daha sonra 
+ortalama normal şekilde hesaplanır
+.
+o
+Örnek
+o
+{1,2,3,4,5,90} 
+değerler
+kümesini
+düşününüz.
+o
+What
+is 
+th
+e
+mean
+, 
+median
+and
+the
+trimmed 
+mean
+with 
+p
+=
+40
+%?
+
+
+o
+Answer
+o
+mean
+=
+17.5
+o
+median
+=
+3.5
+o
+trimmed mean
+(
+40
+%)=
+3.5
+
+
+
+
+
+
+Measures of Location: Mean and Median
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Measures of Spread: Range and Variance
+
+
+
+Range
+, maksimum ve minimum arasındaki 
+farktır.
+
+Varyans
+veya
+standart
+sapma
+, 
+bir
+nokta
+kümesinin
+yayılmasının
+(
+spread
+)
+en
+yaygın
+ölçüsüdür
+. 
+
+
+
+Fakat
+, 
+bu da 
+uç değerlere duyarlıdır
+, 
+bu nedenle 
+sıklıkla başka ölçüler 
+kullınılır
+. 
+
+
+ 
+absolute average deviation 
+(AAD)
+
+
+median
+absolute
+deviation
+(MAD)
+
+
+interquartile
+range
+(IQR)
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Visualization
+
+
+Görselleştirme
+(
+Visualization
+) 
+verilerin 
+karakteristiklerinin
+ve veri öğeleri veya öznitelikler 
+arasındaki 
+ilişkilerin
+analiz edilebilmesi veya 
+raporlanabilmesi için 
+verilerin görsel veya tablo 
+biçiminde bir biçime dönüştürülmesidir
+.
+
+
+
+Verilerin görselleştirilmesi, veri keşfi
+(
+data 
+exploration
+)
+için 
+en güçlü 
+ve 
+çekici
+tekniklerden 
+biridir.
+–
+İnsanlar
+görsel olarak sunulan
+büyük miktarda bilgiyi 
+analiz etme konusunda 
+gelişmiş bir beceriye
+sahiptir.
+–
+Genel kalıpları ve eğilimleri tespit edebilir
+–
+Uç
+değerleri ve alışılmadık kalıpları tespit edebilir
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Example: Sea Surface Temperature
+
+
+
+Aşağıda, Temmuz 1982 için Deniz Yüzeyi 
+Sıcaklığı (SST) gösterilmektedir.
+–
+On binlerce veri noktası tek bir şekilde özetlenmiştir 
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Representation
+
+
+
+Bilginin görsel bir formatla eşleştirilmesi
+
+Veri nesneleri
+, 
+öznitelikleri
+ve 
+veri nesneleri 
+arasındaki ilişkiler
+, 
+noktalar
+, 
+çizgiler
+, 
+şekiller
+ve 
+renkler
+gibi 
+grafiksel öğelere çevrilir
+.
+
+Örnek
+: 
+–
+Nesneler genellikle 
+noktalar
+olarak temsil edilir
+–
+Öznitelik değerleri
+, noktaların 
+konumu
+veya noktaların 
+özellikleri
+, ör
+n
+. 
+r
+enk
+, 
+boyut
+ve 
+şekil 
+olarak gösterilebilir.
+–
+Konum
+bilgisi 
+kullanılırsa, 
+noktaların ilişkileri
+, yani 
+gruplar oluşturup
+oluşturmadıkları veya 
+bir nokta
+nın
+uç
+değer
+olup olmadığı 
+kolayca algılanır
+.
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Arrangement
+
+
+
+Görsel öğelerin bir ekran için
+de
+yerleş
+imidir
+
+Verileri anlamanın ne kadar kolay olduğu 
+konusunda 
+büyük bir fark yaratabilir
+
+Örnek
+: 
+
+
+Satırların
+ve
+sütunların
+ilişkilerinin
+belirgin hale 
+getirildiği 
+altı
+tane
+ikili
+niteliğe
+(
+sütun
+) 
+sahip
+dokuz
+nesneden
+(
+satır
+) 
+oluşan
+bir
+tablo
+.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Selection
+
+
+
+Belirli nesnelerin ve niteliklerin ortadan 
+kaldırılması veya vurgulanmaması
+
+Seçim
+(
+selection
+)
+, 
+özniteliklerin bir alt kümesinin 
+seçilmesini 
+içerebilir
+–
+Boyut azaltma
+(
+Dimensionality reduction
+)
+, genellikle 
+boyutların sayısını iki veya üçe düşürmek için kullanılır
+–
+Alternatif olarak, 
+öz
+nitelik çiftleri
+(
+pairs of attributes
+)
+düşünülebilir
+
+
+
+Seçim, ayrıca nesnelerin bir alt kümesini (
+a subset 
+of objects
+) seçmeyi de içerebilir
+–
+Ekranın bir bölgesi yalnızca 
+belirli sayıda 
+nokta gösterebilir
+–
+Örnekleme yapılabilir
+, ancak seyrek alanlardaki noktala
+r
+koru
+n
+mak 
+iste
+nir
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Visualization Techniques: Histograms
+
+
+
+Histogram 
+–
+Genellikle
+tek bir değişkenin değerlerinin dağılımını 
+gösterir
+.
+–
+Değerler bölmelere
+(
+bins
+)
+dağıtılır
+ve her bölmedeki 
+nesnelerin 
+sayısı
+nın
+çubuk grafiği 
+göster
+ilir
+.
+–
+Her çubuğun yüksekliği nesnelerin sayısını gösterir
+–
+Histogramın şekli, bölme sayısına bağlıdır
+
+
+
+Example: Petal Width 
+(10 and 20 bins, respectively)
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Two
+-
+Dimensional Histograms
+
+
+
+İki özniteliğin değerlerinin ortak dağılımını
+(
+joint distribution
+)
+göster
+ir
+
+Example: petal width and petal length
+–
+What does this tell us? 
+
+
+
+
+Çiçeklerin çoğu 
+sadece 
+üç bölmeye
+düşüyor
+—
+köşegen boyunca 
+olanlar.
+
+
+Tek boyutlu dağılımlara bakarak 
+bunu görmek mümkün değil.
+
+
+İki boyutlu 
+histogramlar
+, 
+iki 
+özelliğin değerlerinin 
+birlikte nasıl oluştuğuna 
+ilişkin ilginç gerçekleri 
+keşfetmek için 
+kullanılabilirken
+, görsel 
+olarak daha karmaşıktır.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Pie Chart
+
+
+
+Pie Chart (
+Pasta Grafik
+)
+–
+histograma benzer, ancak 
+tipik olarak 
+nispeten az 
+sayıda değere sahip 
+kategorik özelliklerle
+kullanılır.
+–
+göreceli frekansı belirtmek için dairenin göreceli alanını 
+kullanır.
+–
+teknik yayınlarda daha az sıklıkla kullanılır çünkü göreceli 
+alanların boyutunun 
+değerlendirilmesi
+zor olabilir
+
+
+
+
+Her üç çiçek türünün de frekansı 
+(sıklığı) aynı
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Visualization Techniques: Box Plots
+
+
+
+Box Plots 
+–
+J. Tukey
+tarafından icat edilmiştir
+–
+Veri dağılımını göstermenin başka bir yolu
+–
+Aşağıdaki şekil bir kutu grafiğinin temel bölümünü göstermektedir
+
+
+
+
+outlier
+
+
+10
+th
+percentile
+
+
+25
+th
+percentile
+
+
+75
+th
+percentile
+
+
+50
+th
+percentile
+
+
+90
+th
+percentile
+
+
+kutunun içindeki çizgi 50. 
+persentil değerini gösterir
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Example of Box Plots 
+
+
+
+Öznitelikleri karşılaştırmak için kutu grafikleri kullanılabilir
+
+
+Box plot for Iris attributes
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Example of Box Plots 
+
+
+
+Kutu grafikl
+eri
+, 
+öz
+niteliklerin farklı nesne 
+sınıfları arasında nasıl değiştiğini
+karşılaştırmak 
+için de kullanılabilir.
+
+
+Box plots of attributes by Iris species
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Visualization Techniques: Scatter Plots
+
+
+
+Scatter plots 
+–
+Öznitelik
+lerin
+değerleri 
+konumu 
+belirler
+–
+En yaygın olan iki boyutlu dağılım
+(
+scatter
+)
+grafikleri, 
+ancak 
+üç boyutlu dağılım grafikleri 
+olabilir
+–
+Genellikle, 
+nesneleri temsil eden 
+belirteçlerin 
+(
+markers
+)
+boyutu
+, 
+şekli
+ve 
+rengi
+kullanılarak 
+ek öz
+nit
+elikler 
+görüntülenebilir.
+–
+Dağılım grafiği dizileri
+,
+birkaç öznitelik çiftinin 
+ilişkilerini kompakt bir şekilde özetleyebil
+mesi 
+açısından kullanışlıdır.
+
+Sonraki slayttaki örne
+k
+
+
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Scatter Plot Array of Iris Attributes
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Visualization Techniques: Contour Plots
+
+
+
+Bazı 
+üç boyutlu veriler 
+için, 
+iki öznitelik bir düzlemdeki bir 
+konumu belirtirken
+, üçüncüsü sıcaklık veya yükselti gibi 
+sürekli bir değere 
+sahiptir.
+
+Contour plots 
+–
+Uzamsal bir ızgarada 
+(
+spatial grid
+) 
+sürekli bir 
+öznitelik
+ölçüldüğünde kullanışlıdır
+.
+–
+Düzlemi benzer değerlere sahip bölgelere ayırırlar
+–
+düzlemi, üçüncü özelliğin (sıcaklık, yükse
+lti
+) değerlerinin 
+yaklaşık olarak aynı olduğu ayrı bölgelere ayırır
+–
+En yaygın örnek, arazi konumlarının yükse
+ltilerinin
+kontur
+haritalarıdır.
+–
+Ayrıca sıcaklık, yağış, hava basıncı vb. 
+g
+örüntül
+enebilir
+.
+
+Deniz Yüzeyi Sıcaklığına (SST) bir örnek sonraki slaytta 
+verilmiştir.
+
+
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Contour Plot Example: SST Dec, 1998
+
+
+Celsius
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Visualization Techniques: Matrix Plots
+
+
+
+Matrix plots 
+–
+Veri
+matrisinin
+her 
+gir
+disi
+görüntüdeki
+bir
+piksel
+ile
+ilişkilendirilerek
+bir
+veri
+matrisi
+bir
+görüntü
+olarak
+görselleştirilebilir
+.
+–
+nesneler 
+sınıfa göre sıralanır
+(Sınıf etiketleri biliniyorsa)
+
+böylece
+bir
+sınıfın
+tüm
+nesneleri
+bir
+arada
+olur
+
+
+–
+Tipik
+olarak
+, 
+bir
+özniteliğin
+grafiğe 
+hakim 
+olmasını
+önlemek
+için
+öznitelikler
+normalleştirilir
+
+Farklı
+özniteliklerin
+farklı
+aralıkları
+varsa
+öznitelikler
+genellikle
+sıfır
+ortalamaya
+(
+mean of zero 
+)
+ve
+1 
+standart
+sapmaya
+(
+standard deviation of 1
+)
+sahip
+olacak
+şekilde
+standartlaştırılır
+.
+
+
+–
+Benzerlik
+veya
+uzaklık
+matrislerinin
+grafikleri
+, 
+nesneler
+arasındaki
+ilişkileri
+görselleştirmek
+için
+de 
+yararlı
+olabilir
+.
+–
+Matris
+grafiklerinin
+örnekleri
+sonraki
+iki
+slaytta
+sunulmuştur
+.
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Visualization of the Iris Data Matrix
+
+
+standard
+
+
+deviation
+
+
+Sütunların ortalama 0 ve standart sapma 1 olacak şekilde 
+standardize edildiği 
+Iris data matrix 
+grafiği
+
+
+İlk 50 sıra 
+Setosa
+, sonraki 50 
+Versicolour
+ve son 50 
+Virginica
+türünden Iris 
+çiçeklerini temsil eder.
+
+
+Setosa çiçeklerinin taç yaprağı 
+(
+petal
+) genişliği ve uzunluğu 
+ortalamanın çok altındadır
+, 
+Versicolour çiçekleri ise 
+ortalama
+taç genişliği ve 
+uzunluğuna
+sahiptir. Virginica 
+çiçeklerinin taç yaprağı 
+genişliği ve uzunluğu 
+ortalamanın üzerinde
+.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Visualization of the Iris Correlation Matrix
+
+
+Plot of the 
+Iris correlation matrix
+.
+
+
+Bir dizi veri nesnesi için 
+yakınlık matrisinin 
+grafiğinde 
+yapı (
+structure
+) aramak da 
+yararlı olabilir.
+
+
+Yine, 
+benzerlik matrisinin 
+satırlarını ve sütunlarını
+(sınıf 
+etiketleri bilindiğinde), 
+bir 
+sınıftaki tüm nesnelerin bir 
+arada olması için 
+sıralamak 
+yararlıdır.
+
+
+Bu, 
+her bir sınıfın bağlılığını 
+ve diğer sınıflardan ayrılığının 
+görsel bir değerlendirmesine 
+izin verir.
+
+
+Her gruptaki çiçekler birbirine en çok benziyor
+, ancak 
+Versicolour ve Virginica Setosa'dan çok birbirine benziyor.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Visualization Techniques: Parallel Coordinates
+
+
+
+Paral
+el
+Koordinatlar
+–
+Yüksek boyutlu verilerin öznitelik değerlerini 
+çizmek
+için 
+kullanılır
+–
+Dikey eksenler kullanmak yerine bir dizi paralel eksen 
+kulla
+nılır
+–
+Her 
+nesnenin öznitelik değerleri
+, 
+karşılık gelen her 
+koordinat ekseninde bir nokta
+olarak çizilir ve 
+noktalar bir 
+çizgi ile bağlanır
+.
+–
+Böylece
+, her nesne bir çizgi olarak temsil edilir
+–
+Çoğu zaman, 
+belli
+bir nesne sınıfını temsil eden çizgiler
+, en 
+azından bazı öznitelikler için 
+birlikte gruplanır
+.
+–
+Özniteliklerin sıralanması, bu tür gruplamaları görmede 
+önemlidir
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Parallel Coordinates Plots for Iris Data
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Other Visualization Techniques
+
+
+
+Star Plots 
+–
+Paralel koordinatlara benzer yaklaşım, ancak
+eksenler 
+merkezi bir noktadan yayılır
+–
+Bu teknik, her özellik için bir eksen kullanır.
+–
+Tipik olarak, tüm öznitelik değerleri [0,1] aralığına eşlenir.
+–
+Bir nesnenin değerlerini birleştiren çizgi 
+bir 
+çokgendir
+
+
+
+
+Iris veri 
+kümesinin 150. 
+çiçeğinin yıldız 
+koordinatları 
+grafiği
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Star Plots for Iris Data
+
+
+Setosa
+
+
+Versicolour
+
+
+Virginica
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Other Visualization Techniques
+
+
+
+Chernoff Faces
+–
+Herman Chernoff tarafından oluşturulan yaklaşım
+–
+Bu yaklaşım, 
+her bir özelliği yüzün
+bir özelliğiyle 
+ilişkilendirir
+.
+–
+Her özelliğin değerleri, 
+karşılık gelen yüz 
+karakteristiğinin görünümünü belirler
+.
+–
+Her nesne 
+ayrı bir yüz 
+olur
+–
+İnsanın yüzleri ayırt etme yeteneğine 
+dayanır
+
+
+
+
+Iris veri 
+kümesinin 
+150. 
+çiçeğinin 
+Chernoff 
+yüzü
+
+
+Gözler arası genişlik 
+ve 
+ağız uzunluğu
+gibi yüzün 
+diğer 
+özelliklerine
+varsayılan değerler 
+verilmiştir.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Chernoff Faces for Iris Data
+
+
+Setosa
+
+
+Versicolour
+
+
+Virginica
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+OLAP
+
+
+
+On
+-
+Line Analytical Processing 
+(OLAP) ilişkisel 
+veritabanının babası
+olarak bilinen
+E
+dgar 
+F
+rank
+Codd tarafından önerildi.
+
+İlişkisel veritabanları 
+verileri tablolara koyarken
+, 
+OLAP çok boyutlu bir dizi 
+temsili
+kullanır
+.
+–
+Verilerin bu tarz temsil edilmesi daha önce istatistik ve 
+diğer alanlarda olmuştur.
+
+
+
+Böyle bir veri 
+temsiliyle
+daha kolay 
+hale gelen
+bir 
+dizi 
+veri analizi 
+ve 
+veri 
+keşfi
+işlemi vardır.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Creating a Multidimensional Array
+
+
+
+Tablo verilerinin çok boyutlu bir diziye
+dönüştürülmesinde iki temel adım.
+–
+İlk olarak, 
+hangi özniteliklerin 
+boyutlar
+olacağını
+ve 
+hangi 
+özniteliğin 
+değerleri çok boyutlu dizide girişler
+(
+entry
+)
+olarak görünen
+hedef
+öznitelik
+(
+target attribute
+)
+olacağını
+belirleyin.
+
+Boyut
+olarak kullanılan öznitelikl
+er
+ayrı
+k
+değerler
+e
+sahip 
+olmalıdır
+
+Hedef değer 
+tipik olarak bir sayı veya sürekli bir değerdi
+r, 
+örneğin bir öğenin maliyeti
+
+
+–
+İkinci olarak, (hedef özniteliğin) 
+değerlerini 
+veya o girdiye 
+karşılık gelen öznitelik değerlerine sahip tüm nesnelerin 
+sayısını toplayarak
+çok boyutlu dizideki her girdinin 
+değerini
+bulun.
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Example: Iris data
+
+
+
+Özn
+iteliklerin
+(
+petal length
+, 
+petal width
+,
+and
+species
+type
+)
+çok
+boyutlu
+bir
+diziye
+nasıl
+dönüştürülebileceği
+:
+–
+İlk 
+olarak
+, 
+petal width 
+ve
+petal length
+’i
+kategorik
+değerlere
+sahip
+olacak
+şekilde
+ayrıklaştırırız
+: 
+low
+, 
+medium
+, 
+ve
+high
+–
+Aşağıdaki
+tabloyu
+elde ederiz
+-
+count 
+özniteliğine
+dikkat
+edin
+
+
+
+
+
+Category boundaries for 
+petal width
+
+low
+→ [0, 0.75)
+
+medium 
+→ [0.75,1.75)
+
+high
+→[1.75, 
+∞
+)
+
+
+
+Category boundaries for 
+petal length
+
+low
+→ [0, 2.5)
+
+medium
+→ [2.5, 5)
+
+high
+→ [5, 
+∞
+)
+
+
+
+
+Discretization
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Example: Iris data (continued)
+
+
+
+Petal
+width
+, 
+petal 
+length 
+ve
+species type
+’
+ın
+her 
+benzersiz
+demeti
+(
+tuple
+)
+, 
+dizinin
+(
+array
+)
+bir
+öğesini
+tanımlar
+.
+
+Bu 
+elemana
+karşılık
+gelen
+sayı
+değeri
+atanır
+.
+
+Yandaki ş
+ekil
+sonucu
+göstermektedir
+.
+
+Belirtilmemiş
+tüm
+
+
+demetler
+0'dır.
+
+
+(
+All non
+-
+specified 
+tuples are 0.
+)
+
+
+A multidimensional data representation for the Iris data set
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Example: Iris data (continued)
+
+
+
+Çok boyutlu dizinin dilimleri aşağıdaki çapraz 
+tablolarla
+(
+cross
+-
+tabulations
+)
+gösterilmiştir
+.
+
+Bu tablolar bize ne anlatıyor?
+
+
+Cross
+-
+tabulation of flowers according
+
+
+to 
+petal length
+and 
+width
+for flowers of the
+
+
+Setosa species
+.
+
+
+Cross
+-
+tabulation of flowers according
+
+
+to 
+petal length
+and 
+width
+for flowers of
+
+
+the 
+Virginica species
+.
+
+
+Cross
+-
+tabulation of flowers 
+according 
+to 
+petal length
+and 
+width
+for flowers of the
+Versicolour 
+species
+.
+
+
+Bu tablolar, her Iris 
+türünün petal 
+uzunluğu ve genişliğinin farklı 
+bir değer kombinasyonu ile 
+karakterize olduğunu 
+göstermektedir.
+
+
+Setosa
+çiçekleri 
+düşük genişlik 
+ve 
+uzunluktadır
+, 
+Versicolour
+çiçekleri 
+orta genişlik 
+ve 
+uzunluktadır
+ve 
+Virginica
+çiçekleri 
+yüksek genişlik 
+ve 
+uzunluktadır
+.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+OLAP Operations: Data Cube
+
+
+
+Bir
+OLAP'ın
+temel
+işlemi
+bir
+veri
+küpünün
+(
+data 
+cube
+)
+oluşmasıdır
+
+Veri
+küpü
+, 
+verilerin
+tüm
+olası
+toplamlarla
+(
+aggregates
+)
+birlikte
+çok
+boyutlu
+bir
+temsilidir
+.
+
+Olası
+tüm
+toplam
+l
+ar
+derken
+, 
+boyutların
+uygun
+bir
+alt 
+kümesini
+seçerek
+ve
+kalan
+tüm
+boyutların
+toplamını
+alarak
+sonuçlanan
+toplamaları
+kastediyoruz
+.
+
+Örneğin
+, Iris 
+verilerinin
+species
+type
+boyutunu
+seçersek
+ve
+diğer
+tüm
+boyutların
+toplamını
+alırsak
+, 
+sonuç
+, her 
+biri
+her 
+bir
+türün
+çiçek
+sayısını
+veren
+üç
+entry’li
+tek
+boyutlu
+bir
+girdi
+olacaktır
+.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+
+Çeşitli tarihlerde bir dizi şirket mağazasında 
+ürünlerin satışını kaydeden bir veri kümesi 
+düşünün.
+
+
+Data Cube Example
+
+
+The 
+dimensions
+of the 
+multidimensional 
+representation
+are the 
+product ID
+, 
+location
+, 
+and 
+date
+attributes, 
+while the 
+target
+attribute is the 
+revenue
+.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+
+Bu veriler 3 boyutlu bir dizi olarak gösterilebilir
+
+
+Data Cube Example
+
+
+Multidimensional data representation for sales data.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+
+There are 3 two
+-
+dimensional
+aggregates
+,
+3 one
+-
+dimensional aggregates,
+and 1 zero
+-
+dimensional 
+aggregate (the overall total)
+
+
+Data Cube Example
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+
+Tablo, çeşitli tarih (
+date
+) ve ürün (
+product
+) 
+kombinasyonları için 
+tüm konumların toplamının 
+(summing over all locations)
+sonucunu gösterir.
+
+
+Data Cube Example (continued)
+
+
+Basit olması için, 
+tüm 
+tarihlerin bir yıl içinde 
+olduğunu varsayalım
+. Yılda 
+365 gün ve 1000 ürün varsa, 
+Tablo 3.12'de her ürün
+-
+veri 
+çifti için bir tane olmak üzere 
+365.000 girdi (toplam) 
+vardır.
+
+
+We
+could
+also specify 
+
+
+•
+the store 
+location
+and 
+date
+and 
+sum over products
+, or 
+•
+the
+location
+and 
+product
+and 
+sum over all dates
+.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Data Cube
+
+
+
+Verilerin çok boyutlu temsili (
+multidimensional 
+representation 
+), tüm olası toplamlarla (aggregates) 
+birlikte 
+veri küpü (
+data cube
+) 
+olarak bilinir.
+
+İsmine rağmen, her boyutun büyüklüğünün 
+(öznitelik değerlerinin sayısı) 
+eşit olması 
+gerekmez
+.
+
+Ayrıca, bir veri küpünün üçten fazla veya daha az 
+boyutu olabilir.
+
+Daha da önemlisi, bir veri küpü, istatistiksel 
+terminolojide çapraz tablo (
+cross
+-
+tabulation
+) 
+olarak bilinen şeyin bir genellemesidir
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+
+Aşağıdaki şekil
+deki
+tablo, iki boyutlu toplamalardan
+(
+two 
+dimensional aggregates
+)
+birini, iki 
+tane 
+tek boyutlu 
+toplamayı
+(
+one
+-
+dimensional aggregates
+)
+ve genel toplamı
+(
+overall total
+)
+gösterir.
+
+
+Data Cube Example (continued)
+
+
+These totals are the 
+result of 
+further summing over 
+either 
+dates 
+or 
+products
+.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+OLAP Operations: Slicing and Dicing
+
+
+
+Slicing
+, 
+bir veya daha fazla boyut için belirli bir 
+değer belirterek 
+tüm çok boyutlu diziden bir 
+hücre grubu seçmektir. 
+
+Dicing
+, 
+bir öznitelik değerleri aralığı belirleyerek
+bir hücre alt kümesini seçmeyi 
+içerir.
+–
+Bu, 
+tüm diziden bir alt dizi
+tanımlamaya eşdeğerdir.
+
+
+
+Uygulamada, her iki işleme de bazı boyutlarda 
+birleştirme
+(
+aggregation
+)
+eşlik edebilir.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+Slicing 
+operation
+
+
+Slicing
+
+
+Slicing
+
+
+Slicing
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+OLAP Operations: Roll
+-
+up and Drill
+-
+down
+
+
+
+Öznitelik değerleri genellikle 
+hiyerarşik bir yapıya 
+sahiptir.
+–
+Her tarih
+;
+bir yıl, ay ve hafta ile ilişkilendirilir.
+–
+Bir konum
+;
+kıta, ülke, eyalet (il vb.) 
+v
+e şehir ile ilişkilidir.
+–
+Ürünler
+;
+giyim, elektronik ve mobilya gibi çeşitli kategorilere 
+ayrılabilir.
+
+
+
+Bu kategorilerin genellikle iç içe geçtiğini ve bir ağaç
+(
+tree
+)
+veya kafes
+(
+lattice
+) 
+oluşturduğunu unutmayın.
+–
+Bir yıl
+,
+gün
+leri
+içeren ayları içerir
+–
+Bir ülke
+,
+eyalet
+leri içerir ve onlar da şehirleri içerir.
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+8/05/2005 
+‹#›
+
+
+OLAP Operations: Roll
+-
+up and Drill
+-
+down
+
+
+
+Bu hiyerarşik yapı, 
+roll
+-
+up
+(yuvarlama)
+ve 
+drill
+-
+down 
+(
+detaya inme
+)
+işlemlerine 
+imkan tanır
+.
+–
+Satış verileri için, satışları 
+bir aydaki tüm tarihler
+dekileri
+toplaya
+rak 
+birleştirebiliriz
+.
+(
+roll up
+) 
+–
+Tersine, 
+zaman boyutunun aylara bölündüğü verilerin bir 
+görünümü verildiğinde
+, 
+aylık satış toplamlarını detay
+ına
+in
+erek
+günlük satış toplamlarına
+geçebiliriz
+.
+(drill down) 
+
+Elbette 
+bu
+, 
+temel satış verilerinin günlük ayrıntı düzeyinde (
+daily 
+granularity
+) mevcut olmasını
+gerektirir
+.
+
+
+–
+Aynı şekilde, konum
+(location)
+veya ürün 
+numarası (product ID)
+özelliklerinde 
+roll up
+veya
+drill
+-
+down
+yapılabilir.
+
+
+
+
+
+Data Mining 
+Classification: Basic 
+Concepts and 
+Techniques
+, 
+Decision
+Trees
+
+
+Lecture Notes for Chapter 
+4
+
+
+Introduction to Data Mining, 2
+nd
+Edition
+
+
+by
+
+
+Tan, Steinbach, Karpatne, Kumar
+
+
+
+Classification: Definition
+
+
+
+Bir
+kayıt
+koleksiyonu
+verildiğinde
+(
+training 
+set
+)
+–
+Her 
+kayıt
+bir
+çok
+-
+öğeli
+bir veri grubu 
+(
+x
+,
+y
+)
+ile
+karakterize
+edilir
+, 
+burada
+x 
+öznitelik
+kümesidir
+ve
+y
+sınıf
+etiketidir
+.
+
+x
+: 
+öznitelik (
+attribute
+)
+, 
+öngösterge
+(
+predictor
+)
+, 
+bağımsız 
+değişken (
+independent variable
+)
+, 
+input
+
+y
+: 
+sınıf (
+class
+)
+, response, 
+bağımlı 
+değişken 
+(
+dependent 
+variable
+)
+, 
+output
+
+
+
+
+
+Görev
+:
+–
+Her 
+bir
+öz
+nit
+elik
+kümesi
+x 
+'
+i
+önceden
+tanımlanmış
+sınıf
+etiketlerinden
+(
+y
+)
+biri
+ne
+eşleyen
+bir
+model 
+öğrenmek
+
+
+
+
+
+Classification: 
+Descriptive Modeling
+
+
+Bir sınıflandırma modeli, farklı sınıflardan nesneler arasında ayrım yapmak için 
+açıklayıcı 
+bir araç
+görevi görebilir.
+
+
+(Omurgalılar veri seti)
+
+
+
+Classification: 
+Predictive Modeling
+
+
+Predictive Modeling
+(Öngörücü modelleme)
+Bir sınıflandırma modeli, 
+bilinmeyen kayıtların sınıf etiketini tahmin etmek için 
+de kullanılabilir. Şekil 4.2'de 
+gösterildiği gibi, bir sınıflandırma modeli, bilinmeyen bir kaydın öznitelik 
+kümesiyle sunulduğunda otomatik olarak bir sınıf etiketi atayan bir kara kutu 
+(
+black box
+) olarak değerlendirilebilir.
+
+
+
+Examples of Classification Task
+
+
+Task
+
+
+Attribute set, 
+x
+
+
+Class label, 
+y
+
+
+Categorizing 
+email 
+messages
+
+
+Features extracted from 
+email message header 
+and content
+
+
+spam or non
+-
+spam
+
+
+Identifying 
+tumor cells
+
+
+Features extracted from 
+MRI scans
+
+
+malignant or benign 
+cells
+
+
+Cataloging 
+galaxies
+
+
+Features extracted from 
+telescope images
+
+
+Elliptical, spiral, or 
+irregular
+-
+shaped 
+galaxies
+
+
+
+
+
+General Approach for Building 
+Classification Model
+
+
+Apply 
+ModelInductionDeduction
+Learn 
+ModelModel
+Tid Attrib1 Attrib2 Attrib3 Class 
+1 Yes Large 125K No 
+2 No Medium 100K No 
+3 No Small 70K No 
+4 Yes Medium 120K No 
+5 No Large 95K Yes 
+6 No Medium 60K No 
+7 Yes Large 220K No 
+8 No Small 85K Yes 
+9 No Medium 75K No 
+10 No Small 90K Yes 
+10 
+Tid Attrib1 Attrib2 Attrib3 Class 
+11 No Small 55K ? 
+12 Yes Medium 80K ? 
+13 Yes Large 110K ? 
+14 No Small 95K ? 
+15 No Large 67K ? 
+10 
+Test SetLearningalgorithmTraining Set
+Classification Techniques
+
+
+
+Base Classifiers
+–
+Decision Tree based Methods
+–
+Rule
+-
+based Methods
+–
+Nearest
+-
+neighbor
+–
+Neural Networks
+–
+Deep Learning
+–
+Naïve Bayes and Bayesian Belief Networks
+–
+Support Vector Machines
+
+
+
+Ensemble Classifiers
+–
+Boosting, Bagging, Random Forests
+
+
+
+
+
+Decision Tree Induction
+: 
+How a Decision Tree Works
+
+
+
+Ağacın üç tür düğümü vardır:
+–
+Giren kenarı olmayan (
+no incoming edges
+) ve sıfır 
+veya daha fazla çıkan kenarı olan 
+kök düğüm 
+(
+root node 
+)
+–
+İç düğüm 
+(
+Internal nodes
+), 
+Her biri tam olarak bir 
+giren kenara (
+one incoming edge 
+) ve iki veya 
+daha fazla çıkan kenara (
+two
+or more outgoing 
+edges
+) sahip olan iç düğümler.
+–
+Yaprak veya uç düğümler
+(
+Leaf 
+or 
+terminal 
+nodes
+)
+, her biri tam olarak bir 
+giren
+kenara
+(
+one 
+incoming edge
+)
+sahiptir ve çık
+an
+kenarı yoktur
+(
+no outgoing edges
+)
+.
+
+
+
+
+
+Decision Tree Induction
+: 
+How a Decision Tree Works
+
+
+
+Bir karar ağacında, her 
+yaprak düğüme
+bir 
+sınıf 
+etiketi
+atanır.
+
+Kök ve diğer 
+iç
+düğümleri içeren 
+uç
+-
+birim
+olmayan düğümler
+(
+nonterminal
+nodes
+)
+, farklı 
+özelliklere sahip kayıtları ayırmak için 
+öznitelik 
+test koşullarını
+(
+attribute test conditions
+)
+içerir.
+–
+Örneğin, Şekil 4.4'te gösterilen kök düğüm, 
+sıcakkanlıları
+(
+warm
+-
+blooded
+)
+soğukkanlı
+(
+cold
+-
+blooded
+)
+omurgalılardan ayırmak için 
+Body
+Temperature
+özniteliğini
+kullanır.
+
+
+
+
+
+Decision Tree Induction
+: 
+How a Decision Tree Works
+
+
+Tüm 
+soğukkanlı 
+omurgalılar
+non
+-
+mammals
+olduğu 
+için
+, kök 
+düğümün sağ çocuğu 
+olarak 
+Non
+-
+mammals
+
+
+etiketli bir yaprak düğümü 
+oluşturulur
+.
+
+
+Bir karar ağacı 
+oluşturulduktan sonra, 
+bir 
+test kaydının 
+sınıflandırılması
+kolaydır. 
+Kök düğümden başlayarak
+, 
+test koşulunu kayda 
+uygularız 
+ve testin 
+sonucuna göre uygun dalı 
+takip ederiz.
+
+
+
+Decision Tree Induction
+: 
+How a Decision Tree Works
+
+
+
+Example of a Decision Tree
+
+
+ID 
+Home 
+Owner 
+Marital 
+Status 
+Annual 
+Income 
+Defaulted 
+Borrower 
+1 Yes Single 125K No 
+2 No Married 100K No 
+3 No Single 70K No 
+4 Yes Married 120K No 
+5 No Divorced 95K Yes 
+6 No Married 60K No 
+7 Yes Divorced 220K No 
+8 No Single 85K Yes 
+9 No Married 75K No 
+10 No Single 90K Yes 
+10 
+categorical
+
+
+categorical
+
+
+continuous
+
+
+class
+
+
+Home 
+Owner
+
+
+MarSt
+
+
+Income
+
+
+YES
+
+
+NO
+
+
+NO
+
+
+NO
+
+
+Yes
+
+
+No
+
+
+Married
+
+
+Single, Divorced
+
+
+< 80K
+
+
+> 80K
+
+
+Splitting Attributes
+
+
+Training Data
+
+
+Model: Decision Tree
+
+
+
+Another Example of Decision Tree
+
+
+categorical
+
+
+categorical
+
+
+continuous
+
+
+class
+
+
+MarSt
+
+
+Home 
+Owner
+
+
+Income
+
+
+YES
+
+
+NO
+
+
+NO
+
+
+NO
+
+
+Yes
+
+
+No
+
+
+Married
+
+
+Single, 
+Divorced
+
+
+< 80K
+
+
+> 80K
+
+
+Aynı verilere uyan birden fazla ağaç 
+olabilir!
+
+
+
+Apply Model to Test Data
+
+
+Home 
+Owner
+
+
+MarSt
+
+
+Income
+
+
+YES
+
+
+NO
+
+
+NO
+
+
+NO
+
+
+Yes
+
+
+No
+
+
+Married
+
+
+Single, Divorced
+
+
+< 80K
+
+
+> 80K
+
+
+Home 
+Owner 
+Marital 
+Status 
+Annual 
+Income 
+Defaulted 
+Borrower 
+No Married 80K ? 
+10 
+Test Data
+
+
+Start from the root of tree.
+
+
+
+Apply Model to Test Data
+
+
+MarSt
+
+
+Income
+
+
+YES
+
+
+NO
+
+
+NO
+
+
+NO
+
+
+Yes
+
+
+No
+
+
+Married
+
+
+Single, Divorced
+
+
+< 80K
+
+
+> 80K
+
+
+Home 
+Owner 
+Marital 
+Status 
+Annual 
+Income 
+Defaulted 
+Borrower 
+No Married 80K ? 
+10 
+Test Data
+
+
+Home 
+Owner
+
+
+
+Apply Model to Test Data
+
+
+MarSt
+
+
+Income
+
+
+YES
+
+
+NO
+
+
+NO
+
+
+NO
+
+
+Yes
+
+
+No
+
+
+Married
+
+
+Single, Divorced
+
+
+< 80K
+
+
+> 80K
+
+
+Home 
+Owner 
+Marital 
+Status 
+Annual 
+Income 
+Defaulted 
+Borrower 
+No Married 80K ? 
+10 
+Test Data
+
+
+Home 
+Owner
+
+
+
+Apply Model to Test Data
+
+
+MarSt
+
+
+Income
+
+
+YES
+
+
+NO
+
+
+NO
+
+
+NO
+
+
+Yes
+
+
+No
+
+
+Married
+
+
+Single, Divorced
+
+
+< 80K
+
+
+> 80K
+
+
+Home 
+Owner 
+Marital 
+Status 
+Annual 
+Income 
+Defaulted 
+Borrower 
+No Married 80K ? 
+10 
+Test Data
+
+
+Home 
+Owner
+
+
+
+Apply Model to Test Data
+
+
+MarSt
+
+
+Income
+
+
+YES
+
+
+NO
+
+
+NO
+
+
+NO
+
+
+Yes
+
+
+No
+
+
+Married 
+
+
+Single, Divorced
+
+
+< 80K
+
+
+> 80K
+
+
+Home 
+Owner 
+Marital 
+Status 
+Annual 
+Income 
+Defaulted 
+Borrower 
+No Married 80K ? 
+10 
+Test Data
+
+
+Home 
+Owner
+
+
+
+Apply Model to Test Data
+
+
+MarSt
+
+
+Income
+
+
+YES
+
+
+NO
+
+
+NO
+
+
+NO
+
+
+Yes
+
+
+No
+
+
+Married 
+
+
+Single, Divorced
+
+
+< 80K
+
+
+> 80K
+
+
+Home 
+Owner 
+Marital 
+Status 
+Annual 
+Income 
+Defaulted 
+Borrower 
+No Married 80K ? 
+10 
+Test Data
+
+
+Assign Defaulted to 
+“No”
+
+
+Home 
+Owner
+
+
+
+Decision Tree Classification Task
+
+
+Apply 
+ModelInductionDeduction
+Learn 
+ModelModel
+Tid Attrib1 Attrib2 Attrib3 Class 
+1 Yes Large 125K No 
+2 No Medium 100K No 
+3 No Small 70K No 
+4 Yes Medium 120K No 
+5 No Large 95K Yes 
+6 No Medium 60K No 
+7 Yes Large 220K No 
+8 No Small 85K Yes 
+9 No Medium 75K No 
+10 No Small 90K Yes 
+10 
+Tid Attrib1 Attrib2 Attrib3 Class 
+11 No Small 55K ? 
+12 Yes Medium 80K ? 
+13 Yes Large 110K ? 
+14 No Small 95K ? 
+15 No Large 67K ? 
+10 
+Test SetTreeInductionalgorithmTraining SetDecision 
+Tree
+
+
+
+How to Build a Decision Tree
+
+
+
+Prensipte, belirli bir özellik kümesinden oluşturulabilen 
+üstel olarak çok sayıda karar ağacı 
+vardır.
+
+Ağaçların bazıları diğerlerinden daha doğru olsa da, 
+en 
+uygun ağacı bulmak
+, 
+arama uzayının üstel boyutu 
+nedeniyle
+hesaplama açısından mümkün değildir
+.
+
+Bununla birlikte, 
+verimli algoritmalar 
+makul bir süre 
+içinde
+(optimal olmasa da) makul ölçüde doğru bir karar 
+ağacı oluşturmak için geliştirilmiştir.
+
+Bu algoritmalar genellikle 
+verileri bölümlemek için 
+hangi 
+özniteliğin 
+kullanılacağına dair bir dizi yerel olarak 
+optimum kararlar alarak bir karar ağacı oluşturan açgözlü 
+bir strateji (
+greedy strategy
+) kullanır.
+
+
+
+Decision Tree Induction
+
+
+
+Many Algorithms:
+–
+Hunt’s Algorithm (one of the earliest)
+–
+CART
+–
+ID3, C4.5
+–
+SLIQ,SPRINT
+
+
+
+
+
+General Structure of Hunt’s Algorithm
+
+
+
+Hunt’ın algoritmasında, eğitim kayıtlarını 
+ardışık olarak daha saf alt kümelere (
+purer 
+subsets
+) bölerek yinelemeli bir şekilde (
+in a 
+recursive fashion
+) bir karar ağacı büyütülür.
+–
+D
+t
+, 
+t
+düğümü ile ilişkili eğitim kayıtları 
+kümesi olsun ve 
+–
+y 
+= 
+{
+y
+1
+, y
+2
+, . . . , y
+C 
+} 
+sınıf etiketleri 
+olsun
+. 
+Aşağıda, Hunt algoritmasının yinelemeli bir 
+tanımı bulunmaktadır.
+
+
+
+
+
+General Structure of Hunt’s Algorithm
+
+
+l
+D
+t
+, 
+t 
+düğümüne
+ulaşan
+eğitim
+kayıtları
+kümesi
+olsun
+l
+Gene
+l
+Prosedür
+:
+–
+Eğer 
+D
+t
+, 
+aynı sınıfa
+(
+y
+t
+) ait 
+kayıtları 
+içeriyorsa 
+t, 
+y
+t
+olarak 
+etiketlenmiş bir 
+yaprak 
+düğümdür 
+(
+leaf 
+node
+)
+.
+–
+Eğer 
+D
+t
+birden
+fazla
+sınıfa
+ait
+kayıtlar
+içeriyorsa
+, 
+verileri
+daha
+küçük
+alt 
+kümelere
+(
+oluşturulan
+alt 
+düğümler
+-
+child
+nodes
+) 
+bölmek
+için
+bir
+öznitelik
+testi
+kullanın
+. 
+Prosedürü
+her alt 
+kümeye
+yinelemeli
+olarak
+uygulayın
+.
+
+
+
+
+D
+t
+
+
+?
+
+
+
+Hunt’s Algorithm
+
+
+(a)(b)
+(c)
+Defaulted = NoHomeOwnerYesNoDefaulted = NoDefaulted = NoYesNoMaritalStatusSingle,
+DivorcedMarried(d)
+YesNoMaritalStatusSingle,
+DivorcedMarriedAnnualIncome< 80K>= 80KHomeOwnerDefaulted = NoDefaulted = NoDefaulted = YesHomeOwnerDefaulted = NoDefaulted = NoDefaulted = NoDefaulted = Yes(3,0)
+
+
+(4,3)
+
+
+(3,0)
+
+
+(1,3)
+
+
+(3,0)
+
+
+(3,0)
+
+
+(1,0)
+
+
+(0,3)
+
+
+(3,0)
+
+
+(7,3)
+
+
+ 
+ID 
+Home 
+Owner 
+Marital 
+Status 
+Annual 
+Income 
+Defaulted 
+Borrower 
+1 Yes Single 125K No 
+2 No Married 100K No 
+3 No Single 70K No 
+4 Yes Married 120K No 
+5 No Divorced 95K Yes 
+6 No Married 60K No 
+7 Yes Divorced 220K No 
+8 No Single 85K Yes 
+9 No Married 75K No 
+10 No Single 90K Yes 
+10 
+
+Hunt’s Algorithm
+
+
+(3,0)
+
+
+(4,3)
+
+
+(3,0)
+
+
+(1,3)
+
+
+(3,0)
+
+
+(3,0)
+
+
+(1,0)
+
+
+(0,3)
+
+
+(3,0)
+
+
+(7,3)
+
+
+
+Hunt’s Algorithm
+
+
+(3,0)
+
+
+(4,3)
+
+
+(3,0)
+
+
+(1,3)
+
+
+(3,0)
+
+
+(3,0)
+
+
+(1,0)
+
+
+(0,3)
+
+
+(3,0)
+
+
+(7,3)
+
+
+
+Hunt’s Algorithm
+
+
+(3,0)
+
+
+(4,3)
+
+
+(3,0)
+
+
+(1,3)
+
+
+(3,0)
+
+
+(3,0)
+
+
+(1,0)
+
+
+(0,3)
+
+
+(3,0)
+
+
+(7,3)
+
+
+
+Design Issues of Decision Tree Induction
+
+
+l
+Eğitim
+dataları/
+kayıtları
+nasıl
+bölünmeli
+? 
+
+öznitelik
+türlerine
+bağlı
+olarak
+
+
+–
+Bir
+test 
+koşulunun
+iyiliğini
+(
+goodness
+)
+değerlendirmek
+için
+ölçü
+t
+
+
+l
+Bölme
+prosedürü
+(
+splitting procedure
+)
+nasıl
+dur
+durul
+malı
+?
+–
+Tüm
+kayıtlar
+aynı
+sınıfa
+aitse
+veya
+aynı
+öznitelik
+değerlerine
+sahipse
+bölmeyi
+durdurun
+–
+Erken
+sonlandırma
+(e
+arly
+termination
+)
+
+
+
+
+
+Methods for Expressing Test Conditions
+
+
+l
+Depends on attribute types
+–
+Binary
+–
+Nominal
+–
+Ordinal
+–
+Continuous
+
+
+l
+Depends on number of ways to split
+–
+2
+-
+way split
+–
+Multi
+-
+way split
+
+
+
+
+
+Test Condition for Nominal Attributes
+
+
+
+Multi
+-
+way split:
+–
+Farklı
+değerler
+in 
+(
+distinct
+values
+) sayısı
+kadar
+bölüm
+kullanı
+r
+
+
+
+
+
+Binary split:
+–
+Değerleri
+iki
+alt 
+gruba
+ayırır
+
+
+
+
+MaritalStatusSingleDivorcedMarried
+{Single}{Married,
+Divorced}
+MaritalStatus{Married}{Single,
+Divorced}
+MaritalStatusOROR{Single,
+Married}
+MaritalStatus{Divorced}
+Test Condition for Ordinal Attributes
+
+
+l
+Multi
+-
+way split:
+–
+Farklı
+değerler
+in 
+(
+distinct
+values
+) sayısı
+kadar
+bölüm
+kullanı
+r
+
+
+l
+Binary split:
+–
+Değerleri
+iki
+alt 
+gruba
+ayırır
+–
+Öznitelik
+değerleri
+arasında
+sıra
+özelliğini
+(
+order
+property
+) 
+kor
+unur
+
+
+
+
+LargeShirtSizeMediumExtra LargeSmall
+{Medium, Large,
+Extra Large}
+ShirtSize{Small}{Large,
+Extra Large}
+ShirtSize{Small,
+Medium}
+{Medium,
+Extra Large}
+ShirtSize{Small,
+Large}
+Bu gruplama, 
+sıra
+özelliğini 
+ihlal ediyor
+
+
+
+Test Condition for Continuous Attributes
+
+
+AnnualIncome> 80K?
+YesNoAnnualIncome?
+(i) Binary split(ii) Multi-way split< 10K[10K,25K)[25K,50K)[50K,80K)
+> 80K
+Splitting Based on Continuous Attributes
+
+
+
+Farklı şekillerde ele alınabilir
+–
+Sıralı bir kategorik öznitelik
+(
+ordinal categorical attribute
+)
+oluşturmak için ayrıklaştırma
+(
+Discretization
+)
+
+
+
+
+Aralıklar
+(
+ranges
+)
+, eşit aralıklı kümeleme, eşit sıklıkta kümeleme 
+(yüzdelikler) veya kümeleme ile bulunabilir.
+
+
+
+Static 
+–
+discretize once at the beginning
+
+Dynamic 
+–
+repeat at each node
+
+
+–
+Binary Decision
+: (A < v) or (A 
+
+v)
+
+olası tüm 
+bölümlemeleri
+düşünüp
+en iyi kesimi bulur
+
+daha yoğun işlem gerektirebilir
+
+
+
+
+
+
+
+How to determine the Best Split
+
+
+GenderC0: 6C1: 4C0: 4C1: 6C0: 1C1: 3C0: 8C1: 0C0: 1C1: 7CarTypeC0: 1C1: 0C0: 1C1: 0C0: 0C1: 1CustomerID...
+YesNoFamilySportsLuxuryc1c10c20C0: 0C1: 1...
+c11Before Splitting: 10 records of class 0,
+10 records of class 1
+
+
+Which test condition is the best?
+
+
+
+How to determine the Best Split
+
+
+l
+Greedy approach: 
+–
+Nodes with 
+purer
+class distribution are 
+preferred
+
+
+l
+Need a measure of node impurity:
+
+
+C0: 5C1: 5
+C0: 9C1: 1High degree of impurity
+
+
+Low degree of impurity
+
+
+purer
+
+
+
+Measures of Node Impurity
+
+
+l
+Gini Index
+l
+Entropy
+l
+Misclassification error
+
+
+
+jtjptGINI2)]|([1)(
+
+jtjptjptEntropy)|(log)|()(
+)|(max1)(tiPtErrori
+
+Finding the Best Split
+
+
+1.
+Compute impurity measure (P) before splitting
+2.
+Compute impurity measure (M) after splitting
+l
+Compute impurity measure of each child node
+l
+M is the weighted impurity of children
+
+
+
+
+3.
+Choose the attribute test condition that 
+produces the 
+highest gain
+or equivalently, 
+lowest impurity
+measure after 
+splitting (M) 
+
+
+Gain = P 
+–
+M
+
+
+
+Finding the Best Split
+
+
+B?
+
+
+Yes
+
+
+No
+
+
+Node N3
+
+
+Node N4
+
+
+A?
+
+
+Yes
+
+
+No
+
+
+Node N1
+
+
+Node N2
+
+
+Before Splitting:
+
+
+C0 N10 
+C1 N11 
+C0 N20 
+C1 N21 
+C0 N30 
+C1 N31 
+C0 N40 
+C1 N41 
+C0 N00 
+C1 N01 
+P
+
+
+M11
+
+
+M12
+
+
+M21
+
+
+M22
+
+
+M1
+
+
+M2
+
+
+Gain = P 
+–
+M1 vs P 
+–
+M2
+
+
+
+Measure of Impurity: GINI
+
+
+
+Gini Index for a given node t :
+
+
+(NOTE: 
+p( j | t) 
+is the relative frequency of class j at node t).
+
+
+–
+Maximum
+(1 
+-
+1/n
+c
+) when records are 
+equally distributed 
+among all classes, implying 
+least interesting 
+information
+–
+Minimum
+(0.0) when all records belong to 
+one class
+, 
+implying 
+most interesting information
+
+
+
+
+
+jtjptGINI2)]|([1)(
+Measure of Impurity: GINI
+
+
+
+Gini Index for a given node t :
+
+
+(NOTE: 
+p( j | t) 
+is the relative frequency of class j at node t).
+
+
+–
+For 2
+-
+class problem (p, 1 
+–
+p):
+
+GINI = 1 
+–
+p
+2
+–
+(1 
+–
+p)
+2
+= 2p (1
+-
+p)
+
+
+
+
+
+
+
+jtjptGINI2)]|([1)(
+C10C26Gini=0.000
+C12C24Gini=0.444
+C13C23Gini=0.500
+C11C25Gini=0.278
+Computing Gini Index of a Single Node
+
+
+C1 0 
+C2 6 
+C1 2 
+C2 4 
+C1 1 
+C2 5 
+P(C1) = 0/6 = 0 P(C2) = 6/6 = 1
+
+
+Gini = 1 
+–
+P(C1)
+2 
+–
+P(C2)
+2
+= 1 
+–
+0 
+–
+1 = 0 
+
+
+
+jtjptGINI2)]|([1)(
+P(C1) = 1/6 P(C2) = 5/6
+
+
+Gini = 1 
+–
+(1/6)
+2 
+–
+(5/6)
+2
+= 0.278
+
+
+P(C1) = 2/6 P(C2) = 4/6
+
+
+Gini = 1 
+–
+(2/6)
+2 
+–
+(4/6)
+2
+= 0.444
+
+
+
+Computing Gini Index for a Collection of 
+Nodes
+
+
+l
+When a node p is split into k partitions (children)
+
+
+where,
+n
+i
+= number of records at child 
+i
+,
+
+
+n
+= number of records at parent node p.
+
+
+l
+Choose the attribute that 
+minimizes weighted average 
+Gini index of the children
+l
+Gini index is used in decision tree algorithms such as 
+CART, SLIQ, SPRINT
+
+
+
+kiisplitiGINInnGINI1)(
+Binary Attributes: Computing GINI Index
+
+
+
+Splits into two partitions
+
+Effect of Weighing partitions: 
+–
+Larger and Purer Partitions 
+are sought for.
+
+
+
+
+B?
+
+
+Yes
+
+
+No
+
+
+Node N1
+
+
+Node N2
+
+
+ Parent 
+C1 7 
+C2 5 
+Gini = 0.486 
+N1 N2 
+C1 5 2 
+C2 1 4 
+Gini=0.361 
+Gini(N1) 
+= 1 
+–
+(5/6)
+2 
+–
+(1/6)
+2
+= 0.278 
+
+
+Gini(N2) 
+= 1 
+–
+(2/6)
+2 
+–
+(4/6)
+2
+= 0.444
+
+
+Weighted Gini of N1 N2
+= 6/12 * 0.278 + 
+6/12 * 0.444
+= 0.361
+
+
+Gain = 0.486 
+–
+0.361 = 0.125
+
+
+
+
+Bölünmeden önce, her iki sınıftan eşit 
+sayıda kayıt olduğundan Gini indeksi 
+0.5'tir.
+
+Verileri bölmek için A özniteliği seçilirse, 
+N1 düğümü için Gini indeksi 0,490 ve N2 
+düğümü için 0,480'dir.
+
+Alt düğümler için Gini 
+indeksi
+nin ağırlıklı 
+ortalaması(7
+/
+12) 
+×
+0
+.
+4898 + (5
+/
+12) 
+×
+0
+.
+480 = 0
+.
+486. 
+
+Benzer şekilde, 
+B
+özniteliği için Gini 
+endeksinin ağırlıklı ortalamasının 0,375 
+olduğunu gösterebiliriz.
+
+B özniteliğinin alt kümeleri (
+subsets
+) 
+daha küçük bir Gini indeksine
+sahip 
+olduğundan
+,
+A 
+özniteliği yerine tercih 
+edilir.
+
+
+
+Categorical Attributes: Computing Gini Index
+
+
+l
+Her 
+farklı
+değer
+için
+, 
+veri
+kümesindeki
+her 
+bir
+sınıfın
+sayılarını
+toplayın
+l
+Karar
+vermek
+için
+sayım
+matrisini
+(
+count
+matrix
+)
+kullanın
+
+
+ CarType 
+{Sports, 
+Luxury} 
+{Family} 
+C1 9 1 
+C2 7 3 
+Gini 0.468 
+CarType 
+{Sports} 
+{Family,
+Luxury} 
+C1 8 2 
+C2 0 10 
+Gini 0.167 
+CarType 
+Family Sports Luxury 
+C1 1 8 1 
+C2 3 0 7 
+Gini 0.163 
+Multi
+-
+way split
+
+
+Two
+-
+way split 
+
+
+(find best partition of values)
+
+
+Which of these is the best?
+
+
+Üçüncü gruplamanın daha 
+düşük bir Gini indeksi vardır 
+çünkü karşılık gelen alt 
+kümeleri çok daha saftır.
+
+
+«
+Multiway
+split»
+, her iki 
+«
+Two
+-
+way split
+» 
+kıyasla daha küçük 
+bir Gini 
+indeksine
+sahiptir.
+
+
+
+Continuous Attributes: Computing Gini Index
+
+
+l
+Tek
+bir
+değere
+dayalı
+İkili
+Kararlar
+(
+Binary Decisions
+) 
+kullanın
+l
+Bölme
+değeri
+(
+splitting 
+value
+)
+için
+birçok
+seçenek
+–
+Olası
+bölme
+değerlerinin
+sayısı
+= 
+Farklı
+değerlerin
+sayısı
+
+
+l
+Her 
+bölme
+değerinin
+kendisiyle
+ilişkili
+bir
+sayım
+matrisi
+vardır
+–
+Her 
+bölümdeki
+(
+partitions
+)
+sınıf
+sayıları
+, 
+A < v 
+ve
+A 
+
+v
+
+
+l
+En
+iyi
+v'yi
+seçmek
+için
+basit
+yöntem
+–
+Her v 
+için
+, 
+sayım
+matrisini
+toplamak
+ve
+Gini 
+indeksini
+hesaplamak
+için
+veritabanını
+tarayın
+–
+Computationally Inefficient! 
+Repetition of work.
+
+
+
+
+ID 
+Home 
+Owner 
+Marital 
+Status 
+Annual 
+Income 
+Defaulted 
+1 Yes Single 125K No 
+2 No Married 100K No 
+3 No Single 70K No 
+4 Yes Married 120K No 
+5 No Divorced 95K Yes 
+6 No Married 60K No 
+7 Yes Divorced 220K No 
+8 No Single 85K Yes 
+9 No Married 75K No 
+10 No Single 90K Yes 
+10 
+≤ 80
+
+
+> 80
+
+
+Defaulted Yes
+
+
+0
+
+
+3
+
+
+Defaulted No
+
+
+3
+
+
+4
+
+
+
+
+Annual Income ?
+
+
+
+Cheat No No No Yes Yes Yes No No No No 
+Annual Income 
+60 70 75 85 90 95 100 120 125 220 
+55 65 72 80 87 92 97 110 122 172 230 
+<= > <= > <= > <= > <= > <= > <= > <= > <= > <= > <= > 
+Yes 0 3 0 3 0 3 0 3 1 2 2 1 3 0 3 0 3 0 3 0 3 0 
+No 0 7 1 6 2 5 3 4 3 4 3 4 3 4 4 3 5 2 6 1 7 0 
+Gini 0.420 0.400 0.375 0.343 0.417 0.400 0.300 0.343 0.375 0.400 0.420 
+Continuous Attributes: Computing Gini Index...
+
+
+
+Verimli hesaplama için: her 
+öznitelik
+için,
+–
+Özniteli
+k
+değerler
+ini 
+sıralayın
+–
+Her seferinde sayım matrisini güncelleyerek ve gini indeksini 
+hesaplayarak bu değerleri doğrusal olarak tarayın
+–
+En 
+düşük
+gini indeksine 
+sahip böl
+me
+konumu
+(
+split position
+)
+seçin
+
+
+
+
+Split Positions
+
+
+Sorted Values
+
+
+Defaulted
+
+
+
+Continuous Attributes: Computing Gini Index...
+
+
+
+Verimli hesaplama için: her 
+öznitelik
+için,
+–
+Özniteli
+k
+değerler
+ini 
+sıralayın
+–
+Her seferinde sayım matrisini güncelleyerek ve gini indeksini 
+hesaplayarak bu değerleri doğrusal olarak tarayın
+–
+En 
+düşük
+gini indeksine 
+sahip böl
+me
+konumu
+(
+split position
+)
+seçin
+
+
+
+
+Split Positions
+
+
+Sorted Values
+
+
+Candidate split positions are identified by taking
+the 
+midpoints
+between 
+two 
+adjacent sorted values
+: 55, 65, 72, and so on.
+
+
+Defaulted
+
+
+
+Continuous Attributes: Computing Gini Index...
+
+
+
+Verimli hesaplama için: her 
+öznitelik
+için,
+–
+Özniteli
+k
+değerler
+ini 
+sıralayın
+–
+Her seferinde sayım matrisini güncelleyerek ve gini indeksini 
+hesaplayarak bu değerleri doğrusal olarak tarayın
+–
+En 
+düşük
+gini indeksine 
+sahip böl
+me
+konumu
+(
+split position
+)
+seçin
+
+
+
+
+Split Positions
+
+
+Sorted Values
+
+
+Defaulted
+
+
+
+Continuous Attributes: Computing Gini Index...
+
+
+
+Verimli hesaplama için: her 
+öznitelik
+için,
+–
+Özniteli
+k
+değerler
+ini 
+sıralayın
+–
+Her seferinde sayım matrisini güncelleyerek ve gini indeksini 
+hesaplayarak bu değerleri doğrusal olarak tarayın
+–
+En 
+düşük
+gini indeksine 
+sahip böl
+me
+konumu
+(
+split position
+)
+seçin
+
+
+
+
+Split Positions
+
+
+Sorted Values
+
+
+Defaulted
+
+
+
+Continuous Attributes: Computing Gini Index...
+
+
+
+Verimli hesaplama için: her 
+öznitelik
+için,
+–
+Özniteli
+k
+değerler
+ini 
+sıralayın
+–
+Her seferinde sayım matrisini güncelleyerek ve gini indeksini 
+hesaplayarak bu değerleri doğrusal olarak tarayın
+–
+En 
+düşük
+gini indeksine 
+sahip böl
+me
+konumu
+(
+split position
+)
+seçin
+
+
+
+
+Split Positions
+
+
+Sorted Values
+
+
+Defaulted
+
+
+
+Measure of Impurity: Entropy
+
+
+l
+Entropy at a given node t:
+
+
+(NOTE: 
+p( j | t) 
+is the relative frequency of class j at node t).
+
+
+
+Maximum
+(log 
+n
+c
+) when records are 
+equally distributed
+among all classes 
+implying least information
+
+Minimum
+(0.0) when all records belong to 
+one class
+, 
+implying most information
+
+
+–
+Entropy based computations are quite similar to 
+the GINI index computations
+
+
+
+
+
+jtjptjptEntropy)|(log)|()(
+Computing Entropy of a Single Node
+
+
+P(C1) = 0/6 = 0 P(C2) = 6/6 = 1
+
+
+Entropy = 
+–
+0 log 0
+–
+1 log 1 = 
+–
+0 
+–
+0 = 0 
+
+
+P(C1) = 1/6 P(C2) = 5/6
+
+
+Entropy = 
+–
+(1/6) log
+2
+(1/6)
+–
+(5/6) log
+2
+(
+5
+/6) = 0.65
+
+
+P(C1) = 2/6 P(C2) = 4/6
+
+
+Entropy = 
+–
+(2/6) log
+2
+(2/6)
+–
+(4/6) log
+2
+(4/6) = 0.92
+
+
+
+jtjptjptEntropy)|(log)|()(2
+Computing Information Gain After Splitting
+
+
+l
+Information Gain: 
+
+
+Parent Node, p is split into k partitions;
+
+
+n
+i
+is number of records in partition 
+i
+
+
+–
+Measures 
+Reduction in Entropy
+achieved 
+because of 
+the split
+. 
+Choose 
+the split that achieves most reduction 
+(maximizes GAIN)
+–
+Used in the ID3 and C4.5 decision tree algorithms
+
+
+
+
+
+
+
+
+
+
+kiisplitiEntropynnpEntropyGAIN1)()(
+Problem with large number of partitions
+
+
+
+«
+Node impurity
+»
+ölçütü, 
+her 
+biri küçük ancak 
+saf olan
+çok sayıda bölümle 
+sonuçlanan 
+bölümlemeleri 
+tercih etme 
+eğilimindedir.
+–
+Customer ID 
+has 
+en
+yüksek
+bilgi
+kazancına
+(
+highest information gain
+)
+sahiptir
+çünkü
+tüm
+çocuklar
+için
+entropi
+sıfırdır
+
+
+
+
+
+Gain Ratio
+
+
+l
+Gain Ratio: 
+
+
+Parent Node, p is split into k partitions
+
+
+n
+i
+is the number of records in partition i
+
+
+–
+Adjusts Information Gain by the entropy of the partitioning 
+(SplitINFO). 
+
+Higher entropy partitioning (large number of small partitions) is 
+penalized!
+
+
+–
+Used in C4.5 algorithm
+–
+Designed to overcome the disadvantage of Information Gain
+
+
+
+
+SplitINFOGAINGainRATIOSplitsplit
+
+
+kiiinnnnSplitINFO1log
+Gain Ratio
+
+
+l
+Gain Ratio: 
+
+
+Parent Node, p is split into k partitions
+
+
+n
+i
+is the number of records in partition 
+i
+
+
+SplitINFOGAINGainRATIOSplitsplit
+
+
+kiiinnnnSplitINFO1logSplitINFO = 1.52
+
+
+SplitINFO = 0.72
+
+
+SplitINFO = 0.97
+
+
+
+SplitINFO=
+-
+(16/20)*log
+2
+(16/20)
+-
+(4/20)*log
+2
+(4/20)
+
+
+=0.72
+
+
+
+
+
+kiiinnnnSplitINFO1logSplitINFO = 1.52
+
+
+SplitINFO = 0.72
+
+
+SplitINFO = 0.97
+
+
+
+Measure of Impurity: Classification Error
+
+
+l
+Classification error at a node t :
+–
+Maximum
+(1 
+-
+1/
+n
+c
+) when records are 
+equally distributed 
+among all classes, implying 
+least interesting 
+information
+–
+Minimum
+(0) when all records belong to 
+one class
+, 
+implying 
+most interesting information
+
+
+
+
+)|(max1)(tiPtErrori
+
+Computing Error of a Single Node
+
+
+P(C1) = 0/6 = 0 P(C2) = 6/6 = 1
+
+
+Error = 1 
+–
+max (0, 1) = 1 
+–
+1 = 0 
+
+
+P(C1) = 1/6 P(C2) = 5/6
+
+
+Error = 1 
+–
+max (1/6, 5/6) = 1 
+–
+5/6 = 1/6
+
+
+P(C1) = 2/6 P(C2) = 4/6
+
+
+Error = 1 
+–
+max (2/6, 4/6) = 1 
+–
+4/6 = 1/3
+
+
+)|(max1)(tiPtErrori
+
+Comparison among Impurity Measures
+
+
+For a 2
+-
+class problem:
+
+
+
+Misclassification Error vs Gini Index
+
+
+A?
+
+
+Yes
+
+
+No
+
+
+Node N1
+
+
+Node N2
+
+
+ Parent 
+C1 7 
+C2 3 
+Gini = 0.42 
+N1 N2 
+C1 3 4 
+C2 0 3 
+Gini=0.342 
+Gini(N1) 
+= 1 
+–
+(3/3)
+2 
+–
+(0/3)
+2
+= 0 
+
+
+Gini(N2) 
+= 1 
+–
+(4/7)
+2 
+–
+(3/7)
+2
+= 0.489
+
+
+Gini(Children) 
+= 3/10 * 0 
++ 7/10 * 0.489
+= 0.342
+
+
+Gini
+improves but 
+error
+remains the 
+same!!
+
+
+
+Misclassification Error vs Gini Index
+
+
+A?
+
+
+Yes
+
+
+No
+
+
+Node N1
+
+
+Node N2
+
+
+ N1 N2 
+C1 3 4 
+C2 1 2 
+Gini=0.416 
+Misclassification error for all three cases = 0.3 ! 
+
+
+
+Decision Tree Based Classification
+
+
+l
+Avantajları
+:
+–
+İnşa
+etmesi
+az zahmetlidir
+–
+Bilinmeyen
+kayıtları
+(
+unknown
+records
+)
+sınıflandırmada
+son 
+derece
+hızlı
+–
+Küçük
+boyutlu
+ağaçlar
+için
+yorumlanması
+kolay
+–
+Gürültüye
+karşı
+dayanıklı
+(
+özellikle
+overfitting
+önleme
+yöntemleri
+kullanıldığında
+)
+–
+Gereksiz
+veya
+alakasız
+öznitelikleri
+kolayca
+idare
+edebilir
+(
+öznitelikler
+birbiriyle
+etkileşim
+halinde
+değilse
+)
+
+
+l
+Dezavantajları 
+: 
+–
+Olası
+karar
+ağa
+cı
+çözüm uzayı
+üstel
+büyük
+lük
+t
+edir
+. 
+Greedy
+yaklaşımlar
+çoğu
+zaman 
+en
+iyi
+ağacı
+bulamaz
+.
+–
+Öznitlikler
+arasındaki
+etkileşimleri
+hesaba
+katmaz
+–
+Her 
+karar
+sınırı
+yalnızca
+tek
+bir
+özniteliği
+içerir
+
+
+
+
+
+Decision Tree 
+Example
+
+
+
+Decision Tree 
+Example
+
+
+Bu bölümde şimdiye kadar açıklanan test koşulları, bir seferde yalnızca 
+tek bir özniteliğin kullanılmasını içerir. Sonuç olarak, ağaç büyütme 
+prosedürü, her bölge aynı sınıfın kayıtlarını içerene kadar öznitelik 
+uzayını ayrık bölgelere bölme işlemi olarak görülebilir (bkz. Şekil 4.20).
+
+
+Farklı sınıflardan iki komşu bölge arasındaki sınır, karar sınırı (
+decision 
+boundary
+) olarak bilinir. Test koşulu yalnızca tek bir özniteliği içerdiğinden, 
+karar sınırları doğrusaldır (
+rectilinear
+); yani "koordinat eksenlerine" paralel.
+
+
+Bu, 
+sürekli özellikler arasındaki karmaşık ilişkileri modellemek
+için 
+karar ağacı temsilinin ifade gücünü 
+sınırlar
+. Şekil 4.21, 
+bir seferde 
+yalnızca tek bir özniteliği
+içeren test koşullarını kullanan bir karar 
+ağacı algoritmasıyla etkili bir şekilde sınıflandırılamayan bir veri setini 
+göstermektedir.
+
+
+
+Decision Tree 
+Example
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+1
+
+
+Data Mining
+
+
+Model Overfitting
+
+
+Introduction to Data Mining, 2
+nd
+Edition
+
+
+by
+
+
+Tan, Steinbach, 
+Karpatne
+, Kumar
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+2
+
+
+Classification Errors
+
+
+
+Training errors (apparent errors)
+–
+Eğitim
+setinde
+yapılan
+hatalar
+
+
+
+Test errors
+–
+Test 
+setinde
+yapılan
+hatalar
+
+
+
+Generalization 
+errors
+–
+Aynı
+dağı
+l
+ımdan
+rastgele
+kayıt
+ların
+seçimi
+üzeri
+den
+bir
+modelin
+beklenen
+hatası
+
+
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+3
+
+
+Example Data Set
+
+
+Two class problem: 
+
+
++ : 5200 instances
+
+
+•
+5000 instances generated 
+from a Gaussian centered at 
+(10,10)
+•
+200 noisy instances added
+
+
+o : 5200 instances 
+
+
+•
+Generated from a uniform 
+distribution
+
+
+10 % of the data used for 
+training and 90% of the 
+data used for testing
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+4
+
+
+Increasing number of nodes in Decision Trees
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+5
+
+
+Decision Tree with 4 nodes
+
+
+Decision Tree
+
+
+Decision boundaries on Training data
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+6
+
+
+Decision Tree with 50 nodes
+
+
+Decision Tree
+
+
+Decision Tree
+
+
+Decision boundaries on Training data
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+7
+
+
+Which tree is better?
+
+
+Decision Tree with 4 nodes
+
+
+Decision Tree with 50 nodes
+
+
+Which tree is better ?
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+8
+
+
+Model Overfitting
+
+
+Underfitting
+: model 
+çok
+basit
+olduğunda
+hem 
+eğitim
+hem de test 
+hataları
+büyüktür
+
+
+Overfitting
+: model 
+çok
+karmaşık
+olduğunda
+, 
+eğitim
+hatası
+küçüktür
+ancak
+test 
+hatası
+büyüktür
+
+
+Overfitting
+ve
+underfitting
+model 
+karmaşıklığıyla
+ilgili
+iki
+patolojidir
+.
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+9
+
+
+Model Overfitting
+
+
+İki 
+kat daha fazla veri 
+örneği
+(
+data 
+instances
+)
+kullanma
+
+
+•
+Eğitim
+verileri
+temsili
+yetersizse
+(
+under
+-
+representative
+)
+, 
+artan
+düğüm
+sayısı
+ile
+test 
+hataları
+artar
+ve
+eğitim
+hataları
+azalır
+•
+Eğitim verilerinin boyutunu artırmak (
+Increasing the size of training data
+), belirli 
+sayıda düğümde eğitim ve test hataları arasındaki farkı azaltır
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+10
+
+
+Model Overfitting
+
+
+İki kat daha fazla veri örneği
+(
+data instances
+)
+kullanma
+
+
+•
+Eğitim
+verileri
+temsili
+yetersizse
+(
+under
+-
+representative
+)
+, 
+artan
+düğüm
+sayısı
+ile
+test 
+hataları
+artar
+ve
+eğitim
+hataları
+azalır
+•
+Eğitim verilerinin boyutunu artırmak (
+Increasing the size of training data
+), belirli 
+sayıda düğümde eğitim ve test hataları arasındaki farkı azaltır
+
+
+Decision Tree with 50 nodes
+
+
+Decision Tree with 50 nodes
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+11
+
+
+Reasons for Model Overfitting
+
+
+
+Limited Training Size
+
+High Model Complexity
+–
+Multiple Comparison Procedure
+
+
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+12
+
+
+Effect of Multiple Comparison Procedure
+
+
+
+Önümüzdeki
+10 
+işlem
+gününde
+borsanın
+yükseli
+şİni
+/düşüşünü 
+tahmin
+etme
+görevini
+düşünün
+
+Random 
+guessing:
+
+
+P
+(
+correct
+) = 0.5
+
+
+
+Arka arkaya 10 rastgele tahmin yapın 
+:
+
+
+Day 1
+
+
+Up
+
+
+Day 2
+
+
+Down
+
+
+Day 3
+
+
+Down
+
+
+Day 4
+
+
+Up
+
+
+Day 5
+
+
+Down
+
+
+Day 6
+
+
+Down
+
+
+Day 7
+
+
+Up
+
+
+Day 8
+
+
+Up
+
+
+Day 9
+
+
+Up
+
+
+Day 10
+
+
+Down
+
+
+
+
+0547.021010910810)8(#10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+correctP
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+13
+
+
+Effect of Multiple Comparison Procedure
+
+
+
+Approach:
+–
+50 
+analist
+getirin
+–
+Her 
+analist
+10 
+rastgele
+tahmin
+(
+random
+guess
+)
+yapar
+–
+En
+fazla
+sayıda
+doğru
+tahminde
+bulunan
+analisti
+seçin
+
+
+
+En
+az
+bir
+analistin
+en
+az
+8 
+doğru
+tahmin
+yapma
+olasılığı
+
+
+9399.0)0547.01(1)8(#50correctP
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+14
+
+
+Effect of Multiple Comparison Procedure
+
+
+Her 
+analistin 
+en az sekiz defa doğru tahmin etme 
+olasılığı düşük 
+olsa da, 
+bunları bir araya getirsek
+, 
+bunu yapabilecek bir analist bulma 
+olasılığımız 
+yüksek
+.
+
+
+Buna ek olarak, 
+gelecekte böyle bir analistin 
+rastgele tahmin yoluyla doğru tahminler yapmaya 
+devam edeceğine dair hiçbir garanti yoktur.
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+15
+
+
+Effect of Multiple Comparison Procedure
+
+
+
+Birçok
+algoritma
+aşağıdaki
+açgözlü
+stratejiyi
+(
+greedy 
+strategy
+)
+kullanır
+:
+–
+İlk model
+: 
+M
+–
+Alternati
+f 
+model
+: M’ = M 
+
+
+, 
+burada
+
+, 
+modele
+eklenecek
+bir
+bileşendir
+(
+örneğin
+, 
+bir
+karar
+ağacının
+test 
+koşulu
+)
+–
+İyileştirme
+varsa
+M’yi
+tutun
+, 
+
+(M,M’) > 
+
+
+
+
+Çoğu
+zaman, 
+
+bir
+dizi
+alternatif
+bileşenden
+seçilir
+, 
+
+= {
+
+1
+, 
+
+2
+, …, 
+
+k
+}
+
+Birçok
+alternatif
+mevcutsa
+, 
+modele
+istemeden
+alakasız
+bileşenler
+eklenebilir
+ve
+bu
+da 
+modelin
+ezberlemesine 
+(
+overfitting
+) 
+neden
+olabilir
+.
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+16
+
+
+Effect of Multiple Comparison 
+-
+Example
+
+
+Use additional 100 noisy variables 
+generated from a uniform distribution 
+along with X and Y as attributes.
+
+
+Use 30% of the data for training and 
+70% of the data for testing
+
+
+Using only X and Y as attributes
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+17
+
+
+Overfitting due to Noise 
+
+
+Decision boundary is distorted by noise point
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+18
+
+
+Overfitting due to Noise 
+
+
+Memelileri sınıflandırmak için kullanılan bir eğitim 
+veri seti. Yıldız ile işaretli olalar yanlış etiketlenmiş 
+kayıtlardır.
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+19
+
+
+Overfitting due to Noise 
+
+
+Training 
+error
+=0%
+
+
+Test 
+error
+=30%
+
+
+Model M1
+
+
+Training 
+error
+=20%
+
+
+Test 
+error
+=10%
+
+
+Model M2
+
+
+Test 
+setinde
+daha
+düşük
+hata
+oranına
+sahip
+daha
+basit
+bir
+model 
+var olduğu 
+olduğu
+için
+, ilk 
+karar
+ağacı
+M
+1 
+'in 
+eğitim
+verilerini
+ezberlediği (
+overfitted
+)
+açıktır
+. 
+
+
+M1 
+modelindeki
+Four
+-
+legged
+öznitelik
+test 
+koşulu
+yanlış
+etiketlenmiş
+eğitim
+kayıtlarına
+uyduğundan
+sahtedir
+(
+spurious
+). 
+Bu 
+da test 
+setindeki kayıtların yanlış 
+sınıflandırılmasına yol 
+açar.
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+20
+
+
+Overfitting due to Insufficient Examples
+
+
+Diyagramın
+alt 
+yarısındaki
+veri
+noktalarının
+yetersiz 
+ol
+uşu
+, 
+o 
+bölgenin
+sınıf
+etiketlerini
+doğru
+şekilde
+tahmin
+etmeyi
+zorlaştırır
+
+
+-
+Insufficient number of training records 
+in the region causes the 
+decision tree to predict the test examples using 
+other training 
+records
+that are 
+irrelevant
+to the classification task
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+21
+
+
+Notes on Overfitting
+
+
+
+Ezberleme/aşırı uyum (
+Overfitting
+)
+, 
+gerekenden
+daha
+karmaşık
+karar
+ağaçlarına
+neden
+olur
+
+Eğitim
+hatası
+(
+Training 
+error
+)
+, 
+ağacın
+daha
+önce
+görülmemiş
+kayıtlar
+(
+unseen 
+records
+)
+üzerinde
+ne 
+kadar
+iyi
+performans
+göstereceğine
+dair
+iyi
+bir
+tahmin
+sağlamaz
+
+Genelleme
+hatalarını
+(
+generalization
+error
+)
+tahmin
+etmenin
+yollarına
+ihtiyacı
+m
+ız
+var
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+22
+
+
+Model Selection
+
+
+
+Model 
+oluşturma
+sırasında
+gerçekleştirilir
+
+Amaç
+, 
+modelin
+aşırı
+karmaşık
+olmamasını
+sağlamaktır
+(
+ezberlemeyi 
+önlemek
+için
+)
+
+Genelleme
+hatasını
+tahmin
+etme
+m
+iz
+/kestirmemiz
+gerekiyor
+–
+Using Validation Set
+(
+Doğrulama veri seti kullanma
+)
+–
+Incorporating 
+Model 
+Complexity
+(
+Model 
+karmaşıklığını dahil etme
+)
+–
+Estimating Statistical Bounds
+(
+İstatistiksel 
+sınırların 
+tahmin edilmesi
+)
+
+
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+23
+
+
+Model Selection:
+Using 
+Validation Set
+
+
+
+Divide 
+training
+data into two parts:
+–
+Training set: 
+
+use for model building
+
+
+–
+Validation set: 
+
+use for estimating generalization error
+
+Note: validation set is not the same as test set
+
+
+
+
+
+Drawback:
+–
+Less data available for training
+
+
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+24
+
+
+Model 
+Selection:
+Incorporating 
+Model Complexity
+
+
+
+Rationale: 
+Occam’s Razor
+(
+or
+principle
+of 
+parsimony
+:)
+–
+Benzer
+genelleme
+hatalarının
+olduğu
+iki
+model 
+verildiğinde
+, 
+daha
+karmaşık
+model 
+yerine
+basit
+modeli
+tercih
+etmelisiniz
+.
+–
+Karmaşık
+bir
+modelin
+, 
+verilerdeki
+hatalarla
+yanlışlıkla
+uydurulma
+şansı
+daha
+yüksektir
+–
+Bu 
+nedenle
+, 
+bir
+modeli
+değerlendirirken
+model 
+karmaşıklığı
+işin içerisine 
+dahil
+edilmelidir
+
+
+
+
+Gen. Error(Model) = Train. Error(Model, Train. Data) 
++ 
+
+
+x Complexity(Model
+)
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+25
+
+
+Estimating the Complexity of Decision Trees
+
+
+
+Pessimistic 
+Error Estimate
+of decision tree 
+T 
+with k leaf nodes:
+–
+err(T): error rate on all training records 
+–
+
+: 
+trade
+-
+off hyper
+-
+parameter (similar to )
+
+Relative cost of adding a leaf node
+(
+penalty term for model 
+complexity
+)
+
+
+–
+k: number of leaf nodes
+–
+N
+train
+: 
+total number of training records
+
+
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+26
+
+
+Estimating the Complexity of 
+Decision 
+Trees: Example
+
+
++: 5-: 2+: 1-: 4+: 3-: 0+: 3-: 6+: 3-: 0+: 0-: 5+: 3-: 1+: 1-: 2+: 0-: 2+: 2-: 1+: 3-: 1Decision Tree, TLDecision Tree, TRe(T
+L
+) = 4/24
+
+
+e(T
+R
+) = 6/24
+
+
+
+= 1
+
+
+e
+gen
+(T
+L
+) = 
+4/24 + 1*7/24 
+= 11/24 = 0.458
+
+
+e
+gen
+(T
+R
+) = 
+6/24 + 1*4/24 
+= 10/24 = 0.417
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+27
+
+
+Estimation
+of 
+Generalization
+Errors
+
+
+
+Resubstitution
+Estimate: 
+–
+Eğitim
+hatasını
+genelleme
+hatasının
+iyimser
+bir
+tahmini
+olarak
+kullanma
+–
+İyimser
+hata
+tahmini
+olarak
+anılır
+(
+optimistic error estimate
+)
+
+
+
+
+e(T
+L
+) = 4/24
+
+
+e(T
+R
+) = 6/24
+
+
+Model Selection:
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+28
+
+
+Estimating Statistical Bounds
+
+
++: 5-: 2+: 2-: 1+: 3-: 1Before splitting: e = 2/7, e’(7, 2/7, 0.25) = 0.503
+e’(T) = 7 
+
+0.503 = 3.521
+
+
+After splitting: 
+e(T
+L
+) = 1/4, e’(4, 1/4, 0.25) = 0.537
+e(T
+R
+) = 1/3, e’(3, 1/3, 0.25) = 0.650
+e’(T) = 4 
+
+0.537 + 3 
+
+0.650 = 4.098 
+
+
+NzNzNeezNzeeNe22/
+222/
+2/
+22/
+14)1(
+2),,('
+
+
+
+
+
+
+
+
+
+
+Therefore, do not split
+
+
+α 
+is the confidence 
+level
+
+
+N 
+is the total number of training records 
+used 
+to
+compute
+e
+
+
+By approximating a binomial distribution 
+with a 
+normal
+distribution
+, the following 
+upper bound of the error rate 
+e 
+can be 
+derived:
+
+
+z
+α/
+2 
+is the standardized value from 
+a 
+standard
+normal 
+distribution
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+29
+
+
+Handling Overfitting in Decision Tree Induction
+
+
+
+Karar 
+ağacı 
+indükleme (
+decision tree 
+induction
+) 
+bağlamında modelin 
+ezberlemesini 
+önlemek 
+için iki 
+strateji
+–
+P
+re
+-
+Pruning 
+–
+Post
+-
+pruning
+
+
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+30
+
+
+Model Selection for Decision Trees
+
+
+
+Pre
+-
+Pruning (Early Stopping Rule)
+–
+Algoritmayı
+tamamen
+büyümüş
+bir
+ağaç
+haline
+gelmeden
+durdurun
+–
+Bir
+düğüm
+için
+tipik
+durma
+koşulları
+(
+stopping conditions
+)
+
+T
+üm
+örnekler
+aynı
+sınıfa
+(
+the same class
+)
+aitse
+dur
+
+Tüm
+öznitelik
+değerleri
+aynıysa
+dur
+
+
+–
+Daha
+kısıtlayıcı
+koşullar
+:
+
+Örnek
+sayısı
+(
+number of 
+instances
+) 
+kullanıcı
+tarafından
+belirlenen
+bazı
+eşiklerin
+altındaysa
+dur
+
+Örneklerin
+sınıf
+dağılımı
+mevcut
+özelliklerden
+bağımsızsa
+durun
+(
+Örn
+.
+, 
+
+2
+test
+i kullanarak
+)
+
+Mevcut
+düğümün
+genişletilmesi
+impurity 
+ölçütlerini 
+(
+Örn
+., 
+Gini 
+veya
+information 
+gain
+) 
+iyileştirmiyorsa
+dur
+
+Tahmini
+genelleme
+hatası
+belirli
+bir 
+eşiğin
+altına
+düşerse
+dur
+
+
+
+
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+31
+
+
+Model Selection for Decision Trees
+
+
+
+Post
+-
+pruning
+–
+Karar
+ağacını
+tamemen
+büyütün
+–
+Alt 
+ağaç
+değişimi
+(
+Subtree replacement
+)
+
+Karar
+ağacının
+düğümlerini
+aşağıdan
+yukarıya
+(
+bottom
+-
+up
+)
+doğru
+kırpın
+
+Kırpmadan
+sonra
+genelleme
+hatası
+düzelirse
+, 
+alt 
+ağacı
+bir
+yaprak
+düğüm
+(
+leaf 
+node
+)
+ile
+değiştirin
+
+Yaprak
+düğümün
+sınıf
+etiketi
+, alt 
+ağaçtaki
+örneklerin
+çoğunluk
+sınıfından
+(
+majority 
+class
+) 
+belirlenir
+
+
+–
+Subtree raising
+
+Replace subtree 
+with 
+most frequently used branch
+
+
+
+
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+32
+
+
+Example of Post
+-
+Pruning
+
+
+A?
+A1A2A3A4Class = Yes
+
+
+20
+
+
+Class = No
+
+
+10
+
+
+Error = 10/30
+
+
+
+
+Training Error (Before splitting) = 10/30
+
+
+Pessimistic error = (10 + 0.5)/30 = 10.5/30
+
+
+Training Error (After splitting) = 9/30
+
+
+Pessimistic error (After splitting)
+
+
+= (9 + 4 
+
+0.5)/30 = 11/30
+
+
+PRUNE!
+
+
+Class = Yes
+
+
+8
+
+
+Class = No
+
+
+4
+
+
+
+
+Class = Yes
+
+
+3
+
+
+Class = No
+
+
+4
+
+
+
+
+Class = Yes
+
+
+4
+
+
+Class = No
+
+
+1
+
+
+
+
+Class = Yes
+
+
+5
+
+
+Class = No
+
+
+1
+
+
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+33
+
+
+Examples of Post
+-
+pruning
+
+
+–
+Optimistic error?
+–
+Pessimistic error?
+
+
+
+
+C0: 11
+
+
+C1: 3
+
+
+C0: 2
+
+
+C1: 4
+
+
+C0: 14
+
+
+C1: 3
+
+
+C0: 2
+
+
+C1: 2
+
+
+Don’t prune for both cases
+
+
+Don’t prune case 1, prune case 2
+
+
+Case 1:
+
+
+Case 2:
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+34
+
+
+Examples of Post
+-
+pruning
+
+
+–
+Optimistic error?
+
+
+
+
+C0: 11
+
+
+C1: 3
+
+
+C0: 2
+
+
+C1: 4
+
+
+C0: 14
+
+
+C1: 3
+
+
+C0: 2
+
+
+C1: 2
+
+
+Case 1:
+
+
+Case 2:
+
+
+Class = 
+C0
+
+
+13
+
+
+Class = 
+C1
+
+
+7
+
+
+Error = 
+7/2
+0
+
+
+
+
+Optimistic
+error (After splitting) 
+= 
+5/20
+
+
+Class = 
+C0
+
+
+16
+
+
+Class = 
+C1
+
+
+5
+
+
+Error = 
+5/21
+
+
+
+
+Optimistic
+error (After splitting) 
+= 
+5/21
+
+
+Don’t prune for both cases
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+35
+
+
+Examples of Post
+-
+pruning
+
+
+–
+Pessimistic error?
+
+
+
+
+C0: 11
+
+
+C1: 3
+
+
+C0: 2
+
+
+C1: 4
+
+
+C0: 14
+
+
+C1: 3
+
+
+C0: 2
+
+
+C1: 2
+
+
+Case 1:
+
+
+Case 2:
+
+
+Class = 
+C0
+
+
+13
+
+
+Class = 
+C1
+
+
+7
+
+
+Error = 
+7/2
+0
+
+
+
+
+Class = 
+C0
+
+
+16
+
+
+Class = 
+C1
+
+
+5
+
+
+Error = 
+5/21
+
+
+
+
+Training Error (Before splitting) = 
+7
+/
+2
+0
+
+
+Pessimistic error = 
+(
+7
++ 0.5)/30 = 
+7
+.5/
+2
+0
+
+
+Training Error (After splitting) = 
+5/20
+
+
+Pessimistic error (After splitting)
+
+
+= 
+(
+5
++ 
+2
+
+0.5
+)/
+2
+0 
+= 
+6
+/
+20
+
+
+DON’T
+PRUNE
+FOR CASE 1
+!
+
+
+Training Error (Before splitting) = 
+5
+/
+21
+
+
+Pessimistic error = 
+(
+5
++ 0.5)/30 = 
+5
+.5/
+21
+
+
+Training Error (After splitting) = 
+5/21
+
+
+Pessimistic error (After splitting)
+
+
+= 
+(
+5
++ 
+2
+
+0.5
+)/
+21
+= 
+6
+/
+21
+
+
+PRUNE
+FOR CASE 2
+!
+
+
+
+03/26/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+36
+
+
+Examples of Post
+-
+pruning
+
+
+Simplified Decision Tree:
+depth = 1 :
+| ImagePages <= 0.1333 : class 1| ImagePages > 0.1333 :
+| | breadth <= 6 : class 0| | breadth > 6 : class 1depth > 1 :
+| MultiAgent = 0: class 0| MultiAgent = 1:
+| | totalPages <= 81 : class 0| | totalPages > 81 : class 1Decision Tree:
+depth = 1 :
+| breadth > 7 : class 1| breadth <= 7 :
+| | breadth <= 3 :
+| | | ImagePages > 0.375 : class 0| | | ImagePages <= 0.375 :
+| | | | totalPages <= 6 : class 1| | | | totalPages > 6 :
+| | | | | breadth <= 1 : class 1| | | | | breadth > 1 : class 0| | width > 3 :
+| | | MultiIP = 0:
+| | | | ImagePages <= 0.1333 : class 1| | | | ImagePages > 0.1333 :
+| | | | | breadth <= 6 : class 0| | | | | breadth > 6 : class 1| | | MultiIP = 1:
+| | | | TotalTime <= 361 : class 0| | | | TotalTime > 361 : class 1depth > 1 :
+| MultiAgent = 0:
+| | depth > 2 : class 0| | depth <= 2 :
+| | | MultiIP = 1: class 0| | | MultiIP = 0:
+| | | | breadth <= 6 : class 0| | | | breadth > 6 :
+| | | | | RepeatedAccess <= 0.0322 : class 0| | | | | RepeatedAccess > 0.0322 : class 1| MultiAgent = 1:
+| | totalPages <= 81 : class 0| | totalPages > 81 : class 1SubtreeRaisingSubtreeReplacement
+Data Mining 
+Classification: Model Evaluation
+
+
+Lecture Notes for Chapter 4
+
+
+Introduction to Data Mining
+
+
+by
+
+
+Tan, Steinbach, Kumar
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+1
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Model Evaluation
+
+
+
+Purpose: 
+–
+To estimate performance of classifier on previously 
+unseen data (test set)
+
+
+
+Holdout
+–
+Reserve k% for training and (100
+-
+k)% for testing 
+
+Proportion Left 
+at the discretion of the analysts (e.g., 50
+-
+50 or two
+thirds
+for training and one
+-
+third for testing).
+
+
+–
+Random subsampling: repeated holdout
+
+
+
+Cross validation
+–
+Partition data into k disjoint subsets
+–
+k
+-
+fold: train on k
+-
+1 partitions, test on the remaining one
+–
+Leave
+-
+one
+-
+out: k=n
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Cross
+-
+validation Example
+
+
+
+3
+-
+fold cross
+-
+validation
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Model Evaluation
+
+
+
+Performans Değerlendirmesi için Metrikler
+–
+Bir modelin performansı 
+nasıl değerlendirilir?
+
+
+
+Performans Değerlendirme Yöntemleri
+–
+Güvenilir tahminler 
+nasıl elde edilir?
+
+
+
+Model Karşılaştırma
+Yöntemleri
+–
+Rakip modeller arasında 
+göreceli performans 
+nasıl karşılaştırılır?
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Model Evaluation
+
+
+
+Performans Değerlendirmesi için Metrikler
+–
+Bir modelin performansı 
+nasıl değerlendirilir?
+
+
+
+Performans Değerlendirme Yöntemleri
+–
+Güvenilir tahminler 
+nasıl elde edilir?
+
+
+
+Model Karşılaştırma
+Yöntemleri
+–
+Rakip modeller arasında 
+göreceli performans 
+nasıl karşılaştırılır?
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Metrics for Performance Evaluation
+
+
+
+Bir modelin tahmin yeteneğine
+(
+predictive capability
+)
+odaklanı
+r
+–
+Sınıflandırma hızı, model oluşturma hızı, 
+ölçeklenebilirik vb hususlardan ziyade…
+
+
+
+Confusion Matrix:
+
+
+PREDICTED CLASS
+
+
+ACTUAL
+CLASS
+
+
+Class=Yes
+
+
+Class=No
+
+
+Class=Yes
+
+
+a
+
+
+b
+
+
+Class=No
+
+
+c
+
+
+d
+
+
+
+
+a: TP (true positive)
+
+
+b: FN (false negative)
+
+
+c: FP (false positive)
+
+
+d: TN (true negative)
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Metrics for Performance Evaluation…
+
+
+
+Most widely
+-
+used metric:
+
+
+PREDICTED CLASS
+
+
+ACTUAL
+CLASS
+
+
+Class=Yes
+
+
+Class=No
+
+
+Class=Yes
+
+
+a
+(TP)
+
+
+b
+(FN)
+
+
+Class=No
+
+
+c
+(FP)
+
+
+d
+(TN)
+
+
+
+
+FNFPTNTPTNTPdcbada
+
+
+
+
+
+Accuracy 
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Metrics for Performance Evaluation…
+
+
+
+True positive 
+(
+TP
+) or 
+f
+++, sınıflandırma modeli tarafından 
+doğru bir şekilde tahmin edilen pozitif örneklerin sayısına 
+karşılık gelir.
+
+False negative 
+(
+FN
+) or 
+f
++
+−
+, sınıflandırma modeli 
+tarafından 
+yanlış
+bir şekilde
+negatif olarak tahmin edilen 
+pozitif örneklerin sayısına
+karşılık gelir.
+
+False positive 
+(
+FP
+) or 
+f−
++, sınıflandırma modeli 
+tarafından 
+yanlış
+bir şekilde 
+pozitif olarak tahmin edilen 
+negatif
+örneklerin sayısına
+karşılık gelir.
+
+True negative 
+(
+TN
+) or 
+f−−
+, sınıflandırma modeli 
+tarafından 
+doğru bir şekilde tahmin edilen 
+negatif
+örneklerin sayısına
+karşılık gelir.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Metrics for Performance Evaluation…
+
+
+
+C
+onfusion
+matrisindeki 
+sayılar ayrıca yüzde olarak da ifade edilebilir
+.
+
+T
+rue 
+positive rate 
+(
+TPR
+) 
+veya
+sensitivity
+(
+hassasiyet
+),
+model 
+tarafından
+doğru
+şekilde
+tahmin
+edilen
+pozitif
+örneklerin
+oranı
+olarak
+tanımlanır
+, 
+yani
+TPR 
+= 
+TP/
+(
+TP 
++ 
+FN
+)
+.
+
+T
+rue 
+negative rate 
+(
+TNR
+) 
+veya
+specificity
+,
+model 
+tarafından
+doğru
+bir
+şekilde
+tahmin
+edilen
+negatif
+örneklerin
+oranı
+olarak
+tanımlanır
+, 
+yani
+,
+TNR 
+= 
+TN/
+(
+TN 
++ 
+FP
+)
+.
+
+F
+alse
+positive rate 
+(
+FPR
+)
+,
+pozitif bir sınıf olarak tahmin edilen negatif 
+örneklerin oranıdır, 
+yani
+
+
+FPR 
+= 
+FP/
+(
+TN 
++ 
+FP
+)
+,
+
+
+
+F
+alse
+negative rate 
+(
+FNR
+)
+, 
+negatif
+bir
+sınıf
+olarak
+tahmin
+edilen
+pozitif
+örneklerin
+oranıdır
+, 
+yani
+,
+
+
+FNR 
+= 
+FN/
+(
+TP 
++ 
+FN
+)
+.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Limitation of Accuracy
+
+
+
+2
+-
+sınıflı bir problem düşünün
+–
+Number of Class 0 examples = 9990
+–
+Number of Class 1 examples = 10
+
+
+
+Model her şeyin 
+S
+ınıf
+-
+0 
+olacağını öngörürse, 
+doğruluk 9990/10000 =% 99,9'dur.
+–
+Doğruluk (
+Accuracy
+)
+yanıltıcıdır çünkü model 
+herhangi bir 
+S
+ınıf
+-
+1 
+örneği tespit etmez
+
+
+
+
+its limitation is obvious for 
+imbalanced datasets
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Cost Matrix
+
+
+PREDICTED CLASS
+
+
+ACTUAL
+CLASS
+
+
+C(i|j)
+
+
+Class=Yes
+
+
+Class=No
+
+
+Class=Yes
+
+
+C(Yes|Yes)
+
+
+C(No|Yes)
+
+
+Class=No
+
+
+C(Yes|No)
+
+
+C(No|No)
+
+
+
+
+C(i|j): Sınıf j örneğini sınıf i olarak yanlış sınıflandırmanın 
+maliyeti
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Computing Cost of Classification
+
+
+Cost 
+Matrix
+
+
+PREDICTED CLASS
+
+
+ACTUAL
+CLASS
+
+
+C(i|j)
+
+
++
+
+
+-
+
+
++
+
+
+-
+1
+
+
+100
+
+
+-
+
+
+1
+
+
+0
+
+
+
+
+Model 
+M
+1
+
+
+PREDICTED CLASS
+
+
+ACTUAL
+CLASS
+
+
++
+
+
+-
+
+
++
+
+
+150
+
+
+40
+
+
+-
+
+
+60
+
+
+250
+
+
+
+
+Model 
+M
+2
+
+
+PREDICTED CLASS
+
+
+ACTUAL
+CLASS
+
+
++
+
+
+-
+
+
++
+
+
+250
+
+
+45
+
+
+-
+
+
+5
+
+
+200
+
+
+
+
+Accuracy = 80%
+
+
+Cost = 3910
+
+
+Accuracy = 90%
+
+
+Cost = 4255
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Cost vs Accuracy
+
+
+Count
+
+
+PREDICTED CLASS
+
+
+ACTUAL
+CLASS
+
+
+Class=Yes
+
+
+Class=No
+
+
+Class=Yes
+
+
+a
+
+
+b
+
+
+Class=No
+
+
+c
+
+
+d
+
+
+
+
+Cost
+
+
+PREDICTED CLASS
+
+
+ACTUAL
+CLASS
+
+
+Class=Yes
+
+
+Class=No
+
+
+Class=Yes
+
+
+p
+
+
+q
+
+
+Class=No
+
+
+q
+
+
+p
+
+
+
+
+N = a + b + c + d
+
+
+Accuracy = (a + d)/N
+
+
+Cost = p (a + d) + q (b + c)
+
+
+= p (a + d) + q (N 
+–
+a 
+–
+d)
+
+
+= q N 
+–
+(q 
+–
+p)(a + d)
+
+
+= N [q 
+–
+(q
+-
+p) 
+
+Accuracy] 
+
+
+Accuracy is proportional to cost if
+1. C(Yes|No)=C(No|Yes) = q 
+2. C(Yes|Yes)=C(No|No) = p
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Cost
+-
+Sensitive Measures
+
+
+cbaaprrpbaacaa
+
+
+
+
+
+
+
+
+222(F) measure-F(r) Recall 
+(p)Precision 
+
+Precision
+is biased towards C(Yes|Yes) & C(Yes|No)
+
+Recall
+is biased towards C(Yes|Yes) & C(No|Yes)
+
+F
+-
+measure
+is biased towards all except C(No|No)
+
+
+dwcwbwawdwaw432141Accuracy Weighted
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Cost
+-
+Sensitive Measures
+
+
+
+Precision
+,
+sınıflandırıcının pozitif bir sınıf olarak 
+bildirdiği
+grupta 
+gerçekte pozitif çıkan 
+kayıtların 
+oranını belirler.
+
+Recall
+, sınıflandırıcı tarafından 
+doğru bir şekilde 
+tahmin edilen pozitif örneklerin
+oranını ölçer.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Model Evaluation
+
+
+
+Performans Değerlendirmesi için Metrikler
+–
+Bir modelin performansı nasıl değerlendirilir?
+
+
+
+Performans Değerlendirme Yöntemleri
+–
+Güvenilir tahminler nasıl elde edilir?
+
+
+
+Model Karşılaştırma
+Yöntemleri
+–
+Rakip modeller arasında göreceli performans 
+nasıl karşılaştırılır?
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Methods for Performance Evaluation
+
+
+
+Güvenilir bir performans tahmini nasıl elde edilir?
+
+Bir modelin performansı, öğrenme algoritmasının 
+yanı sıra diğer faktörlere de bağlı olabilir:
+–
+Sınıf dağılımı
+(
+Class distribution
+)
+–
+Yanlış sınıflandırma maliyeti
+(
+Cost of 
+misclassification
+)
+–
+Eğitim ve test setlerinin boyutu
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Learning Curve
+
+
+
+Learning curve shows 
+how accuracy changes 
+with varying sample size
+
+Requires a sampling 
+schedule for creating 
+learning curve:
+
+Arithmetic sampling
+(Langley, et al)
+
+Geometric sampling
+(Provost et al)
+
+
+
+
+Effect of small sample size
+:
+
+
+-
+Bias
+in the estimate
+-
+Variance
+of estimate
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Methods of Estimation
+
+
+
+Holdout
+–
+Reserve 2/3 for training and 1/3 for testing 
+
+
+
+Random subsampling
+–
+Repeated holdout
+
+
+
+Cross validation
+–
+Partition data into k disjoint subsets
+–
+k
+-
+fold: train on k
+-
+1 partitions, test on the remaining one
+–
+Leave
+-
+one
+-
+out: k=n
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Model Evaluation
+
+
+
+Performans Değerlendirmesi için Metrikler
+–
+Bir modelin performansı nasıl değerlendirilir?
+
+
+
+Performans Değerlendirme Yöntemleri
+–
+Güvenilir tahminler nasıl elde edilir?
+
+
+
+Model Karşılaştırma
+Yöntemleri
+–
+Rakip modeller arasında göreceli performans 
+nasıl karşılaştırılır?
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+ROC (Receiver Operating Characteristic)
+
+
+
+1950'lerde gürültülü sinyalleri analiz etmek 
+amacıyla
+sinyal algılama teorisi için geliştirildi
+–
+Pozitif isabetler ve yanlış alarmlar arasındaki 
+ödünleşimi karakterize eder (
+trade
+-
+off between 
+positive hits and false alarms
+)
+–
+ROC eğrisi
+(curve),
+TP oranını (y ekseninde) FP 
+oranına (x ekseninde) karşı karakterize 
+eder
+
+
+
+Her sınıflandırıcının performansı ROC eğrisinde bir nokta 
+olarak temsil edilir 
+–
+Algoritmanın eşiğini, örneklem dağılımını veya maliyet 
+matrisini değiştirme noktanın konumunu değiştirir.
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+At threshold t:
+
+
+TP=0.5, FN=0.5, FP=0.12, 
+T
+N=0.88
+
+
+ROC Curve
+
+
+-
+1
+-
+dimensional data set containing 2 classes (positive and negative)
+
+
+-
+any points located at x > t is classified as positive
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+ROC Curve
+
+
+
+(TPR=0, FPR=0):Model, her 
+örneğin bir negatif sınıf olacağını 
+öngörür. 
+
+(TPR=1, FPR=1):Model, her 
+örneğin pozitif bir sınıf olduğunu 
+öngörür
+.
+
+(TPR=1, FPR=0):
+İ
+deal model.
+
+
+
+Köşegen (
+Diagonal line
+)
+:
+–
+Random guessing
+–
+Below diagonal line:
+
+prediction is opposite of 
+the true class
+
+
+
+
+
+
+Bir ROC eğrisi boyunca birkaç kritik nokta vardır:
+
+
+Rastgele tahmin (
+Random
+guessing
+), bir kaydın, 
+öznitelik kümesine bakılmaksızın, sabit bir olasılık 
+p
+ile pozitif bir sınıf olarak sınıflandırılması anlamına 
+gelir.
+
+
+İyi bir sınıflandırma modeli, diyagramın sol üst 
+köşesine mümkün olduğunca yakın konumlanmalıdır.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Rastgele tahmin
+, bir 
+kaydın
+, ö
+znitelik kümesine 
+bakılmaksızın
+, 
+sabit bir olasılık p ile
+pozitif bir sınıf olarak 
+sınıflandırılması anlamına gelir.
+
+
+•
+Örneğin, 
+n
++
+pozitif örnekler ve 
+n
+-
+negatif örnekler içeren bir 
+veri kümesi düşünün.
+•
+Rastgele sınıflandırıcının pozitif örneklerin 
+pn
++
+‘sini doğru 
+şekilde sınıflandırması ve negatif örneklerin 
+pn
+-
+‘sini 
+yanlış 
+sınıflandırması beklenir.
+•
+Bu 
+nedenle
+, 
+sınıflandırıcının
+TPR'si
+(
+pn
++
+)
+/
+n
++
+= 
+p
+, 
+FPR'si
+(
+pn
+-
+)
+/
+n
+-
+= 
+p
+. 
+•
+TPR ve FPR aynı olduğundan, 
+rastgele sınıflandırıcı için 
+ROC eğrisi
+her zaman 
+ana köşegen 
+boyunca yer alır.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Using ROC for Model Comparison
+
+
+
+(In this example) 
+No model 
+consistently outperform the 
+other
+
+M
+1
+is better for small 
+FPR
+
+M
+2
+is better for large 
+FPR
+
+
+
+
+
+Area Under the ROC 
+curve
+
+Ideal: 
+
+Area = 1
+
+
+
+Random guess:
+
+Area = 0.5
+
+
+
+
+
+
+The 
+area under the ROC curve 
+(AUC) provides another 
+approach for evaluating
+which model is better on 
+average
+.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+How to Construct an ROC curve
+
+
+Instance
+
+
+P(+|A)
+
+
+True Class
+
+
+1
+
+
+0.95
+
+
++
+
+
+2
+
+
+0.93
+
+
++
+
+
+3
+
+
+0.87
+
+
+-
+
+
+4
+
+
+0.85
+
+
+-
+
+
+5
+
+
+0.85
+
+
+-
+
+
+6
+
+
+0.85
+
+
++
+
+
+7
+
+
+0.76
+
+
+-
+
+
+8
+
+
+0.53
+
+
++
+
+
+9
+
+
+0.43
+
+
+-
+
+
+10
+
+
+0.25
+
+
++
+
+
+
+
+•
+Use classifier that produces 
+posterior probability for each 
+test instance P(+|A)
+•
+Sort the instances according 
+to P(+|A) in decreasing order
+•
+Apply threshold at each 
+unique value of P(+|A)
+•
+Count the number of TP, FP, 
+TN, FN at each threshold
+•
+TP rate, TPR = TP/(TP+FN)
+•
+FP rate, FPR = FP/(FP + TN)
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+How to Construct an ROC curve
+
+
+1.
+Sürekli değerli çıktıların pozitif sınıf için tanımlandığını varsayarak, kayıtları çıktı 
+değerlerinin artan sırasına göre sıralayın.
+2.
+En düşük dereceli test kaydını seçin (yani, en düşük çıktı değerine sahip kaydı). 
+Seçilen kaydı ve üzerinde sıralananları pozitif sınıfa atayın. Bu yaklaşım, tüm 
+test kayıtlarının pozitif sınıf olarak sınıflandırılmasına eşdeğerdir. Tüm pozitif 
+örnekler doğru şekilde sınıflandırıldığı ve negatif örnekler yanlış sınıflandırıldığı 
+için, TPR = FPR = 1.
+3.
+Sıralanan listeden sonraki test kaydını seçin. Seçili kaydı ve üzerinde 
+sıralananları pozitif, altında olanları negatif olarak sınıflandırın. Önceden seçilen 
+kaydın gerçek sınıf etiketini inceleyerek TP ve FP sayılarını güncelleyin. 
+Önceden seçilen kayıt pozitif bir sınıfsa, TP sayısı azaltılır ve FP sayısı öncekiyle 
+aynı kalır. Önceden seçilen kayıt negatif bir sınıfsa, FP sayısı azaltılır ve TP 
+sayısı öncekiyle aynı kalır.
+4.
+Adımı tekrarlayın ve en yüksek dereceli test kaydı seçilene kadar TP ve FP 
+sayılarını uygun şekilde güncelleyin.
+5.
+Sınıflandırıcının FPR'sine karşı TPR'yi çizin.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+How to construct an ROC curve
+
+
+Class + - + - - - + - + + 
+P 
+0.25 0.43 0.53 0.76 0.85 0.85 0.85 0.87 0.93 0.95 1.00 
+TP 5 4 4 3 3 3 3 2 2 1 0 
+FP 5 5 4 4 3 2 1 1 0 0 0 
+TN 0 0 1 1 2 3 4 4 5 5 5 
+FN 0 1 1 2 2 2 2 3 3 4 5 
+TPR 1 0.8 0.8 0.6 0.6 0.6 0.6 0.4 0.4 0.2 0 
+FPR 1 1 0.8 0.8 0.6 0.4 0.2 0.2 0 0 0 
+Threshold >= 
+
+
+ROC Curve:
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Test of Significance
+
+
+
+Given two models:
+–
+Model M1: accuracy = 85%, tested on 30 instances
+–
+Model M2: accuracy = 75%, tested on 5000 instances
+
+
+
+M1'in M2'den daha iyi olduğunu söyleyebilir 
+miyiz?
+–
+M1 ve M2'nin doğruluğuna ne kadar güvenebiliriz?
+–
+Performans ölçüsündeki fark, 
+test setindeki rastgele 
+dalgalanmaların
+bir sonucu olarak açıklanabilir mi?
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Confidence Interval for Accuracy
+
+
+
+Güven aralığını belirlemek için, 
+doğruluk (
+accuracy
+) 
+ölçüsünü yöneten olasılık dağılımını oluşturmamız 
+gerekir
+.
+
+Sınıflandırma görevini binom deneyi olarak modelleyerek 
+güven aralığını türetmek için bir yaklaşıma ihtiyacımız var.
+
+Aşağıda bir binom deneyinin
+(Binomial Experiment)
+özelliklerinin bir listesi verilmiştir
+:
+1.
+Deney, her denemenin 
+iki olası sonuca 
+sahip 
+olduğu 
+N
+bağımsız denemeden oluşur: başarı
+(
+success
+)
+veya başarısızlık
+(
+failure
+)
+.
+2.
+Her denemede başarı olasılığı, 
+p
+, sabittir.
+
+
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Confidence Interval for Accuracy
+
+
+
+Binom deneyine bir örnek
+, (bir yazı tura denemsinde) bozuk para 
+N
+kez atıldığında ortaya çıkan 
+tura sayısını saymaktır
+.
+
+X
+, 
+N
+denemede gözlemlenen başarı sayısı ise, 
+X
+'in
+belirli bir değeri 
+alma olasılığı
+, ortalama 
+Np
+ve varyans 
+Np
+(1 
+-
+p
+) olan bir binom dağılımı 
+ile verilir:
+
+Örneğin, bozuk para adil (
+fair coin
+) ise (
+p
+= 0.5) ve elli kez atılmışsa, 
+turanın 20 kez ortaya çıkma olasılığı
+
+Deney birçok kez tekrarlanırsa, ortaya çıkması beklenen ortalama 
+tura
+sayısı 50 
+×
+0.5 = 25 iken varyansı 50 
+×
+0.5 
+×
+0.5 = 12.5'tir.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Confidence Interval for Accuracy
+
+
+
+Tahmin
+,
+bir Bernoulli denemesi olarak kabul edilebilir
+–
+Bernoulli denemesinin 2 olası sonucu vardır
+–
+Tahmin için olası sonuçlar: doğru veya yanlış
+–
+Bernoulli denemeleri koleksiyonunun Binom dağılımı vardır:
+
+x 
+
+Bin(N, p) x: doğru tahmin sayısı
+
+e.g: Adil bir 
+bozuk parayı
+50 kez atarsan, kaç tura çıkar?
+Beklenen 
+tura
+sayısı 
+= N
+
+p = 50 
+
+0.5 = 25
+
+
+
+
+
+
+
+X (doğru tahmin sayısı) verildiğinde veya eşdeğer olarak, acc 
+= x / N ve N (test örneği sayısı) verildiğinde,
+p
+'yi (modelin gerçek doğruluğunu) tahmin edebilir miyiz?
+
+
+true accuracy of model
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Confidence Interval for Accuracy
+
+
+
+Test kayıtlarının sınıf etiketlerini tahmin etme görevi
+de bir binom 
+deneyi (
+binomial experiment
+) olarak düşünülebilir.
+
+N
+kayıt 
+içeren bir test seti verildiğinde, 
+X
+bir model tarafından 
+doğru 
+tahmin edilen kayıt sayısı
+ve 
+p
+modelin gerçek doğruluğu
+(
+the true
+accuracy
+) olsun.
+
+Tahmin görevini binom deneyi olarak modelleyerek, 
+X
+; 
+Np 
+ortalama ve 
+Np
+(1 
+-
+p
+) varyans ile bir binom dağılımına sahiptir.
+
+Deneysel
+doğruluğun, acc = 
+X
+/ 
+N
+, aynı zamanda 
+p
+ortalama ve
+p
+(1 − 
+p
+) / 
+N
+varyans ile bir binom dağılımına sahip olduğu 
+gösterilebilir (bkz. 
+önceki
+slaytlar). 
+
+Binom dağılım, 
+acc
+için güven aralığını tahmin etmek amacıyla 
+kullanılabilmesine rağmen, 
+N
+yeterince büyük 
+olduğunda genellikle 
+normal dağılımla yaklaşık olarak tahmin edilir.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Confidence Interval for Accuracy
+
+
+
+For large test sets (N > 30), 
+–
+acc has a normal distribution 
+with mean p and variance 
+p(1
+-
+p)/N
+
+
+
+
+
+Confidence Interval for p:
+
+
+
+
+
+
+
+
+
+1)
+/)1(
+(2/12/ZNpppaccZPnorm_conf
+Area = 1 
+-
+
+
+
+Z
+
+/2
+
+
+Z
+1
+-
+
+/2
+
+
+)(244222/
+222/
+22/
+
+
+ZNaccNaccNZZaccNp
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Confidence Interval for Accuracy
+
+
+
+Consider a model that produces an accuracy of 
+80% when evaluated on 100 test instances:
+–
+N=100, acc = 0.8
+–
+Let 1
+-
+
+= 0.95 (95% confidence)
+–
+From probability table, Z
+
+/2
+=1.96
+
+
+
+
+1
+-
+
+
+
+Z
+
+
+0.99
+
+
+2.58
+
+
+0.98
+
+
+2.33
+
+
+0.95
+
+
+1.96
+
+
+0.90
+
+
+1.65
+
+
+
+
+N
+
+
+50
+
+
+100
+
+
+500
+
+
+1000
+
+
+5000
+
+
+p(lower)
+
+
+0.670
+
+
+0.711
+
+
+0.763
+
+
+0.774
+
+
+0.789
+
+
+p(upper)
+
+
+0.888
+
+
+0.866
+
+
+0.833
+
+
+0.824
+
+
+0.811
+
+
+
+
+Confidence Interval: 
+71
+.
+1% and 86
+.
+7%
+
+
+Note that the confidence interval becomes tighter when 
+N 
+increases
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Comparing Performance of 2 Models
+
+
+
+Given two models, say M1 and M2, which is 
+better?
+–
+M1 is tested on D1 (size=n1), found error rate = e
+1
+–
+M2 is tested on D2 (size=n2), found error rate = e
+2
+–
+Assume D1 and D2 are independent
+test sets
+–
+If n1 and n2 are sufficiently large, then
+–
+Approximate
+:
+
+
+
+
+
+222111,~
+,~
+
+
+NeNe
+iiiinee)1(
+ˆ
+
+
+the error rates 
+e
+1
+and 
+e
+2 
+can be approximated using 
+normal distributions.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Comparing Performance of 2 Models
+
+
+
+To test if performance difference is 
+statistically 
+significant
+: d = e1 
+–
+e2
+–
+d ~ 
+N
+(
+d
+t
+,
+
+t
+) where 
+d
+t
+is the 
+true difference
+–
+Since D1 and D2 are independent, their
+variance 
+adds up: 
+
+
+
+
+–
+At (1
+-
+
+) confidence level, 
+
+
+
+
+2)21(21)11(1
+ˆˆ222122212neeneed
+
+
+
+
+
+dtZddˆ2/
+Our goal is to test 
+whether the
+observed 
+difference between 
+e
+1 
+and 
+e
+2 is statistically 
+significant
+.
+
+
+it can be shown that the 
+confidence
+interval for 
+the true difference 
+d
+t
+is 
+given by 
+this
+equation
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+An Illustrative Example
+
+
+
+Given: M1: n1 = 30, e1 = 0.15
+M2: n2 = 5000, e2 = 0.25
+
+d = |e2 
+–
+e1| = 0.1 (2
+-
+sided test)
+
+
+
+At 95% confidence level, 
+Z
+
+/2
+=1.96
+=> Interval contains 0 => difference may not be
+statistically significant
+
+
+0043.05000)25.01(25.030)15.01(15.0
+ˆ2
+
+
+
+d
+128.0100.00043.096.1100.0tdEstimated
+variance
+
+
+As 
+the interval spans the value zero
+, we can conclude 
+that the observed difference
+is not 
+statistically 
+significant
+at a 95% confidence level.
+
+
+
+© Tan,Steinbach, Kumar 
+Introduction to Data Mining 
+4/18/2004 
+‹#›
+
+
+Comparing Performance of 2 Algorithms
+(Classifiers)
+
+
+
+Each learning algorithm may produce k models:
+–
+L1 may produce M11 , M12, …, M1k
+–
+L2 may produce M21 , M22, …, M2k
+
+
+
+If models are generated on the same test sets 
+D1,D2, …, Dk (e.g., via cross
+-
+validation)
+–
+For each set: compute d
+j
+= e
+1j
+–
+e
+2j
+–
+d
+j
+has mean d
+t
+and variance 
+
+t
+–
+Estimate: 
+
+
+
+
+tktkjjttddkkdd
+
+
+ˆ
+)1(
+)(
+ˆ
+1,1122
+
+
+
+
+
+
+
+Data Mining 
+Classification: Alternative Techniques
+
+
+Lecture Notes for Chapter 4
+
+
+Rule
+-
+Based
+
+
+Introduction 
+to Data Mining , 2
+nd
+Edition
+
+
+by
+
+
+Tan, Steinbach, 
+Karpatne, Kumar
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+2
+
+
+Rule
+-
+Based Classifier
+
+
+
+Kayıtları
+“if…then…” 
+kurallarından
+oluşan
+bir
+koleksiyon
+kullanarak
+sınıflandırı
+r
+
+Rule: (
+Condition
+) 
+
+y
+–
+burada
+
+Condition
+(
+Koşul
+)
+, 
+özniteliklerin
+birleşimidir
+
+y
+,
+sınıf etiketidir
+
+
+–
+LHS
+: rule antecedent
+(
+kural öncülü
+)
+or condition
+(
+koşul
+)
+–
+RHS
+: rule consequent
+(
+kural sonucu
+)
+–
+Sınıflandırma
+kurallarına
+örnekler
+:
+
+(Blood Type=Warm) 
+
+(Lay Eggs=Yes) 
+
+Birds
+
+(Taxable Income < 50K) 
+
+(Refund=Yes) 
+
+Evade=No
+
+
+
+
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+3
+
+
+Rule
+-
+based Classifier (Example)
+
+
+R1: (Give Birth = no) 
+
+(Can Fly = yes) 
+
+Birds
+
+
+R2: (Give Birth = no) 
+
+(Live in Water = yes) 
+
+Fishes
+
+
+R3: (Give Birth = yes) 
+
+(Blood Type = warm) 
+
+Mammals
+
+
+R4: (Give Birth = no) 
+
+(Can Fly = no) 
+
+Reptiles
+
+
+R5: (Live in Water
+= sometimes) 
+
+Amphibians
+
+
+NameBlood TypeGive BirthCan FlyLive in WaterClasshumanwarmyesnonomammalspythoncoldnononoreptilessalmoncoldnonoyesfisheswhalewarmyesnoyesmammalsfrogcoldnonosometimesamphibianskomodocoldnononoreptilesbatwarmyesyesnomammalspigeonwarmnoyesnobirdscatwarmyesnonomammalsleopard sharkcoldyesnoyesfishesturtlecoldnonosometimesreptilespenguinwarmnonosometimesbirdsporcupinewarmyesnonomammalseelcoldnonoyesfishessalamandercoldnonosometimesamphibiansgila monstercoldnononoreptilesplatypuswarmnononomammalsowlwarmnoyesnobirdsdolphinwarmyesnoyesmammalseaglewarmnoyesnobirds
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+4
+
+
+Application of Rule
+-
+Based Classifier
+
+
+
+Bir
+r
+kuralı
+, 
+ilgili 
+örneğin
+öznitelikleri
+(
+attributes
+of 
+the
+instance
+)
+kuralın
+koşulunu
+karşılıyorsa
+x
+örneğini
+kapsar
+(
+covers
+)
+
+
+R1: (Give Birth = no) 
+
+(Can Fly = yes) 
+
+Birds
+
+
+R2: (Give Birth = no) 
+
+(Live in Water = yes) 
+
+Fishes
+
+
+R3: (Give Birth = yes) 
+
+(Blood Type = warm) 
+
+Mammals
+
+
+R4: (Give Birth = no) 
+
+(Can Fly = no) 
+
+Reptiles
+
+
+R5: (Live in Water
+= sometimes) 
+
+Amphibians 
+
+
+The rule R1 covers a hawk => Bird
+
+
+The rule R3 covers the grizzly bear => Mammal
+
+
+NameBlood TypeGive BirthCan FlyLive in WaterClasshawkwarmnoyesno?
+grizzly bearwarmyesnono?
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+5
+
+
+Rule Coverage and Accuracy
+
+
+
+Bir
+sınıflandırma kuralının kalitesi
+, 
+kapsam (
+coverage
+) 
+ve 
+doğruluk (
+accuracy
+) 
+gibi ölçümler kullanılarak değerlendirilebilir.
+
+Bir
+veri
+kümesi
+D
+ve
+bir
+sınıflandırma
+kuralı
+verildiğinde
+r 
+: 
+A 
+→ y
+–
+kuralın kapsamı (
+coverage
+), 
+D veri kümesinde 
+r
+kuralını tetikleyen 
+kayıtların 
+oranı
+olarak tanımlanır.
+–
+Öte yandan, 
+kuralın doğruluğu (
+accuracy
+) 
+veya güven 
+faktörü 
+(
+confidence
+factor
+), 
+sınıf etiketleri 
+y
+'ye eşit olan 
+r
+tarafından 
+tetiklenen kayıtların 
+oranı 
+olarak 
+tanımlanır.
+–
+Bu ölçülerin tanımları
+
+
+
+
+Burada 
+|A| 
+kural öncülünü (
+rule 
+antecedent
+) karşılayan kayıtların sayısı
+, 
+
+
+|
+A ∩ y| 
+hem 
+öncülü
+hem de 
+sonucu
+(
+both
+antecedent
+and 
+consequent
+) 
+karşılayan
+kayıtların
+sayısıdır
+ve
+
+
+|D| 
+toplam
+kayıt
+sayısıdır
+. 
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+6
+
+
+Rule Coverage and Accuracy
+
+
+
+Coverage
+of a rule:
+–
+Bir
+kuralın
+öncülünü
+(
+antecedent of a 
+rule
+)
+karşılayan
+kayıt
+ların
+oranı
+
+
+
+Accuracy
+of a rule:
+–
+Bir
+kuralın
+sonucunu
+da 
+öncülü
+nü de 
+karşılayan
+kayıt
+ların
+oranı
+
+
+
+
+Tid Refund Marital 
+Status 
+Taxable 
+Income Class 
+1 Yes Single 125K No 
+2 No Married 100K No 
+3 No Single 70K No 
+4 Yes Married 120K No 
+5 No Divorced 95K Yes 
+6 No Married 60K No 
+7 Yes Divorced 220K No 
+8 No Single 85K Yes 
+9 No Married 75K No 
+10 No Single 90K Yes 
+10 
+(Status=Single) 
+
+No
+
+
+Coverage = 40%, Accuracy = 50%
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+7
+
+
+How does Rule
+-
+based Classifier Work?
+
+
+R1: (Give Birth = no) 
+
+(Can Fly = yes) 
+
+Birds
+
+
+R2: (Give Birth = no) 
+
+(Live in Water = yes) 
+
+Fishes
+
+
+R3: (Give Birth = yes) 
+
+(Blood Type = warm) 
+
+Mammals
+
+
+R4: (Give Birth = no) 
+
+(Can Fly = no) 
+
+Reptiles
+
+
+R5: (Live in Water
+= sometimes) 
+
+Amphibians 
+
+
+A lemur triggers rule R3, so it is classified as a mammal
+
+
+A turtle triggers both R4 and R5
+
+
+A dogfish shark triggers none of the rules
+
+
+NameBlood TypeGive BirthCan FlyLive in WaterClasslemurwarmyesnono?
+turtlecoldnonosometimes?
+dogfish sharkcoldyesnoyes?
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+8
+
+
+T
+wo 
+important properties of the rule set
+
+
+
+Önceki
+örnek
+, 
+kurala
+dayalı
+bir
+sınıflandırıcı
+tarafından
+oluşturulan
+kural
+kümesinin
+iki
+önemli
+özelliğini
+göstermektedir
+.
+
+Mutually Exclusive Rules 
+(
+Karşılıklı/Birbirlerini 
+Dışlayan Kurallar
+)
+–
+Eğer aynı 
+kayıt tarafından 
+R
+'deki 
+herhangi iki kural (
+no two rules
+) 
+tetiklenmezse
+, 
+bu 
+R
+kural kümesindeki kurallar birbirini 
+dışlar (
+mutually 
+exclusiv
+e
+).
+–
+Bu 
+özellik, 
+her kaydın 
+R
+'de 
+en fazla 
+bir kural tarafından kapsanmasını 
+sağlar
+. Karşılıklı dışlayıcı bir kural kümesi örneği Tablo 5.3'te 
+gösterilmiştir.
+
+
+
+Exhaustive Rules 
+(
+Eksiksiz/Kapsamlı 
+Kurallar
+)
+–
+Her 
+öznitelik değeri kombinasyonu için bir kural varsa
+, bir 
+R
+kural grubu 
+eksiksiz kapsamaya(
+exhaustive coverage
+)
+sahiptir
+.
+–
+Bu 
+özellik
+, her 
+kaydın
+R
+'deki
+en
+az
+bir
+kural
+tarafından
+kapsanmasını
+sağlar
+.
+«
+Body Temperature
+» ve 
+«
+Gives Birth
+» özniteliklerinin ikili 
+değişkenler olduğunu varsayarsak, Tablo 5.3'te gösterilen kural seti 
+eksiksiz 
+bir 
+kapsamaya 
+sahiptir.
+
+
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+9
+
+
+Characteristics of Rule Sets: Strategy 1
+
+
+
+Mutually exclusive rules
+–
+Kurallar
+birbirinden
+bağımsızsa
+sınıflandırıcı
+, 
+birbirini
+dışlayan
+kurallar
+içerir
+–
+Her 
+kayıt
+en
+fazla
+bir
+kural
+tarafından kapsanır
+
+
+
+Exhaustive rules
+–
+Sınıflandırıcı
+, 
+öznitelik
+değerlerinin
+her 
+olası
+kombinasyonunu
+hesaba
+katıyorsa
+eksiksiz
+bir
+kapsama
+ya
+sahiptir
+–
+Her 
+kayıt
+en
+az
+bir
+kural
+tarafından 
+kapsa
+nmaktadır
+.
+
+
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+10
+
+
+Characteristics of Rule Sets: Strategy 2
+
+
+
+Rules are not mutually exclusive
+–
+Bir
+kayıt
+birden
+fazla
+kuralı
+tetikleyebilir
+–
+Çözüm
+?
+
+Ordered rule set
+
+Unordered rule set 
+–
+use voting schemes
+
+
+
+
+
+Rules are not exhaustive
+–
+Bir
+kayıt
+herhangi
+bir
+kuralı
+tetiklemeyebilir
+–
+Çözüm
+?
+
+Use a default class
+
+
+
+
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+11
+
+
+Ordered Rule Set
+
+
+
+Kurallar, 
+önceli
+ğe
+(
+priority
+)
+göre sıralanır
+–
+Sıralı
+bir
+kural
+kümesi
+(
+ordered rule 
+set
+)
+, 
+karar
+listesi
+olarak
+bilinir
+
+
+
+Sınıflandırıcıya
+bir
+test 
+kaydı
+sunulduğunda
+–
+Tetiklediği
+en
+yüksek
+dereceli
+kuralın
+sınıf
+etiketine
+atanır
+–
+Kurallardan
+hiçbiri
+tetiklenmediyse
+, 
+varsayılan
+sınıfa
+(
+default 
+class
+)
+atanır
+
+
+
+
+R1: (Give Birth = no) 
+
+(Can Fly = yes) 
+
+Birds
+
+
+R2: (Give Birth = no) 
+
+(Live in Water = yes) 
+
+Fishes
+
+
+R3: (Give Birth = yes) 
+
+(Blood Type = warm) 
+
+Mammals
+
+
+R4: (Give Birth = no) 
+
+(Can Fly = no) 
+
+Reptiles
+
+
+R5: (Live in Water
+= sometimes) 
+
+Amphibians 
+
+
+NameBlood TypeGive BirthCan FlyLive in WaterClassturtlecoldnonosometimes?
+Öncelik
+(
+priority
+)
+birçok
+şekilde
+tanımlanabilir
+(
+ör
+.
+
+
+doğruluk
+, 
+kapsam
+, 
+toplam
+açıklama
+uzunluğu
+veya
+kuralların
+oluşturulma
+sırasına
+göre
+).
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+12
+
+
+Uno
+rdered
+Rule Set
+
+
+
+Bu 
+yaklaşım, bir test kaydının 
+birden çok 
+sınıflandırma kuralını tetiklemesine 
+izin verir ve 
+her kuralın sonucunu 
+belirli bir sınıf için bir 
+oy 
+(
+vote
+) 
+olarak değerlendirir.
+
+Oylar
+daha
+sonra
+test 
+kaydının
+sınıf
+etiketini
+belirlemek
+için
+toplanır
+.
+
+Kayıt 
+genellikle en çok 
+oyu (
+highest number of 
+votes
+) 
+alan sınıfa atanır.
+
+Bazı
+durumlarda
+oylama
+,
+kuralın
+doğruluğuna
+göre
+ağırlıklandırılabilir
+.
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+13
+
+
+Rule Ordering Schemes
+
+
+
+Rule
+-
+based ordering
+–
+Bireysel kurallar kalitelerine göre 
+sıralanır
+
+
+
+Class
+-
+based ordering
+–
+Aynı
+sınıfa
+ait
+kurallar
+birlikte
+görünür
+
+
+
+
+Rule-based Ordering(Refund=Yes) ==> No(Refund=No, Marital Status={Single,Divorced},
+Taxable Income<80K) ==> No(Refund=No, Marital Status={Single,Divorced},
+Taxable Income>80K) ==> Yes(Refund=No, Marital Status={Married}) ==> NoClass-based Ordering(Refund=Yes) ==> No(Refund=No, Marital Status={Single,Divorced},
+Taxable Income<80K) ==> No(Refund=No, Marital Status={Married}) ==> No(Refund=No, Marital Status={Single,Divorced},
+Taxable Income>80K) ==> Yes
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+14
+
+
+Rule
+-
+based 
+ordering
+scheme
+
+
+
+bireysel
+kuralları
+bazı
+kural
+kalite
+ölçülerine
+göre
+sıralar
+.
+
+her 
+test kaydının, kendisini kapsayan "en iyi" 
+kurala göre sınıflandırılmasını sağlar.
+
+potansiyel bir dezavantajı 
+var 
+
+Daha 
+düşük dereceli kuralları yorumlamak çok 
+daha zordur çünkü 
+kendilerinden önceki 
+kuralların 
+değillemesini
+varsayarlar
+.
+
+
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+15
+
+
+Class
+-
+based
+ordering
+scheme
+
+
+
+Bu 
+yaklaşımda, 
+aynı sınıfa 
+ait olan kurallar, 
+R
+kural 
+kümesinde 
+birlikte görünür
+.
+
+Kurallar 
+daha sonra 
+sınıf bilgilerine
+göre 
+toplu olarak 
+sıralanır
+.
+
+Aynı 
+sınıftaki kurallar arasında 
+göreceli sıralama 
+önemli 
+değildir
+;
+–
+k
+urallardan
+biri
+tetiklendiği
+sürece
+, 
+sınıf
+test 
+kaydına
+atanacaktır
+.
+
+
+
+Bu
+, kural yorumlamasını biraz daha kolaylaştırır.
+
+İyi bilinen kural 
+tabanlı (
+rule
+-
+based
+) 
+sınıflandırıcıların çoğu (
+C4.5rules
+ve 
+RIPPER
+gibi) sınıf tabanlı sıralama 
+şemasını (
+class
+-
+based 
+ordering scheme
+) 
+kullandığından
+, bu bölümün geri kalanındaki 
+tartışma esas olarak bu tür sıralama şemasına odaklanmaktadır
+.
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+16
+
+
+Building Classification Rules
+
+
+Sınıflandırma
+kuralları
+çıkarımı
+için
+iki
+geniş
+yöntem
+sınıfı
+vardır
+:
+
+
+
+Direct Method: 
+
+Kuralları
+doğrudan
+verilerden
+çıkarı
+r
+
+Örnekler
+: RIPPER, CN2, 
+Holte’s
+1R
+
+
+
+
+
+Indirect Method:
+
+K
+uralları
+d
+iğer
+sınıflandırma
+modellerinden
+çıkar
+ır
+(e.g. decision trees, neural networks, 
+etc
+).
+
+Örnekler 
+: C4.5rules
+
+
+
+
+
+
+Doğrudan yöntemler 
+(Direct 
+methods
+), 
+öznitelik uzayını daha 
+küçük 
+altuzaylara
+böler
+, böylece bir 
+alt
+-
+uzaya 
+ait olan tüm 
+kayıtlar 
+tek bir 
+sınıflandırma kuralı 
+kullanılarak 
+sınıflandırılabilir
+.
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+17
+
+
+Direct Method: Sequential Covering
+
+
+1.
+Start from an empty rule
+2.
+Grow a rule using the Learn
+-
+One
+-
+Rule function
+3.
+Remove training records covered by the rule
+4.
+The 
+rule 
+is added to the bottom of the decision 
+list 
+R
+.
+5.
+Repeat Step (2) and (3) until stopping criterion is 
+met 
+
+
+A rule is desirable if 
+it
+covers 
+most of the positive examples and 
+none (or very few) of the 
+negative
+examples
+.
+
+
+Learn
+-
+One
+-
+Rule
+Function
+
+
+Learn
+-
+One
+-
+Rule f
+onksiyonunun
+amacı, eğitim setindeki 
+pozitif 
+örneklerin çoğunu ve 
+negatif 
+örneklerin 
+hiçbirini (veya çok azını) kapsayan bir sınıflandırma kuralı çıkarmaktır. Bununla birlikte, arama 
+uzayının 
+üstel boyutu göz önüne alındığında, optimal bir kural bulmak hesaplama açısından pahalıdır.
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+18
+
+
+Example of Sequential Covering
+
+
+(i) Original Data(ii) Step 1Böyle 
+bir kural bulunduğunda, 
+kuralın kapsadığı 
+eğitim 
+kayıtları 
+elimine 
+edilir.
+
+
+Pozitif 
+örneklerin en büyük kısmını kapsadığı için 
+önce R1 kuralı çıkarılır
+.
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+19
+
+
+Example of Sequential Covering…
+
+
+(iii) Step 2R1
+(iv) Step 3R1R2Böyle bir kural bulunduğunda, kuralın kapsadığı eğitim kayıtları 
+elimine edilir.
+
+
+R1
+tarafından kapsanan tüm eğitim kayıtları 
+kaldırılır 
+ve daha sonra 
+algoritma 
+bir sonraki en iyi 
+kuralı
+, yani 
+R2
+'yi 
+aramaya devam eder
+.
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+20
+
+
+Instance Elimination
+
+
+
+Örnekleri
+(
+instances
+)
+neden
+ortadan
+kaldırmamız
+gerekiyor
+?
+–
+Aksi
+takdirde
+, 
+sonraki
+kural
+önceki
+kuralla
+aynı
+olur
+
+
+
+Pozitif
+örnekleri
+neden
+kaldırıyoruz
+?
+–
+Sonraki kuralın farklı 
+olmasını sağlama alıyor
+
+
+
+Negatif
+örnekleri
+neden
+kaldırıyoruz
+?
+–
+Kuralın
+doğruluğunun
+eksik 
+değerlemesini 
+önle
+r
+–
+Diyagramda
+R2 
+ve
+R3 
+kurallarını
+karşılaştırın
+
+
+
+
+class = +
+class = -
++
+++
++
++
++
++
++
++
++
++
++
++
++
++
++
+++
++
++
+-
+-
+-
+-
+--
+-
+-
+-
+--
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
++
++
+++
++
++
++
+R1R3R2+
++
+Şekil
+5.4. 
+«
+sequential 
+covering 
+algorithm
+» ile 
+eğitim 
+kayıtlarının ortadan 
+kaldırılması (
+elimination
+). 
+R1, R2 ve 
+R3, üç farklı kural tarafından kapsanan bölgeleri temsil 
+eder
+
+
+Şekil 
+5.4, 29 olumlu örnek ve 21 olumsuz örnek içeren bir veri 
+kümesinden çıkarılan üç olası kuralı, 
+R1
+, 
+R2
+ve 
+R3
+'ü gösterir. 
+R1
+, 
+R2
+ve 
+R3
+'ün doğrulukları sırasıyla 12/15 
+(
+%80
+), 7/10 
+(
+%70
+) 
+ve 8 / 12'dir 
+(
+%66.7
+). En yüksek doğruluğa sahip olduğu için ilk 
+önce 
+R1
+oluşturulur.
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+21
+
+
+Instance Elimination
+
+
+R1
+, 
+R2
+ve 
+R3
+'ün doğrulukları sırasıyla 12/15 (%80), 7/10 (%70) ve 8 / 12'dir 
+(%66.7). En yüksek doğruluğa sahip olduğu için ilk önce 
+R1
+oluşturulur.
+
+
+En 
+yüksek doğruluğa sahip olduğu için önce 
+R1
+oluşturulur. 
+R1
+oluşturulduktan sonra, algoritma tarafından oluşturulan bir sonraki kuralın 
+R1
+'den farklı olması için kuralın kapsadığı pozitif örneklerin kaldırılması 
+gerektiği açıktır. Ardından, algoritmaya 
+R2
+veya 
+R3
+üretme seçeneği 
+verildiğini varsayalım. 
+R2
+, 
+R3'ten
+daha yüksek doğruluğa sahip olsa da, 
+R1
+ve 
+R3
+birlikte 18 olumlu örneği ve 5 olumsuz örneği kapsar (genel olarak 
+%78,3 doğrulukla sonuçlanır), oysa 
+R1
+ve 
+R2
+birlikte 19 olumlu örneği ve 6 
+olumsuz örneği kapsar (genel bir sonuçla sonuçlanır). %76 doğruluk). 
+R2
+veya 
+R3'ün
+doğruluk üzerindeki artan etkisi, doğrulukları hesaplanmadan 
+önce 
+R1
+kapsamındaki olumlu ve olumsuz örnekler kaldırıldığında daha 
+belirgindir. Özellikle, 
+R1'in
+kapsadığı olumlu örnekler çıkarılmazsa, 
+R3'ün
+etkin doğruluğunu abartabiliriz ve olumsuz örnekler çıkarılmazsa, 
+R3'ün
+doğruluğunu küçümseyebiliriz. İkinci durumda, 
+R3
+tarafından işlenen yanlış 
+pozitif hataların yarısı bir önceki kural olan 
+R1
+tarafından zaten açıklanmış 
+olsa bile, 
+R2'yi
+R3'e
+tercih edebiliriz.
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+22
+
+
+Rule Growing
+
+
+
+Two common strategies 
+
+
+Status =
+SingleStatus =
+DivorcedStatus =
+MarriedIncome> 80K...
+Yes: 3No: 4{ }
+Yes: 0No: 3Refund=
+NoYes: 3No: 4Yes: 2No: 1Yes: 1No: 0Yes: 3No: 1(a) General-to-specific
+Refund=No,
+Status=Single,
+Income=85K(Class=Yes)
+Refund=No,
+Status=Single,
+Income=90K(Class=Yes)
+Refund=No,
+Status = Single(Class = Yes)
+(b) Specific-to-general
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+23
+
+
+Recall
+: 
+How 
+to determine the Best Split
+
+
+l
+Greedy approach: 
+–
+Nodes with 
+purer
+class distribution are 
+preferred
+
+
+l
+Need a measure of node impurity:
+
+
+C0: 5C1: 5
+C0: 9C1: 1High degree of impurity
+
+
+Low degree of impurity
+
+
+purer
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+24
+
+
+Rule Growing
+strategy
+: 
+general
+-
+to
+-
+specific
+
+
+
+Bir 
+başlangıç kuralı 
+r 
+: 
+{}
+→ 
+y
+oluşturulur, burada sol taraf boş bir 
+kümedir ve sağ taraf hedef 
+sınıfı (
+target class
+) 
+içerir.
+
+Bu haliyle kuralın 
+kalitesi 
+düşük (
+poor quality
+) 
+çünkü eğitim setindeki 
+tüm örnekleri 
+kapsar.
+
+Kuralın 
+kalitesini iyileştirmek için 
+sonradan yeni 
+bağlaçlar (
+new
+conjuncts
+) 
+eklenir
+
+Body 
+Temperature=warm
+-
+blooded 
+bağlacı kural öncülünü 
+oluşturmak için başlangıçta seçilir.
+
+Algoritma daha sonra olası tüm adayları araştırır ve 
+greedy
+mantığıyla 
+bir sonraki 
+bağlacı, 
+Gives Birth=yes
+kural öncülüne eklenecek olarak 
+seçer.
+
+
+T
+he 
+general
+-
+to
+-
+specific rule
+-
+growing strategy for the vertebrate 
+classification
+problem
+.
+
+
+Bu 
+süreç, 
+durma 
+kriteri karşılanana 
+kadar devam eder 
+(örneğin, eklenen 
+bağlaç 
+kuralın 
+kalitesini 
+iyileştirmediğinde
+).
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+25
+
+
+Rule Growing
+strategy
+: 
+specific
+-
+to
+-
+general
+
+
+
+Pozitif 
+örneklerden biri
+, kural geliştirme süreci için ilk 
+çekirdek (
+initial 
+seed
+) 
+olarak rastgele seçilir.
+
+İyileştirme 
+adımı sırasında kural
+,
+bağlaçlarından biri kaldırılarak 
+genelleştirilir
+
+böylece 
+daha 
+fazla sayıda pozitif 
+örnekleri 
+kapsayabilir.
+
+
+
+İlk 
+çekirdek 
+olarak memeliler için 
+pozitif 
+bir örnek seçildiğini varsayalım
+.
+–
+Başlangıç 
+kuralı, 
+çekirdek 
+öznitelik değerleriyle aynı bağlaçları içerir.
+
+
+
+Kapsamını
+(
+coverage
+)
+iyileştirmek
+için
+, 
+kural
+Hibernate=no
+bağlacını 
+kaldırılarak
+genelleştirilir
+.
+
+
+the
+specific
+-
+togeneral
+approach 
+for the vertebrate classification problem.
+
+
+Rafine 
+etme adımı, 
+durma kriteri 
+karşılanana kadar 
+tekrar edilir, örneğin,
+kural
+negatif 
+örnekleri 
+kapsamaya 
+başladığında
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+26
+
+
+Rule Evaluation
+
+
+
+Kural 
+geliştirme sürecinde hangi 
+bağlacın 
+eklenmesi (veya 
+kaldırılması) gerektiğini belirlemek için bir değerlendirme ölçütü 
+gereklidir.
+
+Accuracy
+bariz 
+bir seçimdir çünkü kural tarafından doğru bir şekilde 
+sınıflandırılan eğitim örneklerinin 
+oranını 
+açık bir şekilde 
+ölçer.
+
+Ancak, 
+accuracy
+’nin
+olası
+handikapı
+şudur:
+
+kuralın kapsamını (
+coverage
+) 
+hesaba katmaz
+.
+
+
+
+Örneğin
+, aşağıdakileri içeren bir eğitim seti düşünün:
+–
+60 
+pozitif 
+örnek 
+ve
+–
+100 
+negat
+if
+örnek.
+
+
+
+Aşağıdaki
+iki
+aday
+kuralın
+bize
+verildiğini
+varsayalım
+: 
+–
+Rule 
+r
+1: 
+50 
+pozitif
+örnek
+ve
+5 
+negatif
+örnek
+içerir
+, 
+–
+Rule 
+r
+2: 
+2 
+pozitif
+örneği
+içerir
+ve
+hiç 
+negatif
+örnek
+içermez
+
+
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+27
+
+
+Rule Evaluation
+
+
+–
+Rule 
+r
+1
+: 
+covers 50 positive examples and 5 negative examples,
+–
+Rule 
+r
+2
+: 
+covers 2 positive examples and no negative examples
+.
+
+
+
+r
+1
+ve 
+r
+2
+için 
+doğruluklar (
+accuracies
+) 
+sırasıyla% 90,9 
+ve % 
+100'dür.
+
+Ancak
+, doğruluğu düşük olmasına rağmen 
+r
+1
+daha iyi bir 
+kuraldır.
+
+r
+2
+için yüksek doğruluk potansiyel olarak 
+sahte
+dir (
+spurious
+) 
+çünkü 
+kuralın
+kapsamı
+(
+coverage
+)
+çok düşüktür
+.
+
+Bunu
+halletmek
+için
+aşağıdaki
+yaklaşım
+kullanılabilir
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+28
+
+
+Rule Evaluation
+
+
+
+Foil’s Information Gain
+–
+R0: {} => class (initial rule)
+–
+R1: {A} => class (rule after adding conjunct)
+–
+Gain(R0, R1) = 
+𝑡𝑙𝑜𝑔2
+𝑝1
+𝑝1+𝑛1–𝑙𝑜𝑔2
+𝑝0
+𝑝0+𝑛0
+–
+where t: number of positive instances covered by 
+both R0 and R1
+
+
+
+
+p0: number of positive instances covered by R0
+
+
+n0: number of negative instances covered by R0
+
+
+p1: number of positive instances covered by R1
+
+
+n1: number of negative instances covered by R1
+
+
+
+Since 
+the measure is proportional to 
+p
+1 
+and 
+p
+1
+/
+(
+p
+1 
++
+n
+1
+), it prefers 
+rules
+that 
+have 
+high support count 
+and 
+accuracy
+.
+
+
+FOIL: First 
+Order Inductive 
+Learner 
+–
+an early rule
+-
+based learning algorithm
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+29
+
+
+Rule Evaluation
+example
+by
+FOIL’s
+info
+. 
+gain
+
+
+p0=60, n0=100
+
+
+Rule 
+r
+1
+: 
+covers 50 positive 
+examples and 5 negative 
+examples
+, 
+i.e
+.
+
+
+p1=50, n1=5
+
+
+FOIL’s
+info
+gain
+=
+
+
+𝟓𝟎𝑙𝑜𝑔2
+𝟓𝟎
+𝟓𝟓
+–𝑙𝑜𝑔2
+𝟔𝟎
+𝟏𝟔𝟎
+=63,87
+
+
+p0=60, n0=100
+
+
+Rule 
+r
+2
+: 
+covers 2 positive 
+examples and no negative 
+examples
+, 
+i.e
+.
+
+
+p1=2, n1=0
+
+
+FOIL’s
+info
+gain
+=
+
+
+𝟐𝑙𝑜𝑔2
+𝟐
+𝟐
+–𝑙𝑜𝑔2
+𝟔𝟎
+𝟏𝟔𝟎
+=2,83
+
+
+Therefore, 
+r
+1 
+is a better rule than 
+r
+2
+.
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+30
+
+
+Stopping Criterion and Rule Pruning
+
+
+
+Stopping criterion
+–
+Kazancı
+(
+gain
+)
+hesaplayın
+–
+Kazanç
+ihmal edilebilecek kadar küçük
+ise
+, 
+yeni
+kuralı
+atın
+
+
+
+Rule 
+Pruning
+–
+Karar
+ağaçlarının
+sonradan
+budamasına
+(
+post
+-
+pruning
+)
+benzer
+–
+Reduced Error Pruning: 
+
+Kuraldaki
+bağlaçlardan
+birini
+kaldırın
+
+Budamadan
+önce
+ve
+sonra
+doğrulama
+(on 
+validation
+set 
+before 
+and after pruning
+)
+setindeki
+hata
+oranını
+karşılaştırın
+
+Hata
+iyileşirse
+, 
+bağlacı
+budayın
+
+
+
+
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+31
+
+
+Summary of Direct Method
+
+
+
+Grow a single rule
+
+Remove Instances from rule
+
+Prune the rule (if necessary)
+
+Add rule to Current Rule Set
+
+Repeat
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+32
+
+
+Direct Method: RIPPER
+
+
+
+RIPPER
+, yaygın olarak kullanılan bir kural 
+indükleme (
+induction
+) 
+algoritmasıdır
+.
+
+Bu algoritma, eğitim örneklerinin sayısıyla 
+neredeyse doğrusal olarak ölçeklenir ve 
+–
+özellikle 
+dengesiz sınıf dağılımlarına 
+(
+imbalanced class distributions
+) sahip 
+veri 
+kümelerinden modeller oluşturmak için 
+uygundur.
+
+
+
+RIPPER
+, 
+modelin
+ezberlemesini 
+önlemek
+için
+bir
+doğrulama
+seti
+kullandığından
+gürültülü
+veri
+kümeleriyle
+(
+noisy
+data 
+sets
+)
+de 
+iyi
+çalışır
+.
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+33
+
+
+Direct Method: RIPPER
+
+
+
+2 
+sınıflı
+problem 
+için
+, 
+sınıflardan
+birini
+pozitif
+sınıf
+olarak
+seçin
+ve
+diğeri
+ni
+negatif
+sınıf
+olarak
+–
+Pozitif
+sınıf
+için
+kuralları
+öğrenin
+(
+the
+minority
+)
+–
+Negatif
+sınıf
+(
+the
+majority
+)
+varsayılan
+sınıf
+olacaktır
+
+
+
+Çok
+sınıflı
+(
+multi
+-
+class
+)
+problem 
+için
+–
+Sınıfları
+artan
+sınıf
+yaygınlığına
+göre
+sıralayın
+(
+belirli
+bir
+sınıfa
+ait
+örneklerin
+oranı
+, 
+yani
+frekans
+)
+–
+Önce
+en
+küçük
+sınıf
+için
+kural
+kümesini
+öğrenin
+, 
+gerisini
+negatif
+sınıf
+olarak
+değerlendirin
+–
+Pozitif
+sınıf
+olarak
+sonraki
+en
+küçük
+sınıfla
+tekrarlayın
+
+
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+34
+
+
+Direct Method: RIPPER
+
+
+
+Growing a rule:
+–
+Boş 
+kuraldan başlayın (RIPPER, genelden 
+özele (
+general
+-
+to
+-
+specific 
+strategy
+) 
+bir strateji kullanır)
+–
+FOIL’ın
+bilgi
+kazancını
+iyileştirdikleri
+sürece
+bağlaçlar
+ekleyin
+–
+Kural
+artık
+negatif
+örnekleri
+kapsamadığında
+eklemeyi
+durdurun
+–
+«
+incremental reduced error pruning
+» kullanarak kuralı hemen 
+budayın 
+(
+Yeni
+kural
+daha
+sonra
+doğrulama
+setindeki
+performansına
+göre
+budanır
+.
+)
+–
+Measure for pruning: v = (p
+-
+n)/(
+p+n
+)
+
+p: validation set
+inde 
+kuralın kapsadığı 
+pozitif 
+örneklerin sayısı
+
+n: 
+validation set
+inde kuralın kapsadığı 
+negatif 
+örneklerin sayısı
+
+
+–
+Pruning method: 
+v'yi
+en
+maksimize eden 
+son 
+koşullar
+dizisini
+silin
+(
+Budama
+, 
+kurala
+eklenen
+son 
+bağlaçtan
+başlayarak
+yapılır
+.
+)
+
+
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+35
+
+
+Direct Method: RIPPER
+
+
+
+Building a Rule Set:
+–
+Use sequential covering algorithm
+
+Mevcut
+pozitif
+örnekler
+kümesini
+kapsayan
+en
+iyi
+kuralı
+bulur
+
+Kuralın
+kapsadığı
+hem 
+pozitif
+hem de 
+negatif
+örnekleri
+ortadan
+kaldırı
+r
+
+
+–
+Kural
+kümesine
+her 
+kural
+eklendiğinde
+, 
+yeni
+açıklama
+uzunluğunu
+(
+description length
+)
+hesapla
+nır
+
+Yeni
+açıklama
+uzunluğu
+şimdiye
+kadar
+elde
+edilen
+en
+küçük
+açıklama
+uzunluğundan
+d
+bit 
+daha
+uzun
+olduğunda
+yeni
+kural
+eklemeyi
+durdur
+ur
+
+
+
+
+
+
+Yeni
+kural
+, 
+kural kümesinin 
+toplam
+açıklama
+uzunluğunu
+en
+az
+d
+bit 
+arttırırsa
+, RIPPER 
+kural
+kümesine
+kural
+eklemeyi
+durdurur
+(
+varsayılan
+olarak
+, 
+d
+64 bit 
+seçilir
+).
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+36
+
+
+Indirect Methods
+
+
+Rule Setr1: (P=No,Q=No) ==> -
+r2: (P=No,Q=Yes) ==> +
+r3: (P=Yes,R=No) ==> +
+r4: (P=Yes,R=Yes,Q=No) ==> -
+r5: (P=Yes,R=Yes,Q=Yes) ==> +
+PQRQ-++
+-+
+NoNoNoYesYesYesNoYesConverting a decision tree into classification rules.
+
+
+D
+ecision
+T
+ree
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+37
+
+
+Indirect Method: C4.5rules
+
+
+
+Budanmamış
+bir
+karar
+ağacından
+kuralları
+çıkarı
+r
+
+Her 
+kural
+için
+, 
+r: A 
+
+y, 
+–
+alternatif
+bir
+kural
+düşünün
+r′: 
+A′ 
+
+y
+.
+B
+urada
+A′ 
+başlangıçtaki kuraldaki
+bağlaçlardan
+birinin
+kaldırılmasıyla
+elde
+edilir
+.
+–
+r
+'
+nin
+karamsar
+hata
+oranını
+(
+pessimistic error 
+rate
+) 
+tüm
+r
+'
+lere
+karşılaştırın
+–
+Alternatif kurallardan biri daha düşük 
+karamsar hata oranına sahipse 
+budayın
+–
+Genelleme
+hatasını
+(
+generalization error
+)
+artık
+iyileştiremeyene
+kadar
+tekrarlayın
+
+
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+38
+
+
+Indirect Method: C4.5rules
+
+
+
+Kuralları
+sıralamak
+yerine
+, 
+kuralların
+alt 
+kümelerini
+sıralayın
+(
+class ordering
+)
+–
+Her 
+alt 
+küme
+, 
+aynı
+kural
+sonucunu 
+(
+class
+) 
+içeren
+bir
+kurallar
+koleksiyonudur
+.
+–
+Her alt 
+kümenin
+açıklama
+uzunluğunu
+hesaplayın
+(
+description length
+)
+
+Description length = L(error) + g L(model)
+
+g, 
+bir
+kural
+kümesindeki
+gereksiz
+özniteliklerin
+varlığını
+hesaba
+katan
+bir
+parametredir
+(
+varsayılan
+değer
+= 0,5)
+
+
+
+
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+39
+
+
+Example
+
+
+NameGive BirthLay EggsCan FlyLive in WaterHave LegsClasshumanyesnononoyesmammalspythonnoyesnononoreptilessalmonnoyesnoyesnofisheswhaleyesnonoyesnomammalsfrognoyesnosometimesyesamphibianskomodonoyesnonoyesreptilesbatyesnoyesnoyesmammalspigeonnoyesyesnoyesbirdscatyesnononoyesmammalsleopard sharkyesnonoyesnofishesturtlenoyesnosometimesyesreptilespenguinnoyesnosometimesyesbirdsporcupineyesnononoyesmammalseelnoyesnoyesnofishessalamandernoyesnosometimesyesamphibiansgila monsternoyesnonoyesreptilesplatypusnoyesnonoyesmammalsowlnoyesyesnoyesbirdsdolphinyesnonoyesnomammalseaglenoyesyesnoyesbirds
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+40
+
+
+C4.5rules versus RIPPER
+
+
+C4.5rules:
+
+
+(Give Birth=No, Can Fly=Yes) 
+
+Birds
+
+
+(Give Birth=No, Live in Water=Yes) 
+
+Fishes
+
+
+(Give Birth=Yes) 
+
+Mammals
+
+
+(Give Birth=No, Can Fly=No, Live in Water=No) 
+
+Reptiles
+
+
+( ) 
+
+Amphibians
+
+
+GiveBirth?
+Live InWater?
+CanFly?
+MammalsFishesAmphibiansBirdsReptilesYesNoYesSometimesNoYesNoRIPPER:
+
+
+(Live in Water=Yes) 
+
+Fishes
+
+
+(Have Legs=No) 
+
+Reptiles
+
+
+(Give Birth=No, Can Fly=No, Live In Water=No) 
+
+Reptiles
+
+
+(Can Fly=Yes
+,
+Give 
+Birth=No) 
+
+Birds
+
+
+() 
+
+Mammals
+
+
+Classification rules extracted from a decision tree for the 
+vertebrate classification problem
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+41
+
+
+C4.5 versus C4.5rules versus RIPPER
+
+
+PREDICTED CLASS 
+AmphibiansFishesReptilesBirdsMammalsACTUALAmphibians00002CLASSFishes03000Reptiles00301Birds00121Mammals02104
+PREDICTED CLASS 
+AmphibiansFishesReptilesBirdsMammalsACTUALAmphibians20000CLASSFishes02001Reptiles10300Birds10030Mammals00106C4.5 and C4.5rules:
+
+
+RIPPER:
+
+
+
+02/14/2018
+Introduction to Data Mining, 2
+nd
+Edition 
+42
+
+
+Advantages of Rule
+-
+Based Classifiers
+
+
+
+Karar
+ağaçlarına
+oldukça
+benzer
+özelliklere
+sahiptir
+–
+Karar
+ağaçları
+kadar
+ifade gücü yüksek
+–
+Yorumlaması
+kolay
+–
+Yeni
+örnekleri
+hızla
+sınıflandırabilir
+–
+(fakat) performansı 
+Karar
+ağaçlarıyla
+kıyaslanabilir
+–
+Gereksiz
+öz
+nitelikler
+le
+başa çıkabilir
+
+
+
+Dengesiz
+sınıfların
+üstesinden
+gelmek
+için
+daha
+uygun
+(
+imbalanced classes
+)
+
+Test 
+setindeki
+eksik
+değerler
+ile başa çıkmak
+daha
+zor
+
+
+
